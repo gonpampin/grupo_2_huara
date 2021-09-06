@@ -10,15 +10,15 @@
 ---
 ## *Listado de comercios referentes:* ##
 
-* 
-* 
-* 
-* 
-* 
+* https://www.bombonella.com.ar/
+* https://elitechocolates.com.ar/
+* https://vasalissa.com/
+* https://www.chocolatesdelturista.com/
+* https://chocolatesrapanui.com.ar/
 ---
 ## *El equipo:* ##
 
  * :cactus: 
  * :cactus:
- * :cactus:
+ * :cactus: **Ignacio** 
  * :cactus: **Vicky** Tengo 31 años y estoy iniciándome en el mundo de la programación. Soy Licenciada en Turismo. Me encanta viajar, cocinar, ver documentales de animales. *Elijo CHOCOLATE BLANCO CON DULCE DE LECHE, para comer viendo Friends, Harry Potter o alguna peli de terror.*
