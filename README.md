@@ -10,11 +10,11 @@
 ---
 ## *Listado de comercios referentes:* ##
 
-* https://www.bombonella.com.ar/
-* https://elitechocolates.com.ar/
-* https://vasalissa.com/
-* https://www.chocolatesdelturista.com/
-* https://chocolatesrapanui.com.ar/
+* https://www.bombonella.com.ar/ Web referente por ser una chocolatería histórica de la calle corrientes, con un enfoque creativo, haciendo chocolates con mensajes escritos y dibujos. No tiene e-commerce.
+* https://elitechocolates.com.ar/ Web referente por ser una marca premium con una estética muy refinada y bien lograda. Muestra sus locales pero no tiene e-commerce.
+* https://vasalissa.com/ Web referente por ser una marca premium y con una estética clásica. Cuenta con e-commerce incorporado y secciones de registro y login.
+* https://www.chocolatesdelturista.com/ Web referente por ser marca líder con una estética moderna y atractiva. El e-commerce fue desarrollado con Tiendanube por lo que no se toma de referencia.
+* https://chocolatesrapanui.com.ar/ Web referente por ser una de las chocolaterías de mayor expansión en los últimos años. Cuenta con una estética equilibrada y atractiva. No tiene e-commerce.
 ---
 ## *El equipo:* ##
 
