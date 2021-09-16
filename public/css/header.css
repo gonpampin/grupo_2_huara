@@ -1,0 +1,23 @@
+
+.box{
+    display: flexS;
+    background-color: rgb(255, 196, 217, 0.4);
+   border-bottom: solid 1px black  ;
+   
+}
+.logo{
+    width: 15%;
+}
+.nav-bar{
+    display: flexS;
+    font-size: 16px;
+    list-style-type: none;
+    
+}
+.search-bar {
+    width: 300px;
+    height: 15px;
+    display: inline-block;
+    background-color: #eaeaea;
+    border: solid 0.5px black;
+}
