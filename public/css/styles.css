@@ -1,8 +1,12 @@
 @import url(/css/header.css);
-* {
-font-family : 'Fira Sans', sans-serif;
-color: rgb(114, 141, 117);
-}
+
+  * {
+        font-family: nexa-bold;
+        src: url(/design/FontsFree-Net-n1.ttf);
+    }
+ 
+
+
 .instagram {
     width: 100%;
     opacity: 0.4;
