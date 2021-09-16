@@ -1,15 +1,15 @@
 # Proyecto Huara #
 
 
-## *Sprint 1* ##
+## Sprint 1 ##
 
-### ** Hacer más ** ###
+###  Hacer más  ###
 Usar más slack como canal de comunicación
 
-### ** Continuar haciendo ** ###
+###  Continuar haciendo  ###
 Reuniones semanales
 
-### ** Hacer menos ** ###
+###  Hacer menos  ###
 Usar menos whatsapp como canal de comunicación
 
 
