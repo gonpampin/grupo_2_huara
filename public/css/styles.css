@@ -1,6 +1,8 @@
 @import url(/css/header.css);
-
-
+* {
+font-family : 'Fira Sans', sans-serif;
+color: rgb(114, 141, 117);
+}
 .instagram {
     width: 100%;
     opacity: 0.4;
