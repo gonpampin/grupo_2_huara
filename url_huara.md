@@ -1,1 +1,0 @@
-https://github.com/gonpampin/grupo_2_huara.git
