@@ -23,5 +23,8 @@
  * :cactus: **Vicky** Tengo 31 años y estoy iniciándome en el mundo de la programación. Soy Licenciada en Turismo. Me encanta viajar, cocinar, ver documentales de animales. *Elijo CHOCOLATE BLANCO CON DULCE DE LECHE, para comer viendo Friends, Harry Potter o alguna peli de terror.*
  * :cactus: **Berni** Tengo 31 años, vivo en BsAs aunque soy de mardel. Soy ingeniero mecánico y fanático de los chocolates de menta (sí soy de esos :smile:). Me encanta el mar :ocean: y la montaña tanto en verano :sunny: como en invierno :snowflake:
 ---
+## *URL* ##
+https://github.com/gonpampin/grupo_2_huara.git
+---
 ## *Trello* ##
-*https://trello.com/b/JFyY7Izp/proyectohuarachocolates
+https://trello.com/b/JFyY7Izp/proyectohuarachocolates
