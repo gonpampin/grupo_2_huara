@@ -2,10 +2,12 @@
 
   * {
         font-family: nexa-bold;
-        src: url(/design/FontsFree-Net-n1.ttf);
     }
  
-
+@font-face {
+    font-family: nexa-bold;
+    src:    url(/design/NexaBold.otf) format('opentype');
+    }
 
 .instagram {
     width: 100%;
