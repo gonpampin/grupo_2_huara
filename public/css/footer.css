@@ -1,0 +1,16 @@
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+.main-footer{
+    background-image: url('/images/textura.jpg');
+    padding: 20px;
+}
+
+.logo{
+    margin: auto;
+    width: 200px;
+}
