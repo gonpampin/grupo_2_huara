@@ -1,9 +1,15 @@
 @import url(/css/header.css);
+@import url(/css/home.css);
 
-  * {
-        font-family: nexa-bold;
-    }
- 
+@font-face {
+    font-family: nexa-bold;
+    src: url('/design/NexaBold.otf') format('opentype');
+} 
+
+* {
+    font-family: nexa-bold;
+}
+
 
 .instagram {
     width: 100%;

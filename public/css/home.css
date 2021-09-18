@@ -1,0 +1,98 @@
+.banner{
+    
+    background: url("/images/prueba1.jpeg");
+    background-position:center;
+    background-size: cover;
+    resize: both;
+    overflow: scroll;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.banner-historia{
+    
+    background: url("/images/san-juan.jpg");
+    background-position:center;
+    background-size: cover;
+    resize: both;
+    overflow: scroll;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.banner-liso{
+    
+    background-color: black;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+.ofertas-home{
+    display: block;
+    ;
+}
+
+.main-text-banner{
+    color: white;
+}
+
+.list-banner{
+    list-style-type: none;
+    color: rgb(225, 168, 89);
+}
+
+/* Content */
+.main-home{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(225,168,89)
+}
+
+.products{
+    display: flex;
+}
+
+article div.main-article{
+    width: 100%;
+}
+
+.price{
+    font-size: 18px;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+main{
+    width: 100%;
+}
+
+main section article{
+    background-color: #fff;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #FF9440;
+}
+
+
+
+
+@media (min-width: 360) {
+}
+
+@media (min-width: 768) {
+}
