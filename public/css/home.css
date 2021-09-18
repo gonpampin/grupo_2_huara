@@ -1,12 +1,34 @@
 .banner{
     
-    background-color: rgb(67,69,75);
+    background-color: rgb(240,220,190);
     max-width: 100%;
     height: 100%;
     text-align: center;
 }
+.main-text-banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(255,168,89);
+    text-align: center;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    margin-inline: 5%;
+}
 
-.banner-logos{
+.text-chocolate-andino{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(67,69,75);
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-inline: 5%;
+
+}
+
+.banner-chocolate-andino{
     
     display: flex;
     background-color: rgb(240,220,190);
@@ -14,19 +36,15 @@
     max-width: 100%;
     height: 100%;
     text-align: center;
+    flex-wrap: wrap;
 }
 
-.main-text-banner{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: rgb(255,168,89);
-    text-align: center;
-}
-.image-banner-tercio{
-    display: flex;
+
+.image-banner-chocolate-andino{
+    display: none;
     width: 100%;
     text-align: center;
+    font-size: 200%;
 }
 
 .banner-liso{
@@ -56,9 +74,18 @@
 
 
 .list-banner{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     list-style-type: none;
-    
     color: rgb(167,100,66);
+}
+
+.list-banner-item{
+    color: rgb(167,100,66);
+    padding-inline: 5%;
+    text-justify: auto;
+    font-size: 8px;
 }
 
 /* Content */
@@ -109,11 +136,37 @@ main section article i,
 
 
 
-@media (min-width: 360) {
+@media (min-width: 360px) {
+    .image-banner-chocolate-andino{
+        display: flex;
+    }
+    .main-text-banner{
+        font-size: 18px;
+    }
+    .list-banner{
+        flex-wrap: nowrap;
+        padding-inline: 5%;
+    }
+    .list-banner-item{
+        font-size: 12px;
+    }
+    .text-chocolate-andino{
+        flex-wrap: nowrap;
     
-}
+    }
 
-@media (min-width: 768) {
+@media (min-width: 768px) {
+    .main-text-banner{
+        font-size: 30px;
+    }
+    .list-banner-item{
+        font-size: 22px;
+    }
+    .text-chocolate-andino{
+        font-size: 35px;
+       
+    
+    }
 }
 
 /* fondo crema: rgb(250,212,184)

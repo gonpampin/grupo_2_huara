@@ -38,7 +38,7 @@ list-style-type: none;
 }
 
 
-@media (min-width: 360) {
+@media (min-width: 360px) {
 
     .box {
         display: flex;
@@ -75,7 +75,7 @@ list-style-type: none;
     }
 }
 
-@media (min-width: 768) {
+@media (min-width: 768px) {
     .box {
         display: flex;
         background-color: rgb(255, 196, 217, 0.4);
