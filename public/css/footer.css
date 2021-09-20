@@ -1,16 +1,102 @@
+/*Generales footer*/
 
+.pink{
+    color: rgb(255, 196, 217) ;
+}
+
+.yellow{
+    color: rgb(225, 168, 89) ;
+}
+
+.brown{
+    color: rgb(167, 100, 66) ;
+}
 
 
 *{
     box-sizing: border-box;
+    font-family: nexa-
+    bold;
 }
-
 .main-footer{
     background-image: url('/images/textura.jpg');
-    padding: 20px;
+    text-align: center;
+    padding: 5px;
 }
 
-.logo{
-    margin: auto;
-    width: 200px;
+.logo-huara-footer{
+    width: 150px;
+    text-align: center;
 }
+
+.main-footer-top-bar{
+    margin: auto;
+    padding: 10px;
+}
+
+.main-nav-bar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav-bar a{
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+div.icons i{
+    font-size: 22px;
+    padding: 10px;
+}
+
+.copyright{
+    text-align: left;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 10px;
+}
+
+/*Footer opcion 2*/
+
+.main-footer-2{
+    background-color: rgb(255, 196, 217);
+    text-align: center;
+    padding: 5px;
+}
+
+
+.main-nav-bar-2 ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav-bar-2 a{
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 14px;
+}
+
+.main-nav-bar-2 ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+

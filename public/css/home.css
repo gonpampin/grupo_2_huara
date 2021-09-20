@@ -154,6 +154,7 @@ main section article i,
         flex-wrap: nowrap;
     
     }
+}
 
 @media (min-width: 768px) {
     .main-text-banner{
