@@ -2,8 +2,9 @@ main{
     background-color: rgb(255,196,217);
 }
 h3{
-    font-size:24px;
+    font-size:20px;
     color: rgb(167,100,66);
+    padding: 20px;
 }
 
 .descripcion, .precio {
@@ -29,8 +30,12 @@ h3{
 
 .product-box{
     text-align-last: left;
-    border-top: 1px solid rgb(114,141,117);
-    padding: 15px;
+     padding: 5px;
+     background-color: bisque;
 
 }
 
+section{
+    width:90%;
+    margin:auto;
+}
