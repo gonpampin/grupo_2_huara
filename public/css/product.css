@@ -1,0 +1,36 @@
+main{
+    background-color: rgb(255,196,217);
+}
+h3{
+    font-size:24px;
+    color: rgb(167,100,66);
+}
+
+.descripcion, .precio {
+    font-size:16px;
+    color: rgb(114,141,117);
+}
+
+.detalle{
+    font-size:12px;
+    color: rgb(114,141,117);
+   }
+
+.product-img{
+    width:100%;
+}
+
+.product{
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+
+
+.product-box{
+    text-align-last: left;
+    border-top: 1px solid rgb(114,141,117);
+    padding: 15px;
+
+}
+
