@@ -1,41 +1,83 @@
+.header {
+    height: 150px;
+    background-color: #666;
+
+}
+.footer {
+    height: 150px;
+    background-color: #666;
+
+}
+
 main{
-    background-color: rgb(255,196,217);
+    background-color: white;
+    margin-top: 15px;
+    
 }
 h3{
-    font-size:20px;
-    color: rgb(167,100,66);
+    font-size:30px;
+    color: white;
     padding: 20px;
 }
 
 .descripcion, .precio {
     font-size:16px;
     color: rgb(114,141,117);
+    font-family: nexa-light;
 }
 
 .detalle{
     font-size:12px;
     color: rgb(114,141,117);
+    font-family: nexa-light;
    }
 
 .product-img{
-    width:100%;
+    width:200px;
+    height:200px;
+    margin:auto;
+    
 }
 
 .product{
     margin-bottom: 10px;
     background-color: white;
+    border-top: solid 2px #2222;
+    padding-top: 20px;
+    text-align: center;
 }
 
 
 
 .product-box{
-    text-align-last: left;
-     padding: 5px;
-     background-color: bisque;
-
+         padding: 5px;
+    
 }
 
 section{
     width:90%;
     margin:auto;
+}
+.head-product-image{
+    width: 100%;
+    opacity: 0.8;
+}
+.intro{
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    color: #666;
+    font-family: nexa-light;
+    background-color: white;
+}
+
+.head-products{
+    position:relative;
+}
+
+.titulo{
+    position:absolute;
+    top: 40px;
+    left: 55px;
+    z-index: 20;
 }

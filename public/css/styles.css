@@ -7,9 +7,14 @@
     font-family: nexa-bold;
     src: url('/design/NexaBold.otf') format('opentype');
 } 
+@font-face {
+    font-family: nexa-light;
+    src: url('/design/NexaLight.otf') format('opentype');
+} 
 
 * {
     font-family: nexa-bold;
+    box-sizing: border-box;
 }
 
 
@@ -29,4 +34,8 @@
 
 .pink{
     color: rgb(255, 196, 217) ;
+}
+
+.beige-fondo{
+    color: rgb(250,212,184);
 }
