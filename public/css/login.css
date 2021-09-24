@@ -1,0 +1,62 @@
+.login{
+     color: #666;
+   text-align: center;
+   width:100%;
+   font-family: nexa-light;
+   background-color: rgb(255, 196, 217)
+}
+
+.title-login{
+    padding-top: 30px;
+    color: #666;
+    font-size: 30px;
+}
+
+.title-login-2{
+    font-size: 15px;
+    font-style: oblique;
+    padding: 30px;
+}
+
+.observation{
+   
+    color: #6666;
+    font-size:12px;
+}
+
+.formulario{
+       width: 100%
+}
+
+.button{
+    color: white;
+    background-color: #666;
+    border-radius: 12px;
+    padding: 5px;
+    width: 200px;
+    border: solid 0.5px #666;
+    font-family: nexa-light;
+    margin: 20px;
+}
+
+.button:hover{
+    background-color: rgb(225, 168, 89);
+}
+
+   .button2{
+       margin-top:0;
+   }
+
+   .input{
+       display:block;
+       margin:auto;
+       padding:0 5px;
+       color: rgb(167, 100, 66);
+       font-family: nexa-light;
+       font-size:15px;
+
+   }
+
+   .label{
+       font-size: 20px;
+   }
