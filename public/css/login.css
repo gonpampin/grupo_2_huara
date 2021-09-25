@@ -1,5 +1,5 @@
 .login{
-     color: #666;
+    color: rgb(114,141,117);
    text-align: center;
    width:100%;
    font-family: nexa-light;
@@ -9,8 +9,8 @@
 
 .title-login{
     padding-top: 30px;
-    color: #666;
     font-size: 30px;
+    color: rgb(114,141,117);
 }
 
 .title-login-2{
@@ -21,7 +21,7 @@
 
 .observation{
    
-    color: #6666;
+    color: rgb(114,141,117);
     font-size:12px;
 }
 
@@ -31,17 +31,17 @@
 
 .button{
     color: white;
-    background-color: #666;
+    color: rgb(114,141,117);
     border-radius: 12px;
     padding: 5px;
     width: 200px;
-    border: solid 0.5px #666;
+    border: solid 0.5px rgb(114,141,117);
     font-family: nexa-light;
     margin: 20px;
 }
 
 .button:hover{
-    background-color: rgb(167, 100, 66)
+    background-color: rgb(225, 168, 89);
 }
 
    .button2{

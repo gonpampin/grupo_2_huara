@@ -36,6 +36,7 @@ h3{
     width:200px;
     height:200px;
     margin:auto;
+    box-shadow: 0px 0px 10px rgb(100,100,100);
     
 }
 
@@ -77,7 +78,43 @@ section{
 
 .titulo{
     position:absolute;
-    top: 40px;
-    left: 55px;
+    top: 27%;
+    left: 25%;
     z-index: 20;
+}
+
+@media(min-width: 768px){
+    .todos-productos{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .todos-productos article{
+        width: 45%;
+    }
+
+    .titulo{
+        position:absolute;
+        top: 40%;
+        left: 37%;
+        z-index: 20;
+        font-size: 40px;
+    }
+
+  }
+
+@media(min-width: 1200px){
+    .todos-productos article{
+        width: 22%;
+    }
+    .logo{
+        width: 200px;
+    }
+    .titulo{
+        position:absolute;
+        top: 40%;
+        left: 37%;
+        z-index: 20;
+        font-size: 50px;
+    }
 }
