@@ -3,7 +3,8 @@
    text-align: center;
    width:100%;
    font-family: nexa-light;
-   background-color: rgb(255, 196, 217)
+   background-color: white;
+   margin:0;
 }
 
 .title-login{
@@ -40,7 +41,7 @@
 }
 
 .button:hover{
-    background-color: rgb(225, 168, 89);
+    background-color: rgb(167, 100, 66)
 }
 
    .button2{
@@ -50,10 +51,10 @@
    .input{
        display:block;
        margin:auto;
-       padding:0 5px;
+       padding:2px 5px;
        color: rgb(167, 100, 66);
        font-family: nexa-light;
-       font-size:15px;
+        width: 200px;
 
    }
 
