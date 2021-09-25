@@ -12,3 +12,48 @@ section{
 .titulo-carrito{
     color: black;
 }
+
+a.trash-can{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    width: 10%;
+    text-align: center;
+}
+
+.fa-trash-alt{
+    color: #666;
+    font-size: 20px;
+}
+
+div.images-carrito{
+    width: 48%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.precio-cantidad h4{
+    color: rgb(114,141,117);
+    margin-bottom: 5px;
+}
+
+div.precio-cantidad{
+    border: 1px solid green;
+    text-align: center;
+    
+}
+
+.precios{
+    color: rgb(114,141,117);
+}
+
+.article-cart{
+    border: 1px red solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
