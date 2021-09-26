@@ -11,6 +11,8 @@ list-style-type: none;
 }
 
 .box {
+    position: sticky;
+    top: 0;
     max-width: 1200xp;
     width: 100%;
     height: auto;
