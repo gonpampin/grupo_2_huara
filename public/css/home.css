@@ -1,175 +1,53 @@
-.banner{
-    
-    background-color: rgb(240,220,190);
-    max-width: 100%;
-    height: 100%;
-    text-align: center;
-}
-.main-text-banner{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: rgb(255,168,89);
-    text-align: center;
-    flex-wrap: nowrap;
-    font-size: 14px;
-    margin-inline: 5%;
+.banner-home{
+        max-width: 100%;
+        position: relative;
+ 
 }
 
-.text-chocolate-andino{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: rgb(67,69,75);
-    text-align: center;
-    flex-wrap: wrap;
-    font-size: 20px;
-    margin-inline: 5%;
+img.expand { width: 100%; }
 
+
+.text-banner-home{
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        color: white;
+        text-align: right;
 }
 
-.banner-chocolate-andino{
-    
-    display: flex;
-    background-color: rgb(240,220,190);
-    justify-content: space-around;
-    max-width: 100%;
-    height: 100%;
-    text-align: center;
-    flex-wrap: wrap;
+.text-banner-home h3{
+    padding: 0px;
 }
 
-
-.image-banner-chocolate-andino{
+.expand-display{
     display: none;
-    width: 100%;
-    text-align: center;
-    font-size: 200%;
 }
-
-.banner-liso{
-    
-    background-color: black;
-    max-width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-.banner-dividido{
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: rgb(122, 122, 122);
-    max-width: 100%;
-    height: 100%;
-    text-align: auto;
-}
-.image-banner-dividido{
-    width: 50%;
-}
-.ofertas-home{
-    display: block;
-    ;
-}
-
-
-
-.list-banner{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    list-style-type: none;
-    color: rgb(167,100,66);
-}
-
-.list-banner-item{
-    color: rgb(167,100,66);
-    padding-inline: 5%;
-    text-justify: auto;
-    font-size: 8px;
-}
-
-/* Content */
-.main-home{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(225,168,89)
-}
-
-.products{
-    display: flex;
-}
-
-article div.main-article{
-    width: 100%;
-}
-
-.price{
-    font-size: 18px;
-}
-
-.discount,
-.description{
-    font-size: 16px;
-    font-weight: normal;
-}
-
-
-main{
-    width: 100%;
-}
-
-main section article{
-    background-color: #fff;
-}
-
-main section article img{
-    width: 100%;
-    
-    color: rgb(114,141,117)
-}
-
-main section article i,
-.discount{
-    color: #FF9440;
-}
-
-
-
 
 @media (min-width: 360px) {
-    .image-banner-chocolate-andino{
-        display: flex;
-    }
-    .main-text-banner{
-        font-size: 18px;
-    }
-    .list-banner{
-        flex-wrap: nowrap;
-        padding-inline: 5%;
-    }
-    .list-banner-item{
-        font-size: 12px;
-    }
-    .text-chocolate-andino{
-        flex-wrap: nowrap;
-    
-    }
+ 
 }
 
 @media (min-width: 768px) {
-    .main-text-banner{
-        font-size: 30px;
+    .banner-home{
+        background-color:rgb(211, 211, 211);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
-    .list-banner-item{
-        font-size: 22px;
-    }
-    .text-chocolate-andino{
-        font-size: 35px;
-       
-    
-    }
-}
 
+    .banner-home div{
+        justify-content: center;
+        display: flex;
+    }
+    img.expand {
+        max-width: 1200px;
+        }
+
+    .expand-display{
+        display: flex;
+        max-width: 10%;
+    }
+    }      
 /* fondo crema: rgb(250,212,184)
 /* fondo rosa: rgb(255,196,217)
 /* fondo logo: rgb(240,220,190)
