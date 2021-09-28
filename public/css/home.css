@@ -7,9 +7,15 @@
     width: 100%;
 }
 
-
 .banner-derecha-1{
     margin: auto;
+}
+
+.banner-derecha-1 h3{
+    display: flex;
+    font-family: nexa-light;
+    font-size: 20px;
+    color: #666;
 }
 .banner-derecha-1 img{
     width: 100%;
@@ -28,25 +34,6 @@
     text-align: left;
 }*/
 
-.text-banner-2{
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    color: white;
-    text-align: right;
-}
-
-.text-banner-3{
-        position: absolute;
-        right: 30px;
-        bottom: 30px;
-        color: white;
-        text-align: right;
-}
-
-.text-banner-home h3{
-    padding: 0px;
-}
 
 
 @media (min-width: 360px) {
@@ -59,12 +46,17 @@
         justify-content: space-around;
     }
     
-    .banner-derecha{
-        width: 100%;
+    .banner-derecha-1{
+        display: flex;
+        width: 55%;
+    }
+
+    .banner-derecha-1 h3{
+        max-height:600px ;
     }
     
     .banner-izquierda{
-        width: 100%;
+        width: 50%;
     }
     .banner-home div{
         justify-content: center;
