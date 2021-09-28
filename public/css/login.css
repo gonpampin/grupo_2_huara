@@ -3,7 +3,7 @@
    text-align: center;
    width:100%;
    font-family: nexa-light;
-   background-color: rgb(255, 196, 217);
+   background-color: white;
    margin:0;
 }
 
@@ -16,7 +16,7 @@
 .title-login-2{
     font-size: 15px;
     font-style: oblique;
-    padding: 30px;
+    padding: 15px;
 }
 
 .observation{
@@ -24,6 +24,8 @@
     color: rgb(114,141,117);
     font-size:12px;
     margin-bottom:20px;
+    font-family: nexa-light;
+    margin-top: 5px;
 }
 
 .formulario{
@@ -38,7 +40,7 @@
     width: 200px;
     border: solid 0.5px rgb(114,141,117);
     font-family: nexa-light;
-    margin: 20px;
+    margin:5px;
 }
 
 .button:hover{
@@ -55,10 +57,13 @@
        padding:2px 5px;
        color: rgb(167, 100, 66);
        font-family: nexa-light;
-        width: 200px;
+        width: 300px;
+        margin-top: 10px;
 
    }
 
    .label{
        font-size: 20px;
    }
+
+   
