@@ -48,7 +48,12 @@
     
     .banner-derecha-1{
         display: flex;
+        justify-content: space-around;
         width: 55%;
+    }
+
+    .banner-derecha-1 img{
+        width: 80%;
     }
 
     .banner-derecha-1 h3{
