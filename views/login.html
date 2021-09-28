@@ -9,7 +9,31 @@
 </head>
 <body>
     <header>
-        <div class="header"></div>
+        <div class="box">
+            <img src="images\logo-fondo-claro.png" alt="" class="logo">
+            <a href="#" class="hamburger">
+                <i class="fas fa-align-left"></i>
+            </a>
+            <form action="" class="search-bar">
+                  <input class="searchtext" type="text" placeholder="Search">
+                
+            </form>
+            <ul class="nav-bar">
+                <li class="nav-item"><i class="fa-regular fa-house"></i> </li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Mis Compras</a></li>
+            </ul>
+            <ul class="nav-bar2">
+                <li><a href="">Login</a></li>
+                <li><a href="">Registrate</a></li>
+                
+            </ul>
+        
+
+
+
+        </div>
     </header>
     <main class="login">
         <h2 class="title-login">¿Ya estás registrado?</h2>
@@ -18,7 +42,7 @@
                 <p class="title-login-2">Ingresá a tu cuenta</p>
             </div>
             <div class="formulario">
-            <form action="/register" method="POST">
+            <form action="/login" method="POST">
                 <p class="campo">
                 <label for="email"class="label">Dirección de correo electrónico</label>
                 <input type="email" name="email" id="email" class="input" placeholder="ejemplo@gmail.com" style="font-style:italic; font-size: 12px">

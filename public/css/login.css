@@ -3,7 +3,7 @@
    text-align: center;
    width:100%;
    font-family: nexa-light;
-   background-color: white;
+   background-color: rgb(255, 196, 217);
    margin:0;
 }
 
@@ -23,6 +23,7 @@
    
     color: rgb(114,141,117);
     font-size:12px;
+    margin-bottom:20px;
 }
 
 .formulario{

@@ -2,7 +2,7 @@
    color:rgb(114,141,117);
   text-align: center;
   width:100%;
-  background-color: white;
+  background-color: rgb(255, 196, 217);
 }
 
 .title-login{
@@ -20,11 +20,12 @@
 }
 
 .observation{
-  
    color: rgb(114,141,117);
    font-size:12px;
-}
+   margin-bottom:20px;
+  }
 
+ 
 .formulario{
       width: 100%
 }
@@ -55,9 +56,11 @@
       color: rgb(167, 100, 66);
       font-family: nexa-light;
        width: 200px;
+       border: none;
+       box-shadow: 0px 0px 10px rgb(100,100,100);
 
   }
 
   .label{
-      font-size: 20px;
+      font-size: 15px;
   }
