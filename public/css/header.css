@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
-a {
+/*a {
     text-decoration: none;
     color: rgb(114, 141, 117);
-}
+}*/
+
+/*i {
+    color: rgb(114, 141, 117);
+}*/
 
 ul {
     list-style-type: none;
@@ -20,16 +24,17 @@ ul {
     width: 100%;
     height: auto;
     display: flex;
-    background-color: rgb(255, 196, 217, 0.4);
-    border-bottom: solid 1px black;
+    background-color: rgb(250, 212, 184);
+
     justify-content: space-between;
     flex-wrap: wrap;
 
 }
 
 .logo {
+    
     display: flex;
-    width: 15%;
+    width: 45%;
 }
 
 .hamburger {
@@ -40,7 +45,24 @@ ul {
     padding: 15px 0;
     border-radius: 8px;
     align-items: center;
+   
 }
+/*.hamburger {
+    background-color: rgb(114, 141, 117);
+    color: white;
+    max-width: 40px;
+    font-size: 20px;
+    padding: 15px 0;
+    border-radius: 8px;
+    align-items: center;
+    display: block;
+    text-align: center;
+    width: 50px;
+    padding: 15px 0;
+    margin: auto;
+}*/
+
+
 .nav-bar {
     width: 20%;
     display: none;
@@ -48,7 +70,7 @@ ul {
     align-items: flex-end;
     font-size: 16px;
     flex-wrap: nowrap;
- 
+
 }
 
 .nav-bar2 {
@@ -57,7 +79,7 @@ ul {
     justify-content: center;
     align-items: flex-end;
     font-size: 16px;
- 
+    padding: 0px 20px;
 }
 
 
@@ -66,57 +88,61 @@ ul {
 
     .box {
         display: flex;
-        background-color: rgb(255, 196, 217, 0.4);
-        border-bottom: solid 1px black;
-       
+        background-color: rgb(250, 212, 184);
+
+
     }
 
     .logo {
         display: flex;
-        width: 15%;
+        width: 45%;
     }
 
     .hamburger {
-        background-color: rgb(255, 196, 217, 0.4);
-        color: rgb(167, 100, 66);
+        background-color: rgb(114, 141, 117);
+        color: white;
         max-width: 40px;
-        display: flex;
         font-size: 20px;
         padding: 15px 0;
         border-radius: 8px;
         align-items: center;
-
+        display: block;
+        text-align: center;
+        width: 50px;
+        padding: 15px 0;
+        margin: auto;
     }
+}
 
-    .nav-bar {
-        width: 20%;
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        font-size: 16px;
-        flex-wrap: nowrap;
-     
-    }
-
-    .nav-bar2 {
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-end;
-        font-size: 16px;
-       
-    }
+.nav-bar {
+    width: 20%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 16px;
+    flex-wrap: nowrap;
 
 }
+
+.nav-bar2 {
+    width: 20%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 16px;
+
+}
+
+
 
 @media (min-width: 768px) {
     .box {
         display: flex;
-        background-color: rgb(255, 196, 217, 0.4);
-        border-bottom: solid 1px black;
-        
+        background-color: rgb(250, 212, 184);
+
+
 
     }
 
@@ -134,9 +160,12 @@ ul {
         font-size: 16px;
         flex-wrap: nowrap;
     }
-    .nav-item{
+
+    .nav-item {
         color: rgb(114, 141, 117);
-        
+        font-size: 3px;
+        width: 50px;
+
     }
 
     .nav-bar2 {
@@ -146,31 +175,36 @@ ul {
         justify-content: space-around;
         align-items: flex-end;
         font-size: 16px;
-       
+
     }
 
-    .search-bar {
+    /*.search-bar {
         width: 25%;
         display: flex;
         align-items: center;
-    }
+    }*/
 
-    .searchtext {
+    /*.searchtext {
         width: 98%;
         border-radius: 6px;
         border-color: transparent;
         color: rgb(114, 141, 117);
         
-    }
+    }*/
 
     .hamburger {
-        background-color: rgb(255, 196, 217, 0.4);
-        color: rgb(167, 100, 66);
+        background-color: rgb(114, 141, 117);
+        color: white;
         max-width: 40px;
         display: none;
         font-size: 20px;
         padding: 15px 0;
         border-radius: 8px;
         align-items: center;
+        display: none;
+        text-align: center;
+        width: 50px;
+        padding: 15px 0;
+        margin: auto;
     }
 }
