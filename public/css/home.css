@@ -9,6 +9,8 @@
 
 .banner-derecha-1{
     margin: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .banner-derecha-1 h3{
@@ -18,7 +20,7 @@
     color: #666;
 }
 .banner-derecha-1 img{
-    width: 100%;
+    width: 60%;
 }
 
 .banner-home-2 img{
