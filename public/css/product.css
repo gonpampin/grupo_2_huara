@@ -13,11 +13,7 @@ main{
     background-color: white;
        
 }
-h3{
-    font-size:30px;
-    color: white;
-    padding: 20px;
-}
+
 
 .descripcion, .precio {
     font-size:16px;
@@ -73,14 +69,22 @@ section{
 
 .head-products{
     position:relative;
+    text-align: center;
 }
 
 .titulo{
     position:absolute;
-    top: 27%;
-    left: 25%;
-    z-index: 20;
+    top: 10px;
+    left: 10px;
+    letter-spacing: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:30px;
+    color: white;
+    padding: 20px;
 }
+ 
 
 @media(min-width: 768px){
     .todos-productos{
@@ -92,13 +96,6 @@ section{
         width: 45%;
     }
 
-    .titulo{
-        position:absolute;
-        top: 40%;
-        left: 37%;
-        z-index: 20;
-        font-size: 40px;
-    }
 
   }
 
@@ -110,10 +107,9 @@ section{
         width: 200px;
     }
     .titulo{
-        position:absolute;
-        top: 40%;
-        left: 37%;
-        z-index: 20;
-        font-size: 50px;
+        font-size:40px;
+        
     }
+    
 }
+
