@@ -3,6 +3,26 @@
     width: 100%;
 }
 
+.banner-home-2 {
+    width: 100%;
+}
+
+.banner-home-3 {
+    width: 100%;
+}
+
+.banner-home-1 div img{
+    width: 100%;
+}
+
+.banner-home-2 div img{
+    width: 100%;
+}
+
+.banner-home-3 div img{
+    width: 100%;
+}
+
 .banner-izquierda-1 img {
     width: 100%;
 }
@@ -16,18 +36,30 @@
 .banner-derecha-1 h3{
     display: flex;
     font-family: nexa-light;
-    font-size: 20px;
+    font-size: 18px;
     color: #666;
 }
 .banner-derecha-1 img{
     width: 60%;
 }
 
-.banner-home-2 img{
-        width: 100%;
+.banner-home-2 div{
+    width: 100%;
 }
 
+.expand{
+    width: 100%;
+}
 
+.newsletter{
+    background-image: rgba(255, 255, 255, 0.5);
+    margin: auto;
+}
+
+.email-newsletter{
+    margin: auto;
+    text-align: center;
+}
 /*.text-banner-1{
     position: absolute;
     font-size: 100px;
@@ -47,6 +79,35 @@
         display: flex;
         justify-content: space-around;
     }
+
+    .banner-home-1 div img{
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .banner-home-3{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .newsletter{
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 39%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .img-newsletter{
+        width: 55%;
+        size: 0.5;
+    }
     
     .banner-derecha-1{
         display: flex;
@@ -55,7 +116,7 @@
     }
 
     .banner-derecha-1 img{
-        width: 80%;
+        width: 40%;
     }
 
     .banner-derecha-1 h3{
@@ -63,15 +124,15 @@
     }
     
     .banner-izquierda{
-        width: 50%;
+        width: 100%;
     }
     .banner-home div{
         justify-content: center;
         display: flex;
     }
-    img.expand {
+    /*img.expand {
         position: relative;
-        }
+        }*/
     }      
 /* fondo crema: rgb(250,212,184)
 /* fondo rosa: rgb(255,196,217)
