@@ -111,7 +111,11 @@
     color: white;
     text-align: left;
 }*/
-
+.newsletter input{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
 
 
 @media (min-width: 360px) {
