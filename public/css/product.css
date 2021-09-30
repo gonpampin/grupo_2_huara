@@ -84,6 +84,13 @@ section{
     color: white;
     padding: 20px;
 }
+
+p .precio{
+    display: none;
+}
+.produt-img:hover p .precio{
+    display: block;
+}
  
 
 @media(min-width: 768px){
