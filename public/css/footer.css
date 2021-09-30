@@ -23,6 +23,8 @@
     padding: 5px;
     margin: auto;
     box-sizing: border-box;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .logo-huara-footer{
@@ -56,13 +58,124 @@ div.icons i{
     padding: 10px;
 }
 
+
+
+
+
+
+.contact{
+    color: rgb(114,141,117);
+    padding: 5px 0;
+    font-size: 16px;
+    font-family: nexa-light;
+    font-weight: 400;
+
+}
+
+div.icons div h3{
+    color: rgb(114,141,117);
+    padding: 5px 0;
+    font-size: 16px;
+    font-family: nexa-light;
+    font-weight: 400;
+    display: none;
+}
+
+div.icons{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
 .copyright{
     text-align: left;
     padding-bottom: 15px;
     padding-top: 15px;
     font-size: 10px;
     color: rgb(114,141,117);
+    
 }
+
+.copyright p{
+    font-family: nexa-light;
+}
+
+
+@media(min-width: 768px){
+    .main-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    div.main-footer-top-bar{
+        width: 28%;
+        margin: 0;
+    }
+    .contact{
+        display: none;
+    }
+
+    .contact-block{
+        width: 35%;
+
+    }
+
+    nav.main-nav-bar{
+        width: 28%;
+    }
+    ul.inside-navbar{
+        justify-content: center;
+    }
+
+    div.icons div h3{
+        display: block;
+    }
+
+    div.icons{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .info-contact{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-huara-footer{
+        width: 200px;
+        text-align: center;
+    }
+
+
+
+}
+
+
+
+
+@media(min-width: 1200px){
+    .logo-huara-footer{
+        width: 300px;
+        text-align: center;
+    }
+
+    .contact-block{
+        width: 28%;
+    }
+
+}
+
+
+
 
 
 
