@@ -11,7 +11,7 @@
     width: 100%;
 }
 
-.banner-home-1 div img{
+.banner-izquierda-1 div img{
     width: 100%;
 }
 
@@ -90,11 +90,19 @@
 .newsletter{
     background-image: rgba(255, 255, 255, 0.5);
     margin: auto;
+    width: 100%;
 }
 
 .email-newsletter{
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
+    justify-content: center;
+}
+
+.email-newsletter  label{
+    width: 100%;
 }
 /*.text-banner-1{
     position: absolute;
@@ -129,8 +137,8 @@
         justify-content: space-around;
     }
 
-    .banner-home-1 div img{
-        width: 80%;
+    .banner-izquierda-1 img{
+        width: 100%;
         justify-content: space-around;
     }
 
@@ -165,7 +173,7 @@
     }
 
     .banner-derecha-1 img{
-        width: 40%;
+        width: 60%;
     }
 
     .banner-derecha-1 h3{
