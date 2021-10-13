@@ -88,11 +88,16 @@
 }
 
 .newsletter{
+   
     background-image: rgba(255, 255, 255, 0.5);
     margin: auto;
     width: 100%;
 }
-
+.newsletter h3{
+    font-family: nexa-light;
+    font-size: 18px;
+    color: #666;
+}
 .email-newsletter{
     margin: auto;
     display: flex;

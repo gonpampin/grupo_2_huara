@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %> 
+
+<body>
+    <%- include('./partials/header') %> 
+
+    <main class="login">
+        <h2 class="title-login">¿Ya estás registrado?</h2>
+        <section>
+            <div>
+                <p class="title-login-2">Ingresá a tu cuenta</p>
+            </div>
+            <div class="formulario">
+            <form action="/login" method="POST">
+                <p class="campo">
+                <label for="email"class="label">Dirección de correo electrónico</label>
+                <input type="email" name="email" id="email" class="input" placeholder="ejemplo@gmail.com" style="font-style:italic; font-size: 12px">
+                </p>
+                <p class="observation">* Campo obligatorio</p>
+                <p class="campo">
+                <label for="password" class="label">Contraseña</label>
+                <input type="password" name="contrasenia" id="password"class="input" placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
+                </p>
+                <p class="observation">* Campo obligatorio</p>
+                <p>
+                <button type="submit" class="button">INGRESAR</button>
+                </p>
+                <p class="observation">¿Olvidaste tu contraseña?</p>
+            </form>
+            </div>
+        </section>
+        <section>
+            <div>
+                <p class="title-login-2">¿No tenés cuenta?</p>
+                <form>
+                    <p>
+                        <button type="submit" class="button button2" >CREAR MI CUENTA</button>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

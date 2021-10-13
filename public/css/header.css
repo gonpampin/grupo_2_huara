@@ -106,6 +106,7 @@ ul {
         flex-wrap: nowrap;
         padding-bottom: 10px;
        align-items: flex-end;
+       font-size: 90%;
        transition: all 2s;
     }
 .nav-bar-header :hover{
@@ -115,4 +116,9 @@ ul {
     .hamburger-header {
         display: none;
     }
+}
+@media (min-width: 950px){
+.nav-bar-header{
+    font-size: 100%;
+}
 }

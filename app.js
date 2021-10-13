@@ -1,15 +1,29 @@
 const express = require('express');
+const app = express();
+
 const path = require('path');
 
-const app = express();
+const router = require('./routes/mainRoutes');
 
 /* Config public */
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 
-/* Routes */
+// view engine setup
+/*app.set('views', path.resolve(__dirname, 'views'));*/
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use('/', router);
+
+app.listen(3000, () => {
+    console.log('Servidor levantado en el puerto 3000')
+})
+
+
+/* Routes 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views/home.html'));
+    res.sendFile(path.resolve(__dirname, 'views/home.ejs'));
 })
 
 app.get('/productos', (req, res) => {
@@ -37,3 +51,5 @@ app.post('/register', (req, res) => {
 
 
 app.listen(3000, () => console.log('Server corriendo en el puerto 3000'));
+
+*/
