@@ -14,4 +14,8 @@ router.get('/registro', controller.register);
 
 router.get('/carrito', controller.productCart);
 
+router.get('/crearproducto', controller.formCreate);
+
+router.get('/editarproducto', controller.formEdit);
+
 module.exports = router;

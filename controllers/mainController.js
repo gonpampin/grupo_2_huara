@@ -87,8 +87,15 @@ let controller = {
 
     productCart:(req, res) => {
         res.render('productCart');
-    }
+    },
 
+    formCreate:(req, res) => {
+        res.render('formCreate');
+    },
+
+    formEdit:(req, res) => {
+        res.render('formEdit');
+    }
 }
 
 module.exports = controller; 
