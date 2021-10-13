@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('./partials/head') %> 
+
+<body>
+    
+<%- include('./partials/header') %> 
+    
+    <section class="banner-home-1">
+        <div class="banner-izquierda-1">
+            <img src="/images/presentacion-caja.png" alt="Huära Chocolates">
+        </div>
+        <div class="banner-derecha-1">
+                <img src="/images/logo-huara-sinfondo.png" alt="Huära Chocolates">
+        </div>
+        <div class="banner-derecha-1">
+        <h3>Probá y descubrí el verdadero chocolate, ese que te hace bien, sin conservantes, aditivos ni acietes hidrogenados. Cada pieza es confeccionada 
+            100% a mano con el mejor chocolate belga e ingredientes de productores locales.</h3>
+        </div>
+    </section>
+
+    <section class="banner-home-2">
+        
+        <img src="/images/variados-hojas.jpg" alt="Huära Chocolates" width="100%">
+        
+        <a href="/productos">
+        <div>
+            <ul class="list-banner">
+                <li>Verdadero</li>
+                <li>Chocolate Andino</li>
+            </ul>
+        </div>
+        </a>
+
+        <a href="/productos">
+        <div>
+            <ul class="list-banner-2">
+                <li>Trufas</li>
+                <li>Chocolates</li>
+                <li>Tabletas</li>
+            </ul>
+        </div>
+        </a>
+    </section>
+
+
+    <section class="banner-home-3">
+        <div class="img-newsletter">
+            <img src="/images/genericas/taza-chocolate-partido.jpg" alt="Huära Chocolates">
+        </div>
+        <div class="newsletter">
+            <form action="/login" method="POST">
+                <div class="email-newsletter">
+                <h3> Compartí tu foto chocolatosa en Instagram mencionando a @huarachocolate y accedé automáticamente a un 20% de descuento en tu próxima compra!</h3>
+                <br>
+                
+                </div>
+            </form>
+            <img src="/images/logo-figuras-2.png" alt="Huära Chocolates">
+
+            <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" style="font-style:italic; font-size: 10px; font-weight: lighter;">
+        </div>
+    </section>
+    <%- include('./partials/footer') %> 
+    
+</body>
+
+</html>
