@@ -62,6 +62,7 @@
     color: rgb(77, 77, 77);
     background-color: rgba(255, 255, 255, 0.5);
     padding: 5px;
+    border-radius: 5%;
 }
 
 .list-banner-2{
@@ -73,6 +74,7 @@
     color: rgb(77, 77, 77);
     background-color: rgba(255, 255, 255, 0.5);
     padding: 5px;
+    border-radius: 5%;
 }
 
 .list-banner:hover{
@@ -128,13 +130,13 @@
         top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 40px;
+        font-size: 32px;
         padding: 5px;
     }
     .list-banner-2{
         top: 70%;
         left: 50%;
-        font-size: 40px;
+        font-size: 32px;
         color: rgb(77, 77, 77);
         padding: 5px;
     }
@@ -202,7 +204,7 @@
         top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 60px;
+        font-size: 50px;
         padding: 15px;
     }
     
@@ -210,7 +212,7 @@
         position: absolute;
         top: 60%;
         left: 50%;
-        font-size: 60px;
+        font-size: 50px;
         padding: 15px;
     }
     /*img.expand {
