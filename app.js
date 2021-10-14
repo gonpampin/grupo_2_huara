@@ -20,6 +20,9 @@ app.listen(3000, () => {
     console.log('Servidor levantado en el puerto 3000')
 })
 
+/* POST
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 /* Routes 
 app.get('/', (req, res) => {

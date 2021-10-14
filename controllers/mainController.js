@@ -105,8 +105,8 @@ let controller = {
             contrasenia: req.body.contrasenia,
             birthday: req.body.birthday,
         }
-    }
-    */
+    }*/
+    
 }    
      
     
