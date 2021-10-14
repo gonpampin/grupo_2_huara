@@ -35,20 +35,15 @@ main{
     
 }
 
-.product{
+.product-box{
     margin-bottom: 10px;
     background-color: white;
     border-top: solid 2px #2222;
     padding-top: 20px;
     text-align: center;
+   
 }
 
-
-
-.product-box{
-         padding: 5px;
-    
-}
 
 section{
     width:90%;
@@ -85,31 +80,32 @@ section{
     padding: 20px;
 }
 
-p .precio{
-    display: none;
+.box-description{
+    margin-top: 20px;
+    
 }
-.produt-img:hover p .precio{
-    display: block;
-}
+
  
 
 @media(min-width: 768px){
-    .todos-productos{
-        display:flex;
+
+    article.product{
+        display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        width: 100%;
+        justify-content: center;
     }
-    .todos-productos article{
+    .product-box{
         width: 45%;
     }
 
+   
 
-  }
+
+
+}
 
 @media(min-width: 1200px){
-    .todos-productos article{
-        width: 22%;
-    }
     .logo{
         width: 200px;
     }
@@ -117,6 +113,14 @@ p .precio{
         font-size:40px;
         
     }
-    
+    article.product{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .product-box{
+        width: 22%;
+    }
 }
 
