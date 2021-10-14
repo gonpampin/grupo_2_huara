@@ -21,5 +21,6 @@
 
 * Repaso de entregables Sprint 3
 * División en equipo de carpetas USER-PRODUCT
+* Se creó la carpeta SRC: Se puso dentro las carpetas partials, products, users y app.js
 
 ***
