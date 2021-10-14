@@ -67,4 +67,21 @@
    }
 
    
-   
+   .cuadro1{
+       margin-top: 10px;
+       border:dotted rgb(114,141,117) 2px;
+       width:fit-content;
+       padding: 0px 15px;
+       box-sizing: border-box;
+       margin-bottom: 5px;
+       border-radius: 20px;
+   }
+
+   .cuadro2{
+    border:dotted rgb(114,141,117) 2px;
+    width:fit-content;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}

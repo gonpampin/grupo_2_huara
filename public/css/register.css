@@ -2,7 +2,7 @@
    color:rgb(114,141,117);
   text-align: center;
   width:100%;
-  background-color: white;
+  background-color: white  
 }
 
 .title-login{
@@ -68,3 +68,12 @@
       font-size: 15px;
    
   }
+
+  .cuadro{
+   border:dotted rgb(114,141,117) 2px;
+   width:fit-content;
+   padding: 10px 15px 10px 15px;
+   box-sizing: border-box;
+   border-radius: 20px;
+   margin-bottom: 15px;
+}
