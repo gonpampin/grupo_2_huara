@@ -18,4 +18,8 @@ router.get('/crearproducto', controller.formCreate);
 
 router.get('/editarproducto', controller.formEdit);
 
+router.post('/login', controller.home);
+
+router.post('/register', controller.home);
+
 module.exports = router;

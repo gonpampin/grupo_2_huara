@@ -95,7 +95,21 @@ let controller = {
 
     formEdit:(req, res) => {
         res.render('formEdit');
+    },
+
+    /*create:(req, res) => {
+        let usuario= {
+            name: req.body.name,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            contrasenia: req.body.contrasenia,
+            birthday: req.body.birthday,
+        }
     }
-}
+    */
+}    
+     
+    
+
 
 module.exports = controller; 
