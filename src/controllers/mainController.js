@@ -75,19 +75,19 @@ let controller = {
     },
 
     product:(req, res) => {
-        res.render('product', {productosLista});
+        res.render('./products/product', {productosLista});
     },
 
     login:(req, res) => {
-        res.render('login');
+        res.render('./users/login');
     },
 
     register:(req, res) => {
-        res.render('register');
+        res.render('./users/register');
     },
 
     productCart:(req, res) => {
-        res.render('productCart');
+        res.render('./products/productCart');
     },
 
     formCreate:(req, res) => {

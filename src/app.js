@@ -6,7 +6,7 @@ const path = require('path');
 const router = require('./routes/mainRoutes');
 
 /* Config public */
-app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 
 // view engine setup
