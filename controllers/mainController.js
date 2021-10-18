@@ -68,6 +68,7 @@ let productosLista = [
 ]
 
 
+
 let controller = {
     home: (req, res) => {
         res.render('home');
