@@ -32,10 +32,15 @@ ul {
 }
 
 .logo-header {
-
     display: flex;
-    width: 40%;
+    width: 50%;
+    margin-left: 10px;
 }
+.logo-header-img {
+    display: flex;
+    width: 70%;
+}
+
 
 .hamburger-header {
     font-size: 30px;
@@ -64,6 +69,11 @@ ul {
     .logo-header {
         display: flex;
         width: 40%;
+        margin-left: 10px;
+    }
+    .logo-header-img {
+        display: flex;
+        width: 70%;
     }
 
     .hamburger-header {
@@ -94,7 +104,12 @@ ul {
 
     .logo-header {
         display: flex;
-        width: 20%;
+        width: 15%;
+        margin-left: 10px;
+    }
+    .logo-header-img {
+        display: flex;
+        width: 100%;
     }
 
     .nav-bar-header {
