@@ -33,18 +33,54 @@
 }
 
 .button{
-   color: white;
-   background-color: rgb(114,141,117);
-   border-radius: 12px;
-   padding: 5px;
-   width: 200px;
-   border: solid 0.5px rgb(114,141,117);
-   font-family: nexa-light;
-   margin:10px;
+   margin: auto;
+   display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 45px;
+	font-size: 20px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+.button span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
 }
 
-.button:hover{
-   background-color: rgb(225, 168, 89);
+
+.button {
+	background: none;
+	color: rgb(114,141,117);
+}
+
+.button svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.button rect {
+	width: 100%;
+	height: 100%;
+	stroke: #000;
+	stroke-width: 5px;
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	transition: 2s ease all;
+}
+
+.button:hover rect {
+	stroke-dashoffset: 0;
 }
 
   .button2{

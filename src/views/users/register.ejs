@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %> 
+<%- include('../partials/head') %>
 
 <body>
-    <%- include('../partials/header') %> 
+    <%- include('../partials/header') %>
 
     <main class="login">
         <h2 class="title-login">Creá tu cuenta</h2>
@@ -13,40 +13,46 @@
                 <p class="title-login-2">Información personal</p>
             </div>
             <div class="formulario">
-            <form action="/register" method="POST">
-                <p class="campo">
-                <label for="name"class="label">Nombre</label>
-                <input type="text" name="name" id="name" class="input">
-                </p>
-                <p class="observation">* Campo obligatorio</p>
-                <p class="campo">
-                <label for="lastname" class="label">Apellido</label>
-                <input type="text" name="lastname" id="lastname"class="input">
-                </p>
-                <p class="observation">* Campo obligatorio</p>
-                <p>
-                <p class="campo">
-                <label for="email"class="label">Dirección de correo electrónico</label>
-                <input type="email" name="email" id="email" class="input" placeholder="ejemplo@gmail.com" style="font-style:italic; font-size: 12px">
-                </p>
-                <p class="observation">* Campo obligatorio</p>
-                <p class="campo">
-                <label for="password" class="label">Contraseña</label>
-                <input type="password" name="contrasenia" id="password"class="input" placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
-                </p>
-                <p class="observation">* Campo obligatorio</p>
-                <p>
-                <p class="campo">
-                <label for="birthday" class="label">Fecha de nacimiento</label>
-                <input type="date" name="birthday" id="birthday"class="input">
-                </p>
-                <button type="submit" class="button">GUARDAR</button>
-                </p>
-            </form>
+                <form action="/register" method="POST">
+                    <p class="campo">
+                        <label for="name" class="label">Nombre</label>
+                        <input type="text" name="name" id="name" class="input">
+                    </p>
+                    <p class="observation">* Campo obligatorio</p>
+                    <p class="campo">
+                        <label for="lastname" class="label">Apellido</label>
+                        <input type="text" name="lastname" id="lastname" class="input">
+                    </p>
+                    <p class="observation">* Campo obligatorio</p>
+                    <p>
+                        <p class="campo">
+                            <label for="email" class="label">Dirección de correo electrónico</label>
+                            <input type="email" name="email" id="email" class="input" placeholder="ejemplo@gmail.com"
+                                style="font-style:italic; font-size: 12px">
+                        </p>
+                        <p class="observation">* Campo obligatorio</p>
+                        <p class="campo">
+                            <label for="password" class="label">Contraseña</label>
+                            <input type="password" name="contrasenia" id="password" class="input"
+                                placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
+                        </p>
+                        <p class="observation">* Campo obligatorio</p>
+                        <p>
+                            <p class="campo">
+                                <label for="birthday" class="label">Fecha de nacimiento</label>
+                                <input type="date" name="birthday" id="birthday" class="input">
+                            </p>
+                            <br>
+                            <button type="submit" class="button"><span>Guardar</span>
+                                <svg>
+                                    <rect x="0" y="0" fill="none"></rect>
+                                </svg>
+                            </button>
+                        </p>
             </div>
         </section>
     </main>
     <%- include('../partials/footer') %>
 </body>
+
 </html>
-    
