@@ -11,4 +11,7 @@ router.get('/crearproducto', productController.formCreate);
 
 router.get('/editarproducto', productController.formEdit);
 
+router.get('/:id', productController.detail);
+
+
 module.exports = router

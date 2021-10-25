@@ -11,16 +11,25 @@ let productController = {
         res.render('./products/product', {productosLista});
     },
 
-   
 
     formCreate:(req, res) => {
-        res.render('formCreate');
+        res.render('./products/formCreate');
     },
 
     formEdit:(req, res) => {
-        res.render('formEdit');
+        res.render('./products/formEdit');
     }, 
+
+    detail: (req, res) => {
+        let id = req.params.id;
+        let productoDetalle = productosLista.find(product => {
+            return product.id == id;
+        })
+
+        res.render('products/productDetail', { products: productoDetalle });
+    }
     
+
 }    
 
 module.exports = productController; 
