@@ -14,20 +14,22 @@
             </div>
         </section>
         <section>
-            <p class="intro">Trufas, tabletitas y chocolates tipo Bariloche a elección. Podés elegir las dulzuras que más te gusten, creadas y elaboradas a mano en San Juan, con la mejor materia prima.</p>
+            <p class="intro">Tabletitas y chocolates tipo Bariloche a elección. Podés elegir las dulzuras que más te gusten, creadas y elaboradas a mano en San Juan, con la mejor materia prima.</p>
                 <div>  
                         <article class="product">
                             <% productosLista.forEach(element =>{ %>
                                 <div class= "product-box">
+                                    <a href="/productos/<%= element.id%>">
                                     <img src="/images/<%= element.image %>"    alt = <%= element.name %> class="product-img">
                                     <div class="box-description">
                                     <p class="detalle"><%= element.description %></p>
                                     <h4 class="descripcion"><%= element.name %></h4>
-                                    <i class="fas fa-shopping-bag"></i>
+                                    </a>         
                                     </div>
                                 </div> 
                             <% }) %>
                         </article>
+                        
                 </div>
         </section>
     </main>

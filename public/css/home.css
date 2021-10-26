@@ -25,6 +25,7 @@
 
 .banner-izquierda-1 img {
     width: 100%;
+    margin-top: -1px;
 }
 
 .banner-derecha-1{

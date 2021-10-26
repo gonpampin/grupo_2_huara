@@ -1,13 +1,4 @@
-.header {
-    height: 150px;
-    background-color: #666;
 
-}
-.footer {
-    height: 150px;
-    background-color: #666;
-
-}
 
 main{
     background-color: white;
@@ -82,7 +73,7 @@ section{
 
 .box-description{
     margin-top: 20px;
-    
+        
 }
 
  
@@ -97,6 +88,14 @@ section{
     }
     .product-box{
         width: 45%;
+    }
+
+    div .box-description{
+       
+        box-sizing:border-box;
+        padding: 5px;
+       
+        
     }
 
    

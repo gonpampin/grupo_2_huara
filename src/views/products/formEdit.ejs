@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head') %> 
+<%- include('../partials/head') %> 
 
 <body>
-    <%- include('./partials/header') %> 
+    <%- include('../partials/header') %> 
 
     <main class="login">
         <h2 class="title-login">Formulario de edición de productos</h2>
@@ -31,7 +31,6 @@
                 <label for="productCategory"class="label">Modifique categoría</label>
                 <select name="productCategory" class="label">
                     <option disabled selected>Seleccioná una opción</option>
-                    <option value="Trufas" class="input">Trufas</option>
                     <option value="Chocolates" class="input">Chocolates</option>
                     <option value="Tabletas" class="input">Tabletas</option>
                 </select>
@@ -50,6 +49,6 @@
             </div>
         </section>
     </main>
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 </body>
 </html>

@@ -54,15 +54,21 @@
         "image": "frutos-rojos.jpg"
     },
     {
-        "id": 10,
-        "name": "TRUFA NEGRA",
-        "description": "Chocolate con leche y café, bañada en chocolate semi amargo",
-        "image": "trufa-10.jpg"
+        "id": 12,
+        "name": "COOKIES N' CREAM",
+        "description": "Chocolate blanco con Oreos relleno de Nutella",
+        "image": "huevo1.png"
     },
     {
         "id": 11,
-        "name": "TRUFA BLANCA",
-        "description": "Chocolate blanco y maracuyá",
-        "image": "trufaa-6.jpg"
+        "name": "WHISKACHO",
+        "description": "Crema de chocolate belga y whisky, con nibs de cacao",
+        "image": "whisky.jpg"
+    },
+    {
+        "id": 13,
+        "name": "HUEVO TRUFADO DDL",
+        "description": "Mucho dulce de leche entre dos capas de chocolate con leche",
+        "image": "huevo2.png"
     }
 ]
