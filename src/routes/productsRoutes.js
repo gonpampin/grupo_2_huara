@@ -17,17 +17,22 @@ const storage = multer.diskStorage({
   
 const upload = multer({ storage })
 
+// Procesamiento de datos
+router.post('/crearproducto', upload.single('productImage'), productController.store);
+router.put('/editarproducto/:id', productController.editProduct);
+
+// Envío de vistas
 router.get('/', productController.product);
-
 router.get('/crearproducto', productController.formCreate);
-
-router.get('/editarproducto', productController.formEdit);
-
+router.get('/editarproducto/:id', productController.formEdit);
 router.get('/:id', productController.detail);
 
-router.post('/crearproducto', upload.single('productImage'), productController.store);
 
-router.put('/editarproducto/:id', productController.editProduct);
+
+
+
+
+
 
 
 module.exports = router

@@ -25,8 +25,11 @@ let productController = {
         res.render('./products/formCreate');
     },
 
-    formEdit:(req, res) => {
-        res.render('./products/formEdit');
+    formEdit: function (req, res) {
+        let productoEditar = productosLista.find(product => {
+            return product.id == req.params.id;
+        })
+        res.render('products/formEdit', { productEdit: productoEditar });
     }, 
 
     detail: (req, res) => {
@@ -40,6 +43,7 @@ let productController = {
 
     store: (req, res) => {
         let product = {
+            //corregir los campos del name del input para que coinicidan con los nombres de las propiedades del json
             id: nuevoId(),
             ...req.body,
             image: req.file.filename || 'default-image.png'
@@ -53,22 +57,21 @@ let productController = {
 
 
     },
-
     editProduct: (req,res) => {
         productosLista.forEach(product => {
             if (product.id == req.params.id) {
-                product.productName = req.body.productName;
-                product.productDescription = req.body.productDescription;
-                product.productCategory = req.body.productCategory;
-                product.productPrice = req.body.productPrice;
+                product.name = req.body.productName;
+                product.description = req.body.productDescription;
+                product.category = req.body.productCategory;
+                product.price = req.body.productPrice;
                 product.image = 'default-image.png';
             
-    }
+        }
 
         })
     let jsonDeProductos = JSON.stringify(productosLista, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
-        res.send('hola');
+        res.redirect('/')
         }
 }    
 

@@ -11,15 +11,15 @@
         <br>
         <section>
             <div class="formulario">
-                <form action="/productos/editarproducto<%= products.id %>?_method=PUT" method="POST">
+                <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST">
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
-                <input type="text" name="productName" id="productName" class="input" placeholder="Nombre del chocolate" style="font-style:italic; font-size: 12px">
+                <input type="text" name="productName" id="productName" class="input" placeholder="Nombre del chocolate" style="font-style:italic; font-size: 12px" value="<%= productEdit.name %>">
                 </p>
                 <br>
                 <p class="campo">
                 <label for="productDescription"class="label">Modifique descripción</label>
-                <input type="text" name="productDescription" id="productDescription" class="input" placeholder="Descripción" style="font-style:italic; font-size: 12px">
+                <input type="text" name="productDescription" id="productDescription" class="input" placeholder="Descripción" style="font-style:italic; font-size: 12px" value="<%= productEdit.description %>"     >
                 </p>
                 <br>
                 <p class="campo">
