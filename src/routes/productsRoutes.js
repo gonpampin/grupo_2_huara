@@ -25,8 +25,9 @@ router.get('/editarproducto', productController.formEdit);
 
 router.get('/:id', productController.detail);
 
+router.post('/crearproducto', upload.single('productImage'), productController.store);
 
-router.post('/crearproducto', upload.single('image'), productController.store);
+router.put('/editarproducto/:id', productController.editProduct);
 
 
 module.exports = router

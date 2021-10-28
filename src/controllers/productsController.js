@@ -6,7 +6,7 @@ let productosLista = JSON.parse(jsonProducts);
 
 const nuevoId = () => {
     let ultimo = 0;
-    products.forEach(product => {
+    productosLista.forEach(product => {
         if (product.id > ultimo) {
             ultimo = product.id;
         }
@@ -42,18 +42,34 @@ let productController = {
         let product = {
             id: nuevoId(),
             ...req.body,
-             image: req.file.filename || 'default-image.png',
+            image: req.file.filename || 'default-image.png'
         }
-        products.push(product);
+        productosLista.push(product);
 
-        let jsonDeProductos = JSON.stringify(products, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../db/products.json'), jsonDeProductos);
+        let jsonDeProductos = JSON.stringify(productosLista, null, 4);
+        fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
 
         res.redirect('/');
 
 
+    },
+
+    editProduct: (req,res) => {
+        productosLista.forEach(product => {
+            if (product.id == req.params.id) {
+                product.productName = req.body.productName;
+                product.productDescription = req.body.productDescription;
+                product.productCategory = req.body.productCategory;
+                product.productPrice = req.body.productPrice;
+                product.image = 'default-image.png';
+            
     }
 
+        })
+    let jsonDeProductos = JSON.stringify(productosLista, null, 4);
+        fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
+        res.send('hola');
+        }
 }    
 
 module.exports = productController; 

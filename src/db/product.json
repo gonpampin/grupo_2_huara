@@ -26,7 +26,7 @@
     {
         "id": 5,
         "name": "PISTACHO",
-        "description": "Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo",     
+        "description": "Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo",
         "image": "pistacho.jpg"
     },
     {
@@ -70,5 +70,30 @@
         "name": "HUEVO TRUFADO DDL",
         "description": "Mucho dulce de leche entre dos capas de chocolate con leche",
         "image": "huevo2.png"
+    },
+    {
+        "id": 14
+    },
+    {
+        "id": 15,
+        "productName": "",
+        "productDescription": "",
+        "productPrice": ""
+    },
+    {
+        "id": 16,
+        "productName": "ff",
+        "productDescription": "ff",
+        "productCategory": "Trufas",
+        "productPrice": "20",
+        "image": "product-1635457503717.jpg"
+    },
+    {
+        "id": 17,
+        "productName": "cc",
+        "productDescription": "cc",
+        "productCategory": "Chocolates",
+        "productPrice": "20",
+        "image": "product-1635457600159.jpg"
     }
 ]

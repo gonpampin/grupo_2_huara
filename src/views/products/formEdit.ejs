@@ -11,7 +11,7 @@
         <br>
         <section>
             <div class="formulario">
-            <form action="/login" method="POST">
+                <form action="/productos/editarproducto<%= products.id %>?_method=PUT" method="POST">
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
                 <input type="text" name="productName" id="productName" class="input" placeholder="Nombre del chocolate" style="font-style:italic; font-size: 12px">
