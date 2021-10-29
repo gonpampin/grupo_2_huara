@@ -69,9 +69,22 @@ let productController = {
         }
 
         })
-    let jsonDeProductos = JSON.stringify(productosLista, null, 4);
+        let jsonDeProductos = JSON.stringify(productosLista, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
-        res.send('capos')
+
+        res.redirect('/productos')
+
+        },
+        delete: (req, res) => {
+
+            let productosRestantes = products.filter(product => {
+                return product.id != req.params.id;
+            })
+    
+            let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
+            fs.writeFileSync(path.resolve(__dirname, '../db/products.json'), jsonDeProductos);
+    
+            res.redirect('/products');
         }
 }    
 

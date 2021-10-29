@@ -20,6 +20,7 @@ const upload = multer({ storage })
 // Procesamiento de datos
 router.post('/crearproducto', upload.single('productImage'), productController.store);
 router.put('/editarproducto/:id', productController.editProduct);
+router.delete('/:id', productController.delete);
 
 // Envío de vistas
 router.get('/', productController.product);

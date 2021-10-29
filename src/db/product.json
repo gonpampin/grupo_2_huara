@@ -85,12 +85,7 @@
         "productName": "ff",
         "productDescription": "ff",
         "productCategory": "Trufas",
-        "productPrice": "20",
-        "image": "default-image.png",
-        "name": "lola",
-        "description": "lola",
-        "category": "lola",
-        "price": "lola"
+        "productPrice": "20"
     },
     {
         "id": 17,
@@ -99,5 +94,16 @@
         "productCategory": "Chocolates",
         "productPrice": "20",
         "image": "product-1635457600159.jpg"
+    },
+    {
+        "id": 18,
+        "productName": "mentita",
+        "productDescription": "bla",
+        "productCategory": "Chocolates",
+        "productPrice": "100",
+        "image": "product-1635524760464.jpg"
+    },
+    {
+        "id": 19
     }
 ]
