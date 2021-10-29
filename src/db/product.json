@@ -86,7 +86,11 @@
         "productDescription": "ff",
         "productCategory": "Trufas",
         "productPrice": "20",
-        "image": "product-1635457503717.jpg"
+        "image": "default-image.png",
+        "name": "lola",
+        "description": "lola",
+        "category": "lola",
+        "price": "lola"
     },
     {
         "id": 17,

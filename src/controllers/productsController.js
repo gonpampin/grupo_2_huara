@@ -60,18 +60,18 @@ let productController = {
     editProduct: (req,res) => {
         productosLista.forEach(product => {
             if (product.id == req.params.id) {
-                product.name = req.body.productName;
-                product.description = req.body.productDescription;
-                product.category = req.body.productCategory;
-                product.price = req.body.productPrice;
-                product.image = 'default-image.png';
+                product.name = req.body.name;
+                product.description = req.body.description;
+                product.category = req.body.category;
+                product.price = req.body.price;
+                product.image = req.body.image;
             
         }
 
         })
     let jsonDeProductos = JSON.stringify(productosLista, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
-        res.redirect('/')
+        res.send('capos')
         }
 }    
 

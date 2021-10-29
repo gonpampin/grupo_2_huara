@@ -14,34 +14,34 @@
                 <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST">
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
-                <input type="text" name="productName" id="productName" class="input" placeholder="Nombre del chocolate" style="font-style:italic; font-size: 12px" value="<%= productEdit.name %>">
+                <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.name %>">
                 </p>
                 <br>
                 <p class="campo">
-                <label for="productDescription"class="label">Modifique descripción</label>
-                <input type="text" name="productDescription" id="productDescription" class="input" placeholder="Descripción" style="font-style:italic; font-size: 12px" value="<%= productEdit.description %>"     >
-                </p>
-                <br>
-                <p class="campo">
-                <label for="productImage" class="label">Modifique imagen</label>
-                <input type="file" name="productImage" id="productImage" class="input" placeholder="Seleccione la imagen" style="font-style:italic; font-size: 12px">
-                </p>
-                <br>
-                <p class="campo">
-                <label for="productCategory"class="label">Modifique categoría</label>
-                <select name="productCategory" class="label">
-                    <option disabled selected>Seleccioná una opción</option>
-                    <option value="Chocolates" class="input">Chocolates</option>
-                    <option value="Tabletas" class="input">Tabletas</option>
-                </select>
-                </p>
-                <br>
-                <p class="campo">
-                    <label for="productPrice" class="label">Modifique precio ARS $</label>
-                    <input type="number" name="productPrice" id="productPrice" class="input" placeholder="ARS $" step="0.01" style="font-style:italic; font-size: 12px">
+                    <label for="productDescription"class="label">Modifique descripción</label>
+                    <input type="text" name="description" id="productDescription" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.description %>"     >
                     </p>
-                <p>
-                <br>
+                    <br>
+                    <p class="campo">
+                    <label for="productImage" class="label">Modifique imagen</label>
+                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px">
+                    </p>
+                    <br>
+                    <p class="campo">
+                    <label for="productCategory"class="label">Modifique categoría</label>
+                    <select name="category" class="label">
+                        <option disabled selected>Seleccioná una opción</option>
+                        <option value="Chocolates" class="input">Chocolates</option>
+                        <option value="Tabletas" class="input">Tabletas</option>
+                    </select>
+                    </p>
+                    <br>
+                    <p class="campo">
+                        <label for="productPrice" class="label">Modifique precio ARS $</label>
+                        <input type="number" name="price" id="productPrice" class="input" step="0.01" style="font-style:italic; font-size: 12px">
+                        </p>
+                    <p>
+                    <br>
                 <button type="submit" class="button">MODIFICAR</button>
                 </p>
                 <a href="/crearproducto"><p class="observation">Borrar formulario</p></a>
