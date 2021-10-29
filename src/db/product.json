@@ -70,40 +70,5 @@
         "name": "HUEVO TRUFADO DDL",
         "description": "Mucho dulce de leche entre dos capas de chocolate con leche",
         "image": "huevo2.png"
-    },
-    {
-        "id": 14
-    },
-    {
-        "id": 15,
-        "productName": "",
-        "productDescription": "",
-        "productPrice": ""
-    },
-    {
-        "id": 16,
-        "productName": "ff",
-        "productDescription": "ff",
-        "productCategory": "Trufas",
-        "productPrice": "20"
-    },
-    {
-        "id": 17,
-        "productName": "cc",
-        "productDescription": "cc",
-        "productCategory": "Chocolates",
-        "productPrice": "20",
-        "image": "product-1635457600159.jpg"
-    },
-    {
-        "id": 18,
-        "productName": "mentita",
-        "productDescription": "bla",
-        "productCategory": "Chocolates",
-        "productPrice": "100",
-        "image": "product-1635524760464.jpg"
-    },
-    {
-        "id": 19
     }
 ]

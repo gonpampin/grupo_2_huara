@@ -77,14 +77,14 @@ let productController = {
         },
         delete: (req, res) => {
 
-            let productosRestantes = products.filter(product => {
+            let productosRestantes = productosLista.filter(product => {
                 return product.id != req.params.id;
             })
     
             let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
-            fs.writeFileSync(path.resolve(__dirname, '../db/products.json'), jsonDeProductos);
+            fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
     
-            res.redirect('/products');
+            res.redirect('/productos');
         }
 }    
 
