@@ -2,10 +2,11 @@
 @import url(/css/header.css);
 @import url(/css/footer.css);
 @import url(/css/product.css);
+@import url(/css/productDetail.css);
 @import url(/css/login.css);
 @import url(/css/carrito.css);
 @import url(/css/register.css);
-@import url(/css/productDetail.css);
+
 
 @font-face {
     font-family: nexa-bold;

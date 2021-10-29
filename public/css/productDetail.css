@@ -1,9 +1,8 @@
-main .cuerpo-detalle{
+.cuerpo-detalle{
     background-color: rosybrown;
 };
 
-p .detalle-producto-nombre{
+.detalle-producto-nombre{
     color:seagreen;
 }
-
 
