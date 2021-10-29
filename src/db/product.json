@@ -7,9 +7,10 @@
     },
     {
         "id": 2,
-        "name": "MARROC",
+        "name": "MARROCAAAAAAA",
         "description": "Chocolate con leche y chocolate blanco con pasta de maní",
-        "image": "marroc.jpg"
+        "image": "",
+        "price": ""
     },
     {
         "id": 3,

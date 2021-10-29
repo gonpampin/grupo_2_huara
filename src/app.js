@@ -13,6 +13,7 @@ const usersRouter = require('./routes/usersRoutes');
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 
 
