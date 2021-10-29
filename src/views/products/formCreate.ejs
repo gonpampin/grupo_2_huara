@@ -14,24 +14,23 @@
             <form action="/productos/crearproducto" method="POST" enctype= "multipart/form-data">
                 <p class="campo">
                 <label for="productName"class="label">Nombre de producto</label>
-                <input type="text" name="productName" id="productName" class="input" placeholder="Nombre del chocolate" style="font-style:italic; font-size: 12px">
+                <input type="text" name="name" id="productName" class="input" placeholder="Nombre del chocolate" style="font-style:italic; font-size: 12px">
                 </p>
                 <br>
                 <p class="campo">
                 <label for="productDescription"class="label">Descripción</label>
-                <input type="text" name="productDescription" id="productDescription" class="input" placeholder="Descripción" style="font-style:italic; font-size: 12px">
+                <input type="text" name="description" id="productDescription" class="input" placeholder="Descripción" style="font-style:italic; font-size: 12px">
                 </p>
                 <br>
                 <p class="campo">
                 <label for="productImage" class="label">Imagen</label>
-                <input type="file" name="productImage" id="productImage" class="input" placeholder="Seleccione la imagen" style="font-style:italic; font-size: 12px">
+                <input type="file" name="image" id="productImage" class="input" placeholder="Seleccione la imagen" style="font-style:italic; font-size: 12px">
                 </p>
                 <br>
                 <p class="campo">
                 <label for="productCategory"class="label">Categoría</label>
-                <select name="productCategory" class="label">
+                <select name="category" class="label">
                     <option disabled selected>Seleccioná una opción</option>
-                    <option value="Trufas" class="input">Trufas</option>
                     <option value="Chocolates" class="input">Chocolates</option>
                     <option value="Tabletas" class="input">Tabletas</option>
                 </select>
@@ -39,7 +38,7 @@
                 <br>
                 <p class="campo">
                     <label for="productPrice" class="label">Precio ARS $</label>
-                    <input type="number" name="productPrice" id="productPrice" class="input" placeholder="ARS $" step="0.01" style="font-style:italic; font-size: 12px">
+                    <input type="number" name="price" id="productPrice" class="input" placeholder="ARS $" step="0.01" style="font-style:italic; font-size: 12px">
                     </p>
                 <p>
                 <br>
