@@ -1,8 +1,14 @@
 .cuerpo-detalle{
-    background-color: rosybrown;
+    background-color: white;
 };
 
-.detalle-producto-nombre{
-    color:seagreen;
-}
+p.detalle-producto-box{
+    display: flex;
+    flex-direction: row;
+};
 
+.eliminar-boton{
+    height: 54px;
+    padding: 0;
+    align-items: center;
+}

@@ -8,24 +8,22 @@
     <%- include('../partials/header') %> 
 
     <main class="cuerpo-detalle">
-        <section>
-            <p class="detalle-producto-nombre"><%= products.name %></p>
-            <br>
-                <div>  
-                        <article class="product">
-                                <div class= "product-box">
-                                    <img src="/images/products/<%= products.image %>"    alt = <%= products.name %> class="product-img">
-                                    <div class="box-description">
-                                    <p class="detalle"><%= products.description %></p>
+        <section>  
+                <article>
+                    <div class="detalle-producto-box">
+                            <p><%= products.name%></p>
+                                    <img src="/images/products/<%= products.image %>"    alt = <%= products.name %> class= "imagen-detalle">
+                                    <div>
+                                    <p><%= products.description %></p>
                                     <i class="fas fa-shopping-bag"></i>
                                     </div>
                                 </div>
                                 
                                 <a href="/productos/editarproducto/<%= products.id  %>">EDITAR PRODUCTO</a>
 						<form action="/productos/<%= products.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
+							<button type="submit" class="eliminar-boton">ELIMINAR</button>
 						</form>
-
+                    </div>
                         </article>
                 </div>
         </section>
