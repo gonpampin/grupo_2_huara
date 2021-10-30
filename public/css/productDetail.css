@@ -2,13 +2,18 @@
     background-color: white;
 };
 
-p.detalle-producto-box{
+.detalle-producto-box{
     display: flex;
     flex-direction: row;
 };
 
-.eliminar-boton{
+main section article div p#eliminar-boton{
     height: 54px;
     padding: 0;
     align-items: center;
+    background-color: red;
+}
+
+a.editar{
+    color: red;
 }
