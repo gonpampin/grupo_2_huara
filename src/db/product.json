@@ -1,18 +1,17 @@
 [
     {
         "id": 1,
-        "name": "TABLETA FRAMBUESAS",
-        "description": "Chocolate semi amargo con frambuesas",
-        "image": "frambuesa.jpg"
-    },
-    
-    {
-        "id": 2,
         "name": "MARROC",
         "description": "Chocolate con leche y chocolate blanco con pasta de maní",
         "image": "marroc.jpg",
         "price": "20",
         "category": "Chocolates"
+    },
+    {
+        "id": 2,
+        "name": "BORRACHITO",
+        "description": "Chocolate semi amargo con crema de ciruelas al Malbec con dulce de leche",
+        "image": "borrachito.jpg"
     },
     {
         "id": 3,
@@ -40,9 +39,9 @@
     },
     {
         "id": 7,
-        "name": "BORRACHITO",
-        "description": "Chocolate semi amargo con crema de ciruelas al Malbec con dulce de leche",
-        "image": "borrachito.jpg"
+        "name": "TABLETA FRAMBUESAS",
+        "description": "Chocolate semi amargo con frambuesas",
+        "image": "frambuesa.jpg"
     },
     {
         "id": 8,

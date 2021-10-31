@@ -10,22 +10,35 @@
     <main class="cuerpo-detalle">
         <section>  
                 <article>
-                    <div>
-                            <p><%= products.name%></p>
-                                    <img src="/images/products/<%= products.image %>"    alt = <%= products.name %> class= "imagen-detalle">
-                                    <div>
-                                    <p ><%= products.description %></p>
-                                    <i class="fas fa-shopping-bag"></i>
-                                    </div>
-                                </div>
-                                
-                                <a class="editar" href="/productos/editarproducto/<%= products.id  %>">EDITAR PRODUCTO</a>
-						<form action="/productos/<%= products.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit">ELIMINAR</button>
-						</form>
+                    <div class="detail-group">
+                            
+                        <img src="/images/products/<%= products.image %>"    alt = <%= products.name %> class= "imagen-detalle">
+
+                    <div class="detail-otro">
+                        
+                        <p class="detail-product-name"><%= products.name%></p>
+                        <div class="detail-edit">
+                            <a class="detail-editar" href="/productos/editarproducto/<%= products.id  %>">EDITAR PRODUCTO</a>
+                                <form action="/productos/<%= products.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button class="detail-eliminar" type="submit">ELIMINAR</button>
+                                </form>
+                            </div>
+                        <p class="detail-description"><%= products.description %></p>
+                        <div class="detail-numbers">
+                        <p class="detail-presentacion">100 gramos</p>
+                        <p class="detail-price">$550</p>
+                        </div>
+                        <div class="shopping"><i class="fas fa-shopping-bag bolsita"></i></div>
+                        <br>
+                        
                     </div>
-                        </article>
-                </div>
+
+                     </div>
+                                
+                            
+                    
+                </article>
+                
         </section>
     </main>
 
