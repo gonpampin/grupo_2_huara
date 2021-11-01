@@ -27,6 +27,8 @@
 
 # Weekly - Sprint 4 #
 
+* Para este Sprint, se tomo la decisión de codear todos juntos para el punto 3 del sprint "CRUD de productos"
+
 ## *Lunes 19 de octubre de 2021* ##
 ## *18:00hs a 18:50hs* ##
 
