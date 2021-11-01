@@ -44,14 +44,14 @@
 ***
 
 ## *Lunes 25 de octubre de 2021* ##
-## *18:00hs a 18:50hs* ##
+## *18:00hs a 19:10hs* ##
 
 * Coding en equipo. Se termino de configurar las rutas /products​ (GET) y /products/create​ (GET)
 
 ***
 
 ## *Martes 26 de octubre de 2021* ##
-## *18:00hs a 18:50hs* ##
+## *18:00hs a 20:00hs* ##
 
 * Coding en equipo. Se termino de configurar las rutas /products/​:id​ ​(GET) y /products​ (POST)
 
@@ -71,3 +71,8 @@
 * Coding en equipo. Se termino de configurar las rutas /products/​:id​ (PUT) y /products/​:id​ (DELETE)
 
 ***
+
+## *Lunes 01 de noviembre de 2021* ##
+## *18:15 a 19:00hs* ##
+
+* Checklist de entregables. Agregamos nuevas vistas en header y footer.

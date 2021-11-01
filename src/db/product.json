@@ -4,73 +4,95 @@
         "name": "MARROC",
         "description": "Chocolate con leche y chocolate blanco con pasta de maní",
         "image": "marroc.jpg",
-        "price": "20",
+        "price": "550",
         "category": "Chocolates"
     },
     {
         "id": 2,
         "name": "BORRACHITO",
         "description": "Chocolate semi amargo con crema de ciruelas al Malbec con dulce de leche",
-        "image": "borrachito.jpg"
+        "image": "borrachito.jpg",
+        "price": "550",
+        "category": "Chocolates"
     },
     {
         "id": 3,
         "name": "DULCE DE LECHE CON NUEZ",
         "description": "Pasta de dulce de leche y nueces, entre una capa de chocolate con leche y una capa de chocolate blanco",
-        "image": "nuez-ddl-blanco.jpg"
+        "image": "nuez-ddl-blanco.jpg",
+        "price": "550",
+        "category": "Chocolates"
     },
     {
         "id": 4,
         "name": "TABLETA ALMENDRA",
         "description": "Chocolate amargo 70% cacao con naranja, jengibre y almendras",
-        "image": "almendra.jpg"
+        "image": "almendra.jpg",
+        "price": "550",
+        "category": "Chocolates"
     },
     {
         "id": 5,
         "name": "PISTACHO",
         "description": "Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo",
-        "image": "pistacho.jpg"
+        "image": "pistacho.jpg",
+        "price": "550",
+        "category": "Chocolates"
     },
     {
         "id": 6,
         "name": "AVELLANAS",
         "description": "Chocolate amargo con crema de licor de naranja y avellanas tostadas",
-        "image": "avellanas2.jpg"
+        "image": "avellanas2.jpg",
+        "price": "550",
+        "category": "Chocolates"
     },
     {
         "id": 7,
         "name": "TABLETA FRAMBUESAS",
         "description": "Chocolate semi amargo con frambuesas",
-        "image": "frambuesa.jpg"
+        "image": "frambuesa.jpg",
+        "price": "550",
+        "category": "Tabletas"
     },
     {
         "id": 8,
         "name": "TABLETA FRAMBUESAS CHOCO BLANCO",
         "description": "Chocolate blanco con frambuesas y nibs de cacao",
-        "image": "frambuesa-blanco.jpg"
+        "image": "frambuesa-blanco.jpg",
+        "price": "550",
+        "category": "Tabletas"
     },
     {
         "id": 9,
         "name": "FRUTOS ROJOS",
         "description": "Crema de chocolate semi amargo y frutos rojos, entre una capa de chocolate amargo y una de chocolate blanco",
-        "image": "frutos-rojos.jpg"
+        "image": "frutos-rojos.jpg",
+        "price": "550",
+        "category": "Chocolates"
     },
     {
         "id": 12,
         "name": "COOKIES N' CREAM",
         "description": "Chocolate blanco con Oreos relleno de Nutella",
-        "image": "huevo1.png"
+        "image": "huevo1.png",
+        "price": "550",
+        "category": "Chocolates"
     },
     {
         "id": 11,
         "name": "WHISKACHO",
         "description": "Crema de chocolate belga y whisky, con nibs de cacao",
-        "image": "whisky.jpg"
+        "image": "whisky.jpg",
+        "price": "550",
+        "category": "Chocolates"
     },
     {
         "id": 13,
         "name": "HUEVO TRUFADO DDL",
         "description": "Mucho dulce de leche entre dos capas de chocolate con leche",
-        "image": "huevo2.png"
+        "image": "huevo2.png",
+        "price": "550",
+        "category": "Chocolates"
     }
 ]

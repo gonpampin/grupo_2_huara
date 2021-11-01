@@ -24,7 +24,7 @@
                     <br>
                     <p class="campo">
                     <label for="productImage" class="label">Modifique imagen</label>
-                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px">
+                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" value="../public/images/products/<%= productEdit.image %>">
                     </p>
                     <br>
                     <p class="campo">
@@ -38,7 +38,7 @@
                     <br>
                     <p class="campo">
                         <label for="productPrice" class="label">Modifique precio ARS $</label>
-                        <input type="number" name="price" id="productPrice" class="input" step="0.01" style="font-style:italic; font-size: 12px">
+                        <input type="number" name="price" id="productPrice" class="input" step="0.01" style="font-style:italic; font-size: 12px" value="<%= productEdit.price %>">
                         </p>
                     <p>
                     <br>
