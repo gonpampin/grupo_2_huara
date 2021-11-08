@@ -13,30 +13,99 @@
                 <p class="title-login-2">Información personal</p>
             </div>
             <div class="formulario">
-                <form action="/register" method="POST">
+                <form action="/usuarios/registro" method="POST">
                     <p class="campo">
                         <label for="name" class="label">Nombre</label>
-                        <input type="text" name="name" id="name" class="input">
+                        <input 
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        class="input"
+                        value="<%= locals.oldData ? oldData.name : null %>"
+                        >
                     </p>
-                    <p class="observation">* Campo obligatorio</p>
+
+
+                    <span style="color: red; font-size: 10px; font-style:italic">
+                        <% if (locals.errors && errors.name) { %>  
+                            <%= errors.name.msg %> 
+                        <% } %>
+                    </span>
+
+
+
+
                     <p class="campo">
                         <label for="lastname" class="label">Apellido</label>
-                        <input type="text" name="lastname" id="lastname" class="input">
+                        <input 
+                        type="text" 
+                        name="lastname" 
+                        id="lastname" 
+                        class="input"
+                        value="<%= locals.oldData ? oldData.lastname : null %>"
+                        >
                     </p>
-                    <p class="observation">* Campo obligatorio</p>
+
+
+                    <span style="color: red; font-size: 10px; font-style:italic">
+                        <% if (locals.errors && errors.lastname) { %>  
+                            <%= errors.lastname.msg %> 
+                        <% } %>
+                    </span>
+
+
                     <p>
                         <p class="campo">
                             <label for="email" class="label">Dirección de correo electrónico</label>
-                            <input type="email" name="email" id="email" class="input" placeholder="ejemplo@gmail.com"
-                                style="font-style:italic; font-size: 12px">
+                            <input 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            class="input" 
+                            placeholder="ejemplo@gmail.com"
+                            style="font-style:italic; font-size: 12px"
+                            value="<%= locals.oldData ? oldData.email : null %>"
+                            >
                         </p>
-                        <p class="observation">* Campo obligatorio</p>
+
+
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.email) { %>  
+                                <%= errors.email.msg %> 
+                            <% } %>
+                        </span>
+
+
                         <p class="campo">
                             <label for="password" class="label">Contraseña</label>
                             <input type="password" name="contrasenia" id="password" class="input"
                                 placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
                         </p>
-                        <p class="observation">* Campo obligatorio</p>
+
+
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.contrasenia) { %>  
+                                <%= errors.contrasenia.msg %> 
+                            <% } %>
+                        </span>
+
+
+                        <p class="campo">
+                            <label for="password" class="label">Reingrese la contraseña</label>
+                            <input type="password" name="recontrasenia" id="password" class="input"
+                                placeholder="Reingresá tu contraseña" style="font-style:italic; font-size: 12px">
+                        </p>
+
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.recontrasenia) { %>  
+                                <%= errors.recontrasenia.msg %> 
+                            <% } %>
+                        </span>
+
+
+                        
+
+
                         <p>
                             <p class="campo">
                                 <label for="birthday" class="label">Fecha de nacimiento</label>

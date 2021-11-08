@@ -76,3 +76,14 @@
 ## *18:15 a 19:00hs* ##
 
 * Checklist de entregables. Agregamos nuevas vistas en header y footer.
+
+
+# Weekly - Sprint 5 #
+
+## *Lunes 08 de Noviembre de 2021* ##
+## *18:00 a 19:00hs* ##
+
+* Coding en equipo. Se comenzó con el coding de las validaciones
+
+***
+
