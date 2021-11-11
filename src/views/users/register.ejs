@@ -78,18 +78,17 @@
                         <p class="campo">
                             <label class="label">Ingresá imagen de perfil</label>
                             <input
-                             type="file" 
-                             name="avatar" 
-                             accept="image/*" 
+                             type="file"
+                             name="avatar"
+                             accept="image/*"
                              class="input"
                              >
                         </p>
                         <span style="color: red; font-size: 10px; font-style:italic">
                             <% if (locals.errors && errors.avatar) { %>  
-                                <%= errors.avatar.msg %> 
+                                <%= errors.avatar.msg %>
                             <% } %>
                         </span>
-
                         <br>
                         <p class="campo">
                             <label for="password" class="label">Contraseña</label>
@@ -128,7 +127,9 @@
                             </p>
                             <br>
                             <button type="submit" class="button"><span>Guardar</span>
-                            
+                                <svg>
+                                    <rect x="0" y="0" fill="none"></rect>
+                                </svg>
                             </button>
                         </p>
             </div>
