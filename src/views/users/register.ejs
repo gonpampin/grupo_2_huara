@@ -33,7 +33,7 @@
                     </span>
 
 
-
+                    <br>
 
                     <p class="campo">
                         <label for="lastname" class="label">Apellido</label>
@@ -53,7 +53,7 @@
                         <% } %>
                     </span>
 
-
+                    <br>
                     <p>
                         <p class="campo">
                             <label for="email" class="label">Dirección de correo electrónico</label>
@@ -74,8 +74,12 @@
                                 <%= errors.email.msg %> 
                             <% } %>
                         </span>
-
-
+                        <br>
+                        <p class="campo">
+                            <label class="label">Ingresá imagen de perfil</label>
+                            <input type="file" name="avatar" accept="image/*" class="input">
+                        </p>
+                        <br>
                         <p class="campo">
                             <label for="password" class="label">Contraseña</label>
                             <input type="password" name="contrasenia" id="password" class="input"
@@ -89,9 +93,9 @@
                             <% } %>
                         </span>
 
-
+                        <br>
                         <p class="campo">
-                            <label for="password" class="label">Reingrese la contraseña</label>
+                            <label for="password" class="label">Reingresá la contraseña</label>
                             <input type="password" name="recontrasenia" id="password" class="input"
                                 placeholder="Reingresá tu contraseña" style="font-style:italic; font-size: 12px">
                         </p>
@@ -105,7 +109,7 @@
 
                         
 
-
+                        <br>
                         <p>
                             <p class="campo">
                                 <label for="birthday" class="label">Fecha de nacimiento</label>
@@ -113,9 +117,7 @@
                             </p>
                             <br>
                             <button type="submit" class="button"><span>Guardar</span>
-                                <svg>
-                                    <rect x="0" y="0" fill="none"></rect>
-                                </svg>
+                            
                             </button>
                         </p>
             </div>
@@ -125,3 +127,4 @@
 </body>
 
 </html>
+

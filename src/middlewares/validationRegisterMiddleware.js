@@ -11,11 +11,14 @@ const validations = [
           throw new Error('Las contraseñas deben coincidir');
         }
         return true;
-      }).bail()
-
-
-
-
+      }).bail(),
+    body('avatar').custom((value, { req }) =>{
+      let file = req.file;
+      if(!file){
+        throw new Error ('Tenés que cargar un archivo de imagen')}
+        return true;
+      })
+    
 
 ]
 
