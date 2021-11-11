@@ -15,15 +15,14 @@ const validations = [
     body('avatar').custom((value, { req }) =>{
       let file = req.file;
       let acceptedExtensions = ['.jpg', '.png', '.gif'];
-      let fileExtension = path.extname(file.originalname)
 
       if(!file){
         throw new Error ('Tenés que cargar un archivo de imagen')
       } else{
+        let fileExtension = path.extname(file.originalname)
         if (!acceptedExtensions.includes(fileExtension)){
           throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(',')}`);
       }
-
         }
         return true;
       })
