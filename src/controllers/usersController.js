@@ -23,9 +23,8 @@ let userController = {
         if (resultValidation.errors.length > 0) {
             return res.render('./users/register', {
                 errors: resultValidation.mapped(), 
-                oldData: req.body,
-                oldFile: req.file
-            });
+                oldData: req.body
+             });
         }
         return res.send('Ok, te registraste');
     } 
