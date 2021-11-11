@@ -13,7 +13,7 @@
                 <p class="title-login-2">Información personal</p>
             </div>
             <div class="formulario">
-                <form action="/usuarios/registro" method="POST">
+                <form action="/usuarios/registro" method="POST" enctype="multipart/form-data">
                     <p class="campo">
                         <label for="name" class="label">Nombre</label>
                         <input 
@@ -77,8 +77,20 @@
                         <br>
                         <p class="campo">
                             <label class="label">Ingresá imagen de perfil</label>
-                            <input type="file" name="avatar" accept="image/*" class="input">
+                            <input
+                             type="file" 
+                             name="avatar" 
+                             accept="image/*" 
+                             class="input"
+                             value="<%= locals.oldFile ? oldFile.avatar : null %>"
+                             >
                         </p>
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.avatar) { %>  
+                                <%= errors.avatar.msg %> 
+                            <% } %>
+                        </span>
+
                         <br>
                         <p class="campo">
                             <label for="password" class="label">Contraseña</label>

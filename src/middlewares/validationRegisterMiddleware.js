@@ -1,4 +1,4 @@
-
+const path = require('path');
 const { body } = require('express-validator')
 
 const validations = [
@@ -14,8 +14,17 @@ const validations = [
       }).bail(),
     body('avatar').custom((value, { req }) =>{
       let file = req.file;
+      let acceptedExtensions = ['.jpg', '.png', '.gif'];
+      let fileExtension = path.extname(file.originalname)
+
       if(!file){
-        throw new Error ('Tenés que cargar un archivo de imagen')}
+        throw new Error ('Tenés que cargar un archivo de imagen')
+      } else{
+        if (!acceptedExtensions.includes(fileExtension)){
+          throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(',')}`);
+      }
+
+        }
         return true;
       })
     
