@@ -1,82 +1,112 @@
-[{
-    "id": 1,
-    "first_name": "Marcel",
-    "last_name": "Mathivat",
-    "email": "mmathivat0@tumblr.com",
-    "password": "wkYQK67zGMJs",
-    "category": null,
-    "image": "https://robohash.org/abquasialias.png?size=50x50&set=set1"
-  }, {
-    "id": 2,
-    "first_name": "Rochell",
-    "last_name": "Brundrett",
-    "email": "rbrundrett1@google.de",
-    "password": "pswFwArJTK",
-    "category": null,
-    "image": "https://robohash.org/doloremestnam.png?size=50x50&set=set1"
-  }, {
-    "id": 3,
-    "first_name": "Tresa",
-    "last_name": "Saintsbury",
-    "email": "tsaintsbury2@sfgate.com",
-    "password": "7PKLLkyJsosh",
-    "category": null,
-    "image": "https://robohash.org/fugarerumpossimus.png?size=50x50&set=set1"
-  }, {
-    "id": 4,
-    "first_name": "Shadow",
-    "last_name": "George",
-    "email": "sgeorge3@nih.gov",
-    "password": "CFu6lqgkUN3",
-    "category": null,
-    "image": "https://robohash.org/deseruntevenietnemo.png?size=50x50&set=set1"
-  }, {
-    "id": 5,
-    "first_name": "Barbra",
-    "last_name": "Lillo",
-    "email": "blillo4@samsung.com",
-    "password": "0xv5Pr7",
-    "category": null,
-    "image": "https://robohash.org/itaquesitquis.png?size=50x50&set=set1"
-  }, {
-    "id": 6,
-    "first_name": "Elenore",
-    "last_name": "Rountree",
-    "email": "erountree5@google.it",
-    "password": "0D0Zwaks87",
-    "category": null,
-    "image": "https://robohash.org/sitdoloresut.png?size=50x50&set=set1"
-  }, {
-    "id": 7,
-    "first_name": "Woodrow",
-    "last_name": "Francillo",
-    "email": "wfrancillo6@ning.com",
-    "password": "JBRgGPw3R",
-    "category": null,
-    "image": "https://robohash.org/autemquiomnis.png?size=50x50&set=set1"
-  }, {
-    "id": 8,
-    "first_name": "Alina",
-    "last_name": "Saltwell",
-    "email": "asaltwell7@google.ru",
-    "password": "dQWoDrj87",
-    "category": null,
-    "image": "https://robohash.org/utlaboriosamqui.png?size=50x50&set=set1"
-  }, {
-    "id": 9,
-    "first_name": "Lanny",
-    "last_name": "Winscom",
-    "email": "lwinscom8@com.com",
-    "password": "7gccNtM91Teh",
-    "category": null,
-    "image": "https://robohash.org/nesciuntdignissimosvelit.png?size=50x50&set=set1"
-  }, {
-    "id": 10,
-    "first_name": "Nannie",
-    "last_name": "Doley",
-    "email": "ndoley9@reuters.com",
-    "password": "E6wJz4SOem",
-    "category": null,
-    "image": "https://robohash.org/absapienteut.png?size=50x50&set=set1"
-  }]
-  
+[
+ {
+  "id": 1,
+  "first_name": "Marcel",
+  "last_name": "Mathivat",
+  "email": "mmathivat0@tumblr.com",
+  "password": "wkYQK67zGMJs",
+  "category": null,
+  "image": "https://robohash.org/abquasialias.png?size=50x50&set=set1"
+ },
+ {
+  "id": 2,
+  "first_name": "Rochell",
+  "last_name": "Brundrett",
+  "email": "rbrundrett1@google.de",
+  "password": "pswFwArJTK",
+  "category": null,
+  "image": "https://robohash.org/doloremestnam.png?size=50x50&set=set1"
+ },
+ {
+  "id": 3,
+  "first_name": "Tresa",
+  "last_name": "Saintsbury",
+  "email": "tsaintsbury2@sfgate.com",
+  "password": "7PKLLkyJsosh",
+  "category": null,
+  "image": "https://robohash.org/fugarerumpossimus.png?size=50x50&set=set1"
+ },
+ {
+  "id": 4,
+  "first_name": "Shadow",
+  "last_name": "George",
+  "email": "sgeorge3@nih.gov",
+  "password": "CFu6lqgkUN3",
+  "category": null,
+  "image": "https://robohash.org/deseruntevenietnemo.png?size=50x50&set=set1"
+ },
+ {
+  "id": 5,
+  "first_name": "Barbra",
+  "last_name": "Lillo",
+  "email": "blillo4@samsung.com",
+  "password": "0xv5Pr7",
+  "category": null,
+  "image": "https://robohash.org/itaquesitquis.png?size=50x50&set=set1"
+ },
+ {
+  "id": 6,
+  "first_name": "Elenore",
+  "last_name": "Rountree",
+  "email": "erountree5@google.it",
+  "password": "0D0Zwaks87",
+  "category": null,
+  "image": "https://robohash.org/sitdoloresut.png?size=50x50&set=set1"
+ },
+ {
+  "id": 7,
+  "first_name": "Woodrow",
+  "last_name": "Francillo",
+  "email": "wfrancillo6@ning.com",
+  "password": "JBRgGPw3R",
+  "category": null,
+  "image": "https://robohash.org/autemquiomnis.png?size=50x50&set=set1"
+ },
+ {
+  "id": 8,
+  "first_name": "Alina",
+  "last_name": "Saltwell",
+  "email": "asaltwell7@google.ru",
+  "password": "dQWoDrj87",
+  "category": null,
+  "image": "https://robohash.org/utlaboriosamqui.png?size=50x50&set=set1"
+ },
+ {
+  "id": 9,
+  "first_name": "Lanny",
+  "last_name": "Winscom",
+  "email": "lwinscom8@com.com",
+  "password": "7gccNtM91Teh",
+  "category": null,
+  "image": "https://robohash.org/nesciuntdignissimosvelit.png?size=50x50&set=set1"
+ },
+ {
+  "id": 10,
+  "first_name": "Nannie",
+  "last_name": "Doley",
+  "email": "ndoley9@reuters.com",
+  "password": "E6wJz4SOem",
+  "category": null,
+  "image": "https://robohash.org/absapienteut.png?size=50x50&set=set1"
+ },
+ {
+  "id": 11,
+  "name": "Gonzalo",
+  "lastname": "Pampin",
+  "email": "gonpampin@gmail.com",
+  "contrasenia": "$2a$10$cy33ZQc/NNNLzDHDvUjT1e2koFSk66ZBm7lCrW84I5CJKCP2E2n2G",
+  "recontrasenia": "1234567890",
+  "birthday": "1940-01-01",
+  "avatar": "user-1637012626914_img.png"
+ },
+ {
+  "id": 13,
+  "name": "Gonzalo",
+  "lastname": "Pampin",
+  "email": "gonpampin@gmail.com",
+  "contrasenia": "$2a$10$Gvsw4ErhJ0UXsc3tpJas9e3h6k9Yj347/nkm.yF7G4Hp1xRPJCfka",
+  "recontrasenia": "$2a$10$aWCcJ6ydPaTc8d5Vc6GhJehWeAryWINdYjLIWMw02/y21/k85R6O.",
+  "birthday": "1940-01-01",
+  "avatar": "user-1637012883140_img.png"
+ }
+]
