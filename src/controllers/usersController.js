@@ -45,11 +45,51 @@ let userController = {
 
 		let userCreated = User.create(userToCreate);
 
-		return res.redirect('/usuarios/login');
-	}
-        
-    } 
+		return res.redirect('./usuarios/login');
+	},
+    loginProcess: (req, res) => {
+		let userToLogin = User.findByField('email', req.body.email);
+		
+		if(userToLogin) {
+			let isOkThePassword = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
+			if (isOkThePassword) {
+				delete userToLogin.contrasenia;
+				req.session.userLogged = userToLogin;
 
+				if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+
+				return res.redirect('/usuarios/perfil');
+			} 
+			return res.render('../views/users/login', {
+				errors: {
+					email: {
+						msg: 'Las credenciales son inválidas'
+					}
+				}
+			});
+		}
+
+		return res.render('../views/users/login', {
+			errors: {
+				email: {
+					msg: 'No se encuentra este email en nuestra base de datos'
+				}
+			}
+		});
+	},
+    profile: (req, res) => {
+		return res.render('../views/users/profile', {
+			user: req.session.userLogged
+		});
+	},
+    logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
+}
 
 
 module.exports = userController; 

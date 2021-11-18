@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require ('method-override');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
 
 //config put y delete
 app.use(methodOverride('_method'));
@@ -16,6 +19,14 @@ app.use(express.json())
 //config template
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(session({
+	secret: "Secreto chocolatoso",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
 
 //config rutas
 const mainRouter = require('./routes/mainRoutes');

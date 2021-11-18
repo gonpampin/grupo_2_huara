@@ -18,6 +18,8 @@ router.post('/registro', uploadFile.single('avatar'), validations, controller.pr
 
 //Ruta que muestra la vista del login
 router.get('/login', controller.login);
-
+router.post('/login',controller.loginProcess);
+router.get('/perfil', controller.profile);
+router.get('/logout', controller.logout);
 
 module.exports = router
