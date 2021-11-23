@@ -8,9 +8,17 @@
             <li ><i class="fas fa-home"> </i><a  href="/">    Home</a></li>
             <li><i class="fas fa-box"> </i><a href="/productos">   Productos</a></li>
             <li><i class="fas fa-shopping-bag"></i> <a href="/carrito">   Carrito</a></li>
+            <% if (locals.isLogged) { %> 
+            <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/perfil">
+                <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+                Hi <%= locals.userLogged.name %> 
+             </a></li> 
+             <% } else { %>
             <li><i class="fas fa-door-open"></i> <a href="/usuarios/login">   Login</a></li>
             <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/registro">   Registrate</a></li> 
+            <% } %>
             <li><i class="fas fa-box"> </i><a href="/productos/crearproducto">   Crear producto</a></li>    
+            
         </ul>
     </div>
 </header>

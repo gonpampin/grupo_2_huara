@@ -56,7 +56,7 @@ let userController = {
 				delete userToLogin.contrasenia;
 				req.session.userLogged = userToLogin;
 
-				if(req.body.remember_user) {
+				if(req.body.recordarUsuario) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
