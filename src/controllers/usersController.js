@@ -45,7 +45,7 @@ let userController = {
 
 		let userCreated = User.create(userToCreate);
 
-		return res.redirect('./usuarios/login');
+		return res.redirect('/usuarios/login');
 	},
     loginProcess: (req, res) => {
 		let userToLogin = User.findByField('email', req.body.email);

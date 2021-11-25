@@ -108,5 +108,45 @@
   "recontrasenia": "$2a$10$aWCcJ6ydPaTc8d5Vc6GhJehWeAryWINdYjLIWMw02/y21/k85R6O.",
   "birthday": "1940-01-01",
   "avatar": "user-1637012883140_img.png"
+ },
+ {
+  "id": 14,
+  "name": "Juan",
+  "lastname": "Pedro",
+  "email": "juan@gmail.com",
+  "contrasenia": "$2a$10$IkWYNSUHL2tLL/oYoWu1x.OUhFVBPnXls54zLBcZr3OpR1KYt.f/a",
+  "recontrasenia": "$2a$10$RRJ15hY9wQFLmJ8Acyel4O7WOP5bVYrf7GywYEBdKzY9iin/piLi.",
+  "birthday": "2009-11-05",
+  "avatar": "user-1637876954816_img.jpg"
+ },
+ {
+  "id": 15,
+  "name": "Juan",
+  "lastname": "Pedro",
+  "email": "juanpedro@gmail.com",
+  "contrasenia": "$2a$10$kRDz8SpCJqWkgBYIRn3pweUTftZKUxhs5I6Lm6iK/piq31Tp3zeOW",
+  "recontrasenia": "$2a$10$xcrwFwWqdr0Sikqp0owGj.1kGgb8NOFLXVfkZ0sXBxkbKGVtOGAI2",
+  "birthday": "2009-12-18",
+  "avatar": "user-1637877078674_img.jpg"
+ },
+ {
+  "id": 16,
+  "name": "otro",
+  "lastname": "otro",
+  "email": "otro@gmail.com",
+  "contrasenia": "$2a$10$YpB36xOwLTPiZUPpdUlxHezKt6xoptWPRWtfRpxoKQpBsPOHkt942",
+  "recontrasenia": "$2a$10$NpOP9.GgAlHsPfQho/2V8OrYEui6nEHrwn0eJo7d2DFe.B9.LE2t.",
+  "birthday": "2009-12-30",
+  "avatar": "user-1637877811048_img.jpg"
+ },
+ {
+  "id": 17,
+  "name": "otro",
+  "lastname": "otro",
+  "email": "otrootro@gmail.com",
+  "contrasenia": "$2a$10$kAqA7sOWMVq3M3SbHEKujuxXXQrqH7/0z4II8msywAyN1gtv34oqq",
+  "recontrasenia": "$2a$10$arwdnFFCnGvkMQCjUiwLiOYWn8QNiHuEYmXUJdO1mXhR6Ll19p7H.",
+  "birthday": "2009-12-30",
+  "avatar": "user-1637877876974_img.jpg"
  }
 ]
