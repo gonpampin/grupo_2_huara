@@ -90,7 +90,7 @@
 ## *Jueves 11 de Noviembre de 2021* ##
 ## *18:00 a 19:00hs* ##
 
-* Coding en equipo. Se comenzó con el coding de las validaciones. Todos los miembros del equipo presentes.
+* Coding en equipo. Validaciones. Todos los miembros del equipo presentes.
 
 
 ***
