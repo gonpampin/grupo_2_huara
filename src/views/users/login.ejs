@@ -18,15 +18,25 @@
                 <label for="email"class="label">Dirección de correo electrónico</label>
                 <input type="email" name="email" id="email" class="input" placeholder="ejemplo@gmail.com" style="font-style:italic; font-size: 12px">
                 </p>
-                <p class="observation">* Campo obligatorio</p>
+
+                
+
                 <p class="campo">
                 <label for="password" class="label">Contraseña</label>
                 <input type="password" name="contrasenia" id="password"class="input" placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
                 </p>
-                <p class="observation">* Campo obligatorio</p>
+                
+                <span style="color: red; font-size: 10px; font-style:italic">
+                    <% if (locals.errors && errors.email) { %>
+                        <%= errors.email.msg %>  
+                    <% } %>
+                </span>  
+                <br>
+
                 <label>
                     Recordar usuario
                 </label>
+
                 <input type="checkbox" name="recordarUsuario">
                 <br>
                 <br>

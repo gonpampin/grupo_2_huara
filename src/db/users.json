@@ -111,32 +111,42 @@
  },
  {
   "id": 14,
-  "name": "paola",
-  "lastname": "garcia",
-  "email": "pao@gmail.com",
-  "contrasenia": "$2a$10$rxCBtvMFNBtTlDiCkaoqiOwwFxACE./J4nUOmqW3jPdEWpAcjlTde",
-  "recontrasenia": "$2a$10$j5BM/iayk3l0rqKnn4c.m.LU0P.TufTT/BuHyeyvFj46J7HLd.mgm",
-  "birthday": "2000-01-01",
-  "avatar": "user-1637877842476_img.jpg"
+  "name": "Juan",
+  "lastname": "Pedro",
+  "email": "juan@gmail.com",
+  "contrasenia": "$2a$10$IkWYNSUHL2tLL/oYoWu1x.OUhFVBPnXls54zLBcZr3OpR1KYt.f/a",
+  "recontrasenia": "$2a$10$RRJ15hY9wQFLmJ8Acyel4O7WOP5bVYrf7GywYEBdKzY9iin/piLi.",
+  "birthday": "2009-11-05",
+  "avatar": "user-1637876954816_img.jpg"
  },
  {
   "id": 15,
-  "name": "paola",
-  "lastname": "garcia",
-  "email": "paola@gmail.com",
-  "contrasenia": "$2a$10$Iqkn/BOdwh6hADFcEiI6qOuT2b7h1Dkrn87ce92MJHRe59388VvYu",
-  "recontrasenia": "$2a$10$jjBMqdqspyeO2Cxzi0CK5uiXR5al0D2Im5Sw2Lg3h30noVEf9Fdyy",
-  "birthday": "2009-08-20",
-  "avatar": "user-1637879723702_img.jpg"
+  "name": "Juan",
+  "lastname": "Pedro",
+  "email": "juanpedro@gmail.com",
+  "contrasenia": "$2a$10$kRDz8SpCJqWkgBYIRn3pweUTftZKUxhs5I6Lm6iK/piq31Tp3zeOW",
+  "recontrasenia": "$2a$10$xcrwFwWqdr0Sikqp0owGj.1kGgb8NOFLXVfkZ0sXBxkbKGVtOGAI2",
+  "birthday": "2009-12-18",
+  "avatar": "user-1637877078674_img.jpg"
  },
  {
   "id": 16,
   "name": "otro",
-  "lastname": "mas",
-  "email": "otromas@gmail.com",
-  "contrasenia": "$2a$10$jCUPr9LGWne5tONFvgySNuM1ngXoeQXwYR76GuzgD2CEdW3CMzeLq",
-  "recontrasenia": "$2a$10$o4jMor6DaAAPBDGg6e44i.zrFMgQtk3qaDWflHP4QUdOKzaPxWV8y",
-  "birthday": "1940-02-01",
-  "avatar": "user-1637880008111_img.jpg"
+  "lastname": "otro",
+  "email": "otro@gmail.com",
+  "contrasenia": "$2a$10$YpB36xOwLTPiZUPpdUlxHezKt6xoptWPRWtfRpxoKQpBsPOHkt942",
+  "recontrasenia": "$2a$10$NpOP9.GgAlHsPfQho/2V8OrYEui6nEHrwn0eJo7d2DFe.B9.LE2t.",
+  "birthday": "2009-12-30",
+  "avatar": "user-1637877811048_img.jpg"
+ },
+ {
+  "id": 17,
+  "name": "otro",
+  "lastname": "otro",
+  "email": "otrootro@gmail.com",
+  "contrasenia": "$2a$10$kAqA7sOWMVq3M3SbHEKujuxXXQrqH7/0z4II8msywAyN1gtv34oqq",
+  "recontrasenia": "$2a$10$arwdnFFCnGvkMQCjUiwLiOYWn8QNiHuEYmXUJdO1mXhR6Ll19p7H.",
+  "birthday": "2009-12-30",
+  "avatar": "user-1637877876974_img.jpg"
  }
 ]
