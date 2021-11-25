@@ -1,3 +1,4 @@
+// es un middleware de aplicación ya que el header aparece en todas las vistas
 const User = require('../models/User');
 
 function userLoggedMiddleware(req, res, next) {

@@ -9,7 +9,7 @@ const productController = require('../controllers/productsController');
 const uploadFile = require('../middlewares/multerProductsMiddleware');
 
 
-// Procesamiento de datos
+//Formulario creación productos
 router.post('/crearproducto', uploadFile.single('image'), productController.store);
 router.put('/editarproducto/:id', uploadFile.single('image'), productController.editProduct);
 router.delete('/:id', productController.delete);
