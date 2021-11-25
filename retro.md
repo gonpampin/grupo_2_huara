@@ -45,4 +45,14 @@ Contiunar codeando en equipo.
 ## *Dejar de hacer* ##
 
 
+# Retro - Sprint 4 #
+
+## *Continuar haciendo* ##
+Contiunar codeando en equipo, con reuniones semanales y buena comunicación. Esta metodología viene funcionando bien y asegura que todos estamos en tema, aprendiendo a la par.
+
+## *Hacer menos* ##
+No demorar el análisis de la retro, para que tenga efecto inmediato sobre el siguiente sprint.
+
+
+
 
