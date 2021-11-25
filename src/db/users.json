@@ -108,5 +108,35 @@
   "recontrasenia": "$2a$10$aWCcJ6ydPaTc8d5Vc6GhJehWeAryWINdYjLIWMw02/y21/k85R6O.",
   "birthday": "1940-01-01",
   "avatar": "user-1637012883140_img.png"
+ },
+ {
+  "id": 14,
+  "name": "paola",
+  "lastname": "garcia",
+  "email": "pao@gmail.com",
+  "contrasenia": "$2a$10$rxCBtvMFNBtTlDiCkaoqiOwwFxACE./J4nUOmqW3jPdEWpAcjlTde",
+  "recontrasenia": "$2a$10$j5BM/iayk3l0rqKnn4c.m.LU0P.TufTT/BuHyeyvFj46J7HLd.mgm",
+  "birthday": "2000-01-01",
+  "avatar": "user-1637877842476_img.jpg"
+ },
+ {
+  "id": 15,
+  "name": "paola",
+  "lastname": "garcia",
+  "email": "paola@gmail.com",
+  "contrasenia": "$2a$10$Iqkn/BOdwh6hADFcEiI6qOuT2b7h1Dkrn87ce92MJHRe59388VvYu",
+  "recontrasenia": "$2a$10$jjBMqdqspyeO2Cxzi0CK5uiXR5al0D2Im5Sw2Lg3h30noVEf9Fdyy",
+  "birthday": "2009-08-20",
+  "avatar": "user-1637879723702_img.jpg"
+ },
+ {
+  "id": 16,
+  "name": "otro",
+  "lastname": "mas",
+  "email": "otromas@gmail.com",
+  "contrasenia": "$2a$10$jCUPr9LGWne5tONFvgySNuM1ngXoeQXwYR76GuzgD2CEdW3CMzeLq",
+  "recontrasenia": "$2a$10$o4jMor6DaAAPBDGg6e44i.zrFMgQtk3qaDWflHP4QUdOKzaPxWV8y",
+  "birthday": "1940-02-01",
+  "avatar": "user-1637880008111_img.jpg"
  }
 ]

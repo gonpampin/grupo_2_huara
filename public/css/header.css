@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 a {
     text-decoration: none;
     color: rgb(114, 141, 117);
@@ -136,4 +137,51 @@ ul {
 .nav-bar-header{
     font-size: 100%;
 }
+}
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav{
+    background-color: rgb(250, 212, 184);
+height: 160px;
+
+}
+.nav_conteiner{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo-header{
+    width: 200px;
+    height: auto;
+   
+
+}
+.logo-header-img{
+    width: 100%;
+}
+.nav_input:checked + .nav_menu{
+
+    background: tomato;
+}
+
+
+.nav_menu{
+text-decoration: none;
+    color: rgb(114, 141, 117);
+}
+.nav_menu, .nav_input{
+    display: none;
+}
+label i{
+    color: blanchedalmond;
+    width: 100%;
 }
