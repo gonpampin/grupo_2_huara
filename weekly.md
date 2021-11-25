@@ -83,7 +83,48 @@
 ## *Lunes 08 de Noviembre de 2021* ##
 ## *18:00 a 19:00hs* ##
 
-* Coding en equipo. Se comenzó con el coding de las validaciones
+* Coding en equipo. Se comenzó con el coding de las validaciones. Todos los miembros del equipo presentes.
 
 ***
+
+## *Jueves 11 de Noviembre de 2021* ##
+## *18:00 a 19:00hs* ##
+
+* Coding en equipo. Se comenzó con el coding de las validaciones. Todos los miembros del equipo presentes.
+
+
+***
+
+## *Lunes 15 de Noviembre de 2021* ##
+## *18:00 a 19:00hs* ##
+
+* Coding en equipo. Registro de usuarios funcional. Todos los miembros del equipo presentes.
+
+
+***
+
+## *Jueves 18 de Noviembre de 2021* ##
+## *18:00 a 19:00hs* ##
+
+* Coding en equipo. Seteo de cookies y login de usuarios funcional. Todos los miembros del equipo presentes.
+
+
+***
+
+## *Martes 23 de Noviembre de 2021* ##
+## *18:30 a 20:00hs* ##
+
+* Coding en equipo. Implementación de rutas de huéspedes y usuarios, función de remember user. Todos los miembros del equipo presentes.
+
+
+***
+
+## *Jueves 25 de Noviembre de 2021* ##
+## *18:30 a 19:00hs* ##
+
+* Checklist de entragables. Todos los miembros del equipo presentes.
+
+
+***
+
 
