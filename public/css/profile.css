@@ -1,6 +1,11 @@
-* {
-    margin-left: 20;
-}
+
+
 .row img{
     width: 150px;
 }  
+.usario_perfil{
+   text-align: center ;
+}
+.title-login{
+    color: rgb(114,141,117);
+}

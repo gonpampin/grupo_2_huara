@@ -148,5 +148,15 @@
   "recontrasenia": "$2a$10$arwdnFFCnGvkMQCjUiwLiOYWn8QNiHuEYmXUJdO1mXhR6Ll19p7H.",
   "birthday": "2009-12-30",
   "avatar": "user-1637877876974_img.jpg"
+ },
+ {
+  "id": 18,
+  "name": "paola",
+  "lastname": "garcia",
+  "email": "paola@gmail.com",
+  "contrasenia": "$2a$10$Nm8SWBnB/0/z.XFyyUIVm.6aXgMtYlpWrijHIczKrFpY7l.ZP1vz6",
+  "recontrasenia": "$2a$10$1pfF0uyFI/guEaINpsW/1.iWZOWncWni12D/GPWSmXA.TXLYW1Urm",
+  "birthday": "1940-01-01",
+  "avatar": "user-1637886640044_img.jpg"
  }
 ]
