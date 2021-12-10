@@ -36,11 +36,11 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true,
         paranoid: true
     };
-    const Product = sequelize.define(alias, cols, config)
+    const Users = sequelize.define(alias, cols, config)
 
-    Product.associate = models => {
-        Product.belongsTo(models.Category, {as: 'users_categories', foreignKey: 'category_id'});
+    Users.associate = models => {
+        Users.belongsTo(models.Category, {as: 'users_categories', foreignKey: 'category_id'});
     }
 
-    return Product
+    return Users
 }
