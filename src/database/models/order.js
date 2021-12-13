@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'orders';
+    let alias = 'Orders';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -10,10 +10,8 @@ module.exports = (sequelize, dataTypes) => {
         status: {
             type: dataTypes.STRING(20),
             notNull: false
-        },
+        }
        
-        
-
     };
     let config = {
         tableName: 'orders',
@@ -21,11 +19,11 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true,
         paranoid: true
     };
-    const orders = sequelize.define(alias, cols, config)
+    const Orders = sequelize.define(alias, cols, config)
 
-    orders.associate = models => {
-        orders.belongsTo(models.orders, {as: 'orders',});
+    Orders.associate = models => {
+        Orders.belongsTo(models.Orders, {as: 'orders',});
     }
 
-    return orders
+    return Orders
 }

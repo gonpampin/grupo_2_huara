@@ -20,13 +20,13 @@ module.exports = (sequelize, dataTypes) => {
             notNull: false
         },
         price: {
-            type: dataTypes.FLOAT,
+            type: dataTypes.DOUBLE,
             notNull: false
         },
         stock: {
             type: dataTypes.INTEGER,
             notNull: false
-        },
+        }
         
 
     };
@@ -36,11 +36,11 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true,
         paranoid: true
     };
-    const Product = sequelize.define(alias, cols, config)
+    const Products = sequelize.define(alias, cols, config)
 
-    Product.associate = models => {
-        Product.belongsTo(models.Products, {as: 'Products', });
+    Products.associate = models => {
+        Products.belongsTo(models.Products, {as: 'products', });
     }
 
-    return Product
+    return Products
 }

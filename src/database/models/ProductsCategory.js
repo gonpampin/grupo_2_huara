@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'users_categories';
+    let alias = 'ProductsCategories';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -10,22 +10,22 @@ module.exports = (sequelize, dataTypes) => {
         category: {
             type: dataTypes.STRING(45),
             notNull: false
-        },
+        }
        
         
 
     };
     let config = {
-        tableName: 'users_categories',
+        tableName: 'products_categories',
         timestamps: true,
         underscored: true,
         paranoid: true
     };
-    const users_categories = sequelize.define(alias, cols, config)
+    const ProductsCategories = sequelize.define(alias, cols, config)
 
-    users_categories.associate = models => {
-        users_categories.hasMany(models.users_categories, {as: 'users_categories',});
+    ProductsCategories.associate = models => {
+        ProductsCategories.hasMany(models.ProductsCategories, {as: 'products_categories',});
     }
 
-    return products_categories
+    return ProductsCategories
 }
