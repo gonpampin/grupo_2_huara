@@ -11,8 +11,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             notNull: false
         }
-       
-        
 
     };
     let config = {

@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             notNull: false
         },
-        last_nema: {
+        last_name: {
             type: dataTypes.STRING,
             notNull: false
         },
@@ -32,15 +32,15 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'users',
-        timestamps: true,
+        timestamps: false,
         underscored: true,
         paranoid: true
     };
     const Users = sequelize.define(alias, cols, config)
 
-    Users.associate = models => {
+    /*Users.associate = models => {
         Users.belongsTo(models.Users, {as: 'users', foreignKey: 'category_id'});
-    }
+    }*/
 
     return Users
 }

@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     const OrderDetails = sequelize.define(alias, cols, config)
 
-    OrderDetails.associate = models => {
+    /*OrderDetails.associate = models => {
         OrderDetails.hasMany(models.Products, {
             as: 'order_details',
             foreignKey: 'product_id'
@@ -36,7 +36,7 @@ module.exports = (sequelize, dataTypes) => {
             as: 'order_details',
             foreignKey: 'order_id'
         });
-    }
+    }*/
 
     return OrderDetails
 }

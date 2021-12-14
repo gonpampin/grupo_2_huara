@@ -3,6 +3,9 @@ const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const User = require('../models/user.js');
 const { validationResult } = require('express-validator');
+const db = require ('../database/models');
+
+const Users = db.Users;
 
 
 let userController = {
@@ -24,6 +27,7 @@ let userController = {
                 oldData: req.body
              });
         }
+
         let userInDB = User.findByField('email', req.body.email);
 
 		if (userInDB) {
@@ -36,16 +40,19 @@ let userController = {
 				oldData: req.body
 			});
 		}
-        let userToCreate = {
-			...req.body,
-			contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
-            recontrasenia: bcryptjs.hashSync(req.body.recontrasenia, 10),
-			avatar: req.file.filename
-		}
 
-		let userCreated = User.create(userToCreate);
 
+		Users.create({
+			first_name: req.body.name,
+			last_name: req.body.lastname,
+			avatar: req.file.filename,
+			password: req.body.contrasenia,
+			email: req.body.email
+		})
+		
 		return res.redirect('/usuarios/login');
+
+
 	},
     loginProcess: (req, res) => {
 		let userToLogin = User.findByField('email', req.body.email);
