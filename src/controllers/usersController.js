@@ -50,6 +50,7 @@ let userController = {
 			email: req.body.email
 		})
 		
+		
 		return res.redirect('/usuarios/login');
 
 
