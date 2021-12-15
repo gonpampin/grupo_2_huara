@@ -1,5 +1,9 @@
 const path = require('path');
 const fs = require('fs');
+const db = require ('../database/models');
+
+const Products = db.Products;
+
 
 let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../db/product.json'), 'utf-8');
 let productosLista = JSON.parse(jsonProducts); 
@@ -42,18 +46,35 @@ let productController = {
     },
 
     store: (req, res) => {
-        let product = {
+        /*let product = {
             //corregir los campos del name del input para que coinicidan con los nombres de las propiedades del json
             id: nuevoId(),
             ...req.body,
             image: req.file.filename || 'default-image.png'
         }
+
         productosLista.push(product);
 
         let jsonDeProductos = JSON.stringify(productosLista, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
 
+        res.redirect('/');*/
+
+        Products.create({
+            name: req.body.name,
+			description: req.body.lastname,
+            image: req.file.filename,
+			price: req.body.price,
+			stock: req.body.stock
+		
+        })
+        .catch(error =>{
+            res.send(error)
+        })
+
         res.redirect('/');
+
+
 
 
     },
