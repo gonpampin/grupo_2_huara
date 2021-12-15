@@ -47,8 +47,12 @@ let userController = {
 			last_name: req.body.lastname,
 			avatar: req.file.filename,
 			password: req.body.contrasenia,
-			email: req.body.email
+			email: req.body.email,
 		})
+		/*.catch(error => {
+			res.send(error)
+		})*/
+
 		
 		
 		return res.redirect('/usuarios/login');
