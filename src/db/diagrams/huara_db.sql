@@ -78,7 +78,7 @@ DROP TABLE IF EXISTS `products`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
   `description` varchar(500) DEFAULT NULL,
   `image` varchar(500) DEFAULT NULL,
   `price` decimal(8,2) DEFAULT NULL,
@@ -134,10 +134,11 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(45) DEFAULT NULL,
-  `last_name` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL,
+  `first_name` varchar(100) DEFAULT NULL,
+  `last_name` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL,
   `user_category_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_category_id_idx` (`user_category_id`),
@@ -151,7 +152,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (35,'Pier','Bohman','EDTpxR411RV','pbohman0@princeton.edu',1),(36,'Carce','Seniour','CjYdoMrFOp','cseniour1@g.co',1),(37,'Alberto','Danko','SEB0s2aU7Z','adanko2@biglobe.ne.jp',1),(38,'Lewie','Junkinson','p9ZqbsypuHQ','ljunkinson3@livejournal.com',1),(39,'Aldrich','Buddington','HZNtZQ7','abuddington4@plala.or.jp',1),(40,'Lind','Rickis','NNLOcsXF','lrickis5@ask.com',1),(41,'Barclay','Lockless','Wg23Gcs','blockless6@nbcnews.com',1),(42,'Darn','Lewton','2ISI9jrvUeS','dlewton7@patch.com',1),(43,'Cheston','Keniwell','Q7CjNJc','ckeniwell8@themeforest.net',1),(44,'Enrique','Mecozzi','fF9sSXTjT','emecozzi9@ted.com',1),(45,'Randie','Hixson','JnptRYkJU','rhixsona@cargocollective.com',1),(46,'Xylia','Eathorne','J0kAsufeQPPN','xeathorneb@eepurl.com',1),(47,'Joaquin','Thomerson','YqAX4gWjRbI','jthomersonc@cbslocal.com',1),(48,'Morley','Letterick','Du0IErZjG','mletterickd@constantcontact.com',1),(49,'Calhoun','Nerne','hOMMZeXR9L','cnernee@patch.com',1),(50,'Fern','Kenzie','p1NnVI32','fkenzief@oracle.com',1),(51,'Karrah','Cotgrove','Z2rvyIlB3','kcotgroveg@studiopress.com',1),(52,'Yolanda','Celle','BMsgt3ss','ycelleh@acquirethisname.com',1),(53,'Lotta','Fetherstan','a840EYjaxu','lfetherstani@zdnet.com',2),(54,'Brenda','Grievson','jYa5S9um','bgrievsonj@ucoz.com',2),(55,'bernardo','segui','123456789','bernardo@bernardo.com',2);
+INSERT INTO `users` VALUES (35,'Pier','Bohman','EDTpxR411RV','pbohman0@princeton.edu',NULL,1),(36,'Carce','Seniour','CjYdoMrFOp','cseniour1@g.co',NULL,1),(37,'Alberto','Danko','SEB0s2aU7Z','adanko2@biglobe.ne.jp',NULL,1),(38,'Lewie','Junkinson','p9ZqbsypuHQ','ljunkinson3@livejournal.com',NULL,1),(39,'Aldrich','Buddington','HZNtZQ7','abuddington4@plala.or.jp',NULL,1),(40,'Lind','Rickis','NNLOcsXF','lrickis5@ask.com',NULL,1),(41,'Barclay','Lockless','Wg23Gcs','blockless6@nbcnews.com',NULL,1),(42,'Darn','Lewton','2ISI9jrvUeS','dlewton7@patch.com',NULL,1),(43,'Cheston','Keniwell','Q7CjNJc','ckeniwell8@themeforest.net',NULL,1),(44,'Enrique','Mecozzi','fF9sSXTjT','emecozzi9@ted.com',NULL,1),(45,'Randie','Hixson','JnptRYkJU','rhixsona@cargocollective.com',NULL,1),(46,'Xylia','Eathorne','J0kAsufeQPPN','xeathorneb@eepurl.com',NULL,1),(47,'Joaquin','Thomerson','YqAX4gWjRbI','jthomersonc@cbslocal.com',NULL,1),(48,'Morley','Letterick','Du0IErZjG','mletterickd@constantcontact.com',NULL,1),(49,'Calhoun','Nerne','hOMMZeXR9L','cnernee@patch.com',NULL,1),(50,'Fern','Kenzie','p1NnVI32','fkenzief@oracle.com',NULL,1),(51,'Karrah','Cotgrove','Z2rvyIlB3','kcotgroveg@studiopress.com',NULL,1),(52,'Yolanda','Celle','BMsgt3ss','ycelleh@acquirethisname.com',NULL,1),(53,'Lotta','Fetherstan','a840EYjaxu','lfetherstani@zdnet.com',NULL,2),(54,'Brenda','Grievson','jYa5S9um','bgrievsonj@ucoz.com',NULL,2),(55,'bernardo','segui','123456789','bernardo@bernardo.com',NULL,2);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -188,4 +189,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-16 20:11:30
+-- Dump completed on 2021-12-16 20:48:54

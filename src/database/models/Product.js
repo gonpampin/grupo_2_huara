@@ -8,15 +8,15 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         name: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(100),
             notNull: false
         },
         description: {
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING(500),
             notNull: false
         },
         image: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(500),
             notNull: false
         },
         price: {

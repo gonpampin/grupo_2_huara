@@ -8,24 +8,24 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         first_name: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(100),
             notNull: false
         },
         last_name: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(100),
             notNull: false
         
         },
         password: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(100),
             notNull: false
         },
         email: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(100),
             notNull: false
         },
         image:{
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(100),
             notNull: false
         },
         user_category_id: {
