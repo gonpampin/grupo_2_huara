@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const db = require ('../database/models');
+const db = require('../database/models');
 
 const Products = db.Products;
 
@@ -18,81 +18,82 @@ const nuevoId = () => {
     return ultimo + 1;
 }
 
-let productController = { 
+let productController = {
 
-    products :(req, res) => {
-    Products.findAll()
-    .then(function(resultados){
-        res.render("./products/product", {products:resultados})
-    })
-    .catch(function () {
-        console.log("Promise Rejected");
-    })
+    products: (req, res) => {
+        Products.findAll()
+            .then(function (resultados) {
+                res.render("./products/product", {
+                    products: resultados
+                })
+            })
+            .catch(function () {
+                console.log("Promise Rejected");
+            })
     },
-    
 
-    formCreate:(req, res) => {
+
+    formCreate: (req, res) => {
         res.render('./products/formCreate');
-    },
-
-
-    formEdit: function (req, res) {
-        Products.findByPk(req.params.id)
-        .then(function(productoEditar){
-            res.render('products/formEdit', { productEdit: productoEditar });
-        })
-    }, 
-
-
-    detail: (req, res) => {
-        Products.findByPk(req.params.id)
-        .then(function(productoDetalle){
-           res.render('./products/productDetail', { products: productoDetalle });
-        })  
     },
 
 
     store: (req, res) => {
         Products.create({
             name: req.body.name,
-			description: req.body.description,
+            description: req.body.description,
             image: req.file.filename,
-			price: req.body.price,
-			stock: req.body.stock
+            price: req.body.price,
+            stock: req.body.stock
         })
         res.redirect('/productos');
     },
 
+    // hay dos img rotas en la pagina de productos que no pude arreglar
+    detail: (req, res) => {
+        Products.findByPk(req.params.id)
+            .then(function (productoDetalle) {
+                res.render('./products/productDetail', {
+                    products: productoDetalle
+                });
+            })
+    },
 
-    editProduct: (req,res) => {
+
+    formEdit: function (req, res) {
+        Products.findByPk(req.params.id)
+            .then(function (productoEditar) {
+                res.render('products/formEdit', {
+                    productEdit: productoEditar
+                });
+            })
+    },
+//falta que venga en el form la imagen ya cargada o poner una validacion para que 
+//no se pueda modificar sin cargarla.
+    editProduct: (req, res) => {
         Products.update({
             name: req.body.name,
-			description: req.body.description,
+            description: req.body.description,
             image: req.body.image,
-			price: req.body.price,
-			stock: req.body.stock
-        },
-        {   where:{
-            id: req.params.id
-        }
+            price: req.body.price,
+            stock: req.body.stock
+        }, {
+            where: {
+                id: req.params.id
+            }
         })
-        res.redirect( '/productos')
-        },
+        res.redirect('/productos')
+    },
 
-        
-         delete: (req, res)  => {
+
+    delete: (req, res) => {
         Products.destroy({
-                where: {
-                     id : req.params.id
-                     }
-            });
-            res.redirect('/productos')
-        }
-}    
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect('/productos')
+    }
+}
 
-module.exports = productController; 
-
-
-
-
-
+module.exports = productController;
