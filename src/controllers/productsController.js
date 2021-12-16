@@ -8,7 +8,7 @@ const Products = db.Products;
 //let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../db/product.json'), 'utf-8');
 //let productosLista = JSON.parse(jsonProducts); 
 
-const nuevoId = () => {
+/*const nuevoId = () => {
     let ultimo = 0;
     productosLista.forEach(product => {
         if (product.id > ultimo) {
@@ -16,7 +16,7 @@ const nuevoId = () => {
         }
     });
     return ultimo + 1;
-}
+}*/
 
 let productController = {
 

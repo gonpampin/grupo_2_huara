@@ -45,52 +45,64 @@ let userController = {
 		Users.create({
 			first_name: req.body.name,
 			last_name: req.body.lastname,
-			avatar: req.file.filename,
-			password: req.body.contrasenia,
+			password: bcryptjs.hashSync(req.body.contrasenia,10),
 			email: req.body.email,
+			image: req.file.filename,
 		})
 		/*.catch(error => {
 			res.send(error)
 		})*/
-
-		
 		
 		return res.redirect('/usuarios/login');
 
 
 	},
     loginProcess: (req, res) => {
-		let userToLogin = User.findByField('email', req.body.email);
+
+		Users.findOne({
+			where:{
+				email: req.body.email
+			}
+		})
+		.then((resultado)=>{
 		
-		if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
-			if (isOkThePassword) {
-				delete userToLogin.contrasenia;
-				req.session.userLogged = userToLogin;
-
-				if(req.body.recordarUsuario) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-				}
-
-				return res.redirect('/usuarios/perfil');
-			} 
+			if(resultado) {
+				let isOkThePassword = bcryptjs.compareSync(req.body.contrasenia, resultado.password);
+				
+				if (isOkThePassword) {
+					delete resultado.password;
+					req.session.userLogged = resultado;
+	
+					if(req.body.recordarUsuario) {
+						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+					}
+	
+					return res.redirect('/usuarios/perfil');
+				} 
+				return res.render('../views/users/login', {
+					errors: {
+						email: {
+							msg: 'Las credenciales son inválidas'
+						}
+					}
+				});
+			}
+	
 			return res.render('../views/users/login', {
 				errors: {
 					email: {
-						msg: 'Las credenciales son inválidas'
+						msg: 'No se encuentra este email en nuestra base de datos'
 					}
 				}
 			});
-		}
+		})
+		.catch(function () {
+			console.log("Promise Rejected");
+		})
 
-		return res.render('../views/users/login', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
 	},
+
+
     profile: (req, res) => {
 		return res.render('../views/users/profile', {
 			user: req.session.userLogged
