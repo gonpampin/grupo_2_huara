@@ -42,7 +42,7 @@ app.use('/usuarios', usersRouter);
 
 
 //servidor
-app.listen(3002, () => {
-    console.log('Servidor levantado en el puerto 3001')
+app.listen(3000, () => {
+    console.log('Servidor levantado en el puerto 3000')
 })
 
