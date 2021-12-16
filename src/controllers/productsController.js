@@ -18,11 +18,20 @@ const nuevoId = () => {
     return ultimo + 1;
 }
 
-let productController = {
+let productController = { 
 
-    product:(req, res) => {
-        res.render('./products/product', {productosLista});
+    products :(req, res) => {
+    Products.findAll()
+    .then(function(resultados){
+        res.render("./products/product", {products:resultados})
+    })
+    .catch(function () {
+        console.log("Promise Rejected");
+    })
+    
+
     },
+    
 
 
     formCreate:(req, res) => {
@@ -30,48 +39,33 @@ let productController = {
     },
 
     formEdit: function (req, res) {
-        let productoEditar = productosLista.find(product => {
-            return product.id == req.params.id;
+        Products.findByPk(req.params.id)
+        .then(function(productoEditar){
+            res.render('products/formEdit', { productEdit: productoEditar });
         })
-        res.render('products/formEdit', { productEdit: productoEditar });
+    
+      
     }, 
 
     detail: (req, res) => {
-        let id = req.params.id;
-        let productoDetalle = productosLista.find(product => {
-            return product.id == id;
+        Products.findByPk(req.params.id)
+        .then(function(productoDetalle){
+           res.render('./products/productDetail', { products: productoDetalle });
         })
 
-        res.render('products/productDetail', { products: productoDetalle });
+        
     },
 
     store: (req, res) => {
-        /*let product = {
-            //corregir los campos del name del input para que coinicidan con los nombres de las propiedades del json
-            id: nuevoId(),
-            ...req.body,
-            image: req.file.filename || 'default-image.png'
-        }
-
-        productosLista.push(product);
-
-        let jsonDeProductos = JSON.stringify(productosLista, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
-
-        res.redirect('/');*/
-
         Products.create({
             name: req.body.name,
-			description: req.body.lastname,
+			description: req.body.description,
             image: req.file.filename,
 			price: req.body.price,
 			stock: req.body.stock
 		
         })
-        .catch(error =>{
-            res.send(error)
-        })
-
+       
         res.redirect('/');
 
 
@@ -79,23 +73,22 @@ let productController = {
 
     },
     editProduct: (req,res) => {
-        productosLista.forEach(product => {
-            if (product.id == req.params.id) {
-                product.name = req.body.name;
-                product.description = req.body.description;
-                product.category = req.body.category;
-                product.price = req.body.price;
-                product.image = req.body.image;
-            
-        }
-
+        Products.update({
+            name: req.body.name,
+			description: req.body.description,
+            image: req.file.image,
+			price: req.body.price,
+			stock: req.body.stock
+        },{
+            where:{
+                id: req.params.id
+            }
         })
-        let jsonDeProductos = JSON.stringify(productosLista, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
 
-        res.redirect('/productos')
+        res.redirect('./productos/' + req.params.id)
 
         },
+
         delete: (req, res) => {
 
             let productosRestantes = productosLista.filter(product => {
@@ -106,7 +99,21 @@ let productController = {
             fs.writeFileSync(path.resolve(__dirname, '../db/product.json'), jsonDeProductos);
     
             res.redirect('/productos');
-        }
+        } 
+        /*  delete: (req, res) => {
+
+            db.Products.destroy({
+                where: {
+                     name : req.body.name
+                     }
+            });
+            res.redirect('/productos')
+        }*/
 }    
 
 module.exports = productController; 
+
+
+
+
+

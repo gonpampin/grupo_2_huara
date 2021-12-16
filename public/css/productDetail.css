@@ -1,6 +1,9 @@
 .cuerpo-detalle{
     background-color: white;
 }
+.formulario1{
+    border:dotted 8px black 2px;
+}
 
 
 
@@ -111,8 +114,13 @@
     
        align-items: center;
        text-align: center;
+       
    }
-  
+  .formularioedit{
+    border:dotted  rgb(114,141,117) 2px;
+    border-radius: 20px;
+    margin: 100px;
+  }
 
    @media(min-width: 768px){
     .imagen-detalle{

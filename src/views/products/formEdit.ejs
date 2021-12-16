@@ -10,7 +10,12 @@
         <h2 class="title-login">Formulario de edición de productos</h2>
         <br>
         <section>
-            <div class="formulario">
+            <div class="detail-group">
+                            
+                <img src="/images/products/<%= productEdit.image %>"    alt = <%= productEdit.name %> class= "imagen-detalle">
+
+            <div class="detail-otro">
+            <div class="formularioedit">
                 <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST">
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
@@ -24,21 +29,17 @@
                     <br>
                     <p class="campo">
                     <label for="productImage" class="label">Modifique imagen</label>
-                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" value="../public/images/products/<%= productEdit.image %>">
-                    </p>
-                    <br>
-                    <p class="campo">
-                    <label for="productCategory"class="label">Modifique categoría</label>
-                    <select name="category" class="label">
-                        <option disabled selected>Seleccioná una opción</option>
-                        <option value="Chocolates" class="input">Chocolates</option>
-                        <option value="Tabletas" class="input">Tabletas</option>
-                    </select>
+                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.image %>">
                     </p>
                     <br>
                     <p class="campo">
                         <label for="productPrice" class="label">Modifique precio ARS $</label>
-                        <input type="number" name="price" id="productPrice" class="input" step="0.01" style="font-style:italic; font-size: 12px" value="<%= productEdit.price %>">
+                        <input type="number" name="price" id="productPrice" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.price %>">
+                        </p>
+                    <br>
+                    <p class="campo">
+                        <label for="productStock" class="label">Modifique Stock</label>
+                        <input type="number" name="stock" id="productStock" class="input" step="0.01" style="font-style:italic; font-size: 12px" value="<%= productEdit.stock %>">
                         </p>
                     <p>
                     <br>

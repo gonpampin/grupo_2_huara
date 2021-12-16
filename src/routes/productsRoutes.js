@@ -15,7 +15,7 @@ router.put('/editarproducto/:id', uploadFile.single('image'), productController.
 router.delete('/:id', productController.delete);
 
 // Envío de vistas
-router.get('/', productController.product);
+router.get('/', productController.products);
 router.get('/crearproducto', productController.formCreate);
 router.get('/editarproducto/:id', productController.formEdit);
 router.get('/:id', productController.detail);
