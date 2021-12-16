@@ -5,8 +5,8 @@ const db = require ('../database/models');
 const Products = db.Products;
 
 
-let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../db/product.json'), 'utf-8');
-let productosLista = JSON.parse(jsonProducts); 
+//let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../db/product.json'), 'utf-8');
+//let productosLista = JSON.parse(jsonProducts); 
 
 const nuevoId = () => {
     let ultimo = 0;
@@ -60,7 +60,7 @@ let productController = {
 			price: req.body.price,
 			stock: req.body.stock
         })
-        res.redirect('/');
+        res.redirect('/productos');
     },
 
 
@@ -68,7 +68,7 @@ let productController = {
         Products.update({
             name: req.body.name,
 			description: req.body.description,
-            image: req.file.image,
+            image: req.body.image,
 			price: req.body.price,
 			stock: req.body.stock
         },
@@ -76,18 +76,18 @@ let productController = {
             id: req.params.id
         }
         })
-        res.redirect('./productos/' + req.params.id)
+        res.redirect( '/productos')
         },
 
         
-         delete: (req, res)  => {}/*
-            db.Products.destroy({
+         delete: (req, res)  => {
+        Products.destroy({
                 where: {
-                     name : req.params.id
+                     id : req.params.id
                      }
             });
             res.redirect('/productos')
-        }*/
+        }
 }    
 
 module.exports = productController; 
