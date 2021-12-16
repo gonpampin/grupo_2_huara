@@ -59,13 +59,13 @@ let userController = {
 	},
     loginProcess: (req, res) => {
 		console.log('pase por login process')
+		console.log(req.body.contrasenia)
 		Users.findOne({
 			where:{
 				email: req.body.email
 			}
 		})
 		.then((resultado)=>{
-		
 			if(resultado) {
 				let isOkThePassword = bcryptjs.compareSync(req.body.contrasenia, resultado.password);
 				
