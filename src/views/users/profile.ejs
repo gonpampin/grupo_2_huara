@@ -11,7 +11,7 @@
 	<div class="cuadro1" style="margin: auto; margin-top: 10px; margin-bottom: 10px;">
 		<div class="row">
 			<div class="usario_perfil">
-				<h2 class="title-login">Hi <%= user.first_name %> </h2>
+				<h2 class="title-login">Hi <%= user.first_name %> <%= user.user_category_id %></h2>
 				<img  src="../images/avatars/<%= user.image %>" alt="avatar">
 				<br>
 				<div style="  color: rgb(114,141,117);" class="alert alert-success"><%= user.email %>  </div>

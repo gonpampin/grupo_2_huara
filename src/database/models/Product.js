@@ -26,6 +26,10 @@ module.exports = (sequelize, dataTypes) => {
         stock: {
             type: dataTypes.INTEGER,
             notNull: false
+        },
+        product_category_id: {
+            type: dataTypes.INTEGER,
+            notNull: false
         }
         
 
@@ -38,6 +42,14 @@ module.exports = (sequelize, dataTypes) => {
         
     };
     const Products = sequelize.define(alias, cols, config)
+
+
+    Products.associate = function(models) {
+        Products.belongsTo(models.ProductsCategories, {
+            as: "categorias_producto",
+            foreignKey: "product_category_id"
+        });
+    }
 
    /* Products.associate = models => {
         Products.belongsTo(models.ProductsCategories, {

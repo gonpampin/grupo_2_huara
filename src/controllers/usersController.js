@@ -47,7 +47,7 @@ let userController = {
 			last_name: req.body.lastname,
 			password: bcryptjs.hashSync(req.body.contrasenia,10),
 			email: req.body.email,
-			image: req.file.filename,
+			image: req.file.filename
 		})
 		/*.catch(error => {
 			res.send(error)
@@ -58,7 +58,7 @@ let userController = {
 
 	},
     loginProcess: (req, res) => {
-
+		console.log('pase por login process')
 		Users.findOne({
 			where:{
 				email: req.body.email
@@ -77,7 +77,7 @@ let userController = {
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 					}
 	
-					return res.redirect('/usuarios/perfil');
+					return res.redirect('/usuarios/perfil', {user:resultado});
 				} 
 				return res.render('../views/users/login', {
 					errors: {

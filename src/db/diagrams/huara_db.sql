@@ -83,7 +83,11 @@ CREATE TABLE `products` (
   `image` varchar(500) DEFAULT NULL,
   `price` decimal(8,2) DEFAULT NULL,
   `stock` int(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `product_category_id` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `products_category_id_idx` (`image`),
+  KEY `product_category_id_idx` (`product_category_id`),
+  CONSTRAINT `product_category_id` FOREIGN KEY (`product_category_id`) REFERENCES `products_categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -93,7 +97,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'MARROC','Chocolate con leche y chocolate blanco con pasta de maní','marroc.jpg',500.00,20),(2,'BORRACHITO','Chocolate semi amargo con crema de ciruelas al Malbec con dulce de leche','borrachito.jpg',500.00,20),(3,'DULCE DE LECHE CON NUEZ','Pasta de dulce de leche y nueces, entre una capa de chocolate con leche y una capa de chocolate blanco','nuez-ddl-blanco.jpg',500.00,20),(4,'TABLETA ALMENDRA','Chocolate amargo 70% cacao con naranja, jengibre y almendras','almendra.jpg',500.00,20),(5,'PISTACHO','Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo','pistacho.jpg',500.00,20),(6,'AVELLANAS','Chocolate amargo con crema de licor de naranja y avellanas tostadas','avellanas2.jpg',500.00,20),(7,'PISTACHO','Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo','avellanas2.jpg',500.00,20),(8,'TABLETA FRAMBUESAS','Chocolate semi amargo con frambuesas','frambuesa.jpg',500.00,20),(9,'TABLETA FRAMBUESAS CHOCO BLANCO','Chocolate blanco con frambuesas y nibs de cacao','frambuesa-blanco.jpg',500.00,20),(10,'FRUTOS ROJOS','Crema de chocolate semi amargo y frutos rojos, entre una capa de chocolate amargo y una de chocolate blanco','frutos-rojos.jpg',500.00,20),(11,'COOKIES N CREAM','Chocolate blanco con Oreos relleno de Nutella','huevo1.jpg',500.00,20),(12,'WHISKACHO','Crema de chocolate belga y whisky, con nibs de cacao','whisky.jpg',500.00,20),(13,'HUEVO TRUFADO DDL','Mucho dulce de leche entre dos capas de chocolate con leche','huevo2.jpg',500.00,20);
+INSERT INTO `products` VALUES (1,'MARROC','Chocolate con leche y chocolate blanco con pasta de maní','marroc.jpg',500.00,20,1),(2,'BORRACHITO','Chocolate semi amargo con crema de ciruelas al Malbec con dulce de leche','borrachito.jpg',500.00,20,1),(3,'DULCE DE LECHE CON NUEZ','Pasta de dulce de leche y nueces, entre una capa de chocolate con leche y una capa de chocolate blanco','nuez-ddl-blanco.jpg',500.00,20,1),(4,'TABLETA ALMENDRA','Chocolate amargo 70% cacao con naranja, jengibre y almendras','almendra.jpg',500.00,20,1),(5,'PISTACHO','Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo','pistacho.jpg',500.00,20,1),(6,'AVELLANAS','Chocolate amargo con crema de licor de naranja y avellanas tostadas','avellanas2.jpg',500.00,20,1),(7,'PISTACHO','Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo','avellanas2.jpg',500.00,20,1),(8,'TABLETA FRAMBUESAS','Chocolate semi amargo con frambuesas','frambuesa.jpg',500.00,20,2),(9,'TABLETA FRAMBUESAS CHOCO BLANCO','Chocolate blanco con frambuesas y nibs de cacao','frambuesa-blanco.jpg',500.00,20,2),(10,'FRUTOS ROJOS','Crema de chocolate semi amargo y frutos rojos, entre una capa de chocolate amargo y una de chocolate blanco','frutos-rojos.jpg',500.00,20,1),(11,'COOKIES \"N\" CREAM','Chocolate blanco con Oreos relleno de Nutella','huevo1.jpg',500.00,20,1),(12,'WHISKACHO','Crema de chocolate belga y whisky, con nibs de cacao','whisky.jpg',500.00,20,1),(13,'HUEVO TRUFADO DDL','Mucho dulce de leche entre dos capas de chocolate con leche','huevo2.jpg',500.00,20,1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,8 +138,11 @@ CREATE TABLE `users` (
   `last_name` varchar(45) DEFAULT NULL,
   `password` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+  `user_category_id` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_category_id_idx` (`user_category_id`),
+  CONSTRAINT `user_category_id` FOREIGN KEY (`user_category_id`) REFERENCES `users_categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,7 +151,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Juan','Pedro','123456789','juan@gmail.com'),(2,'Pepe','Biondi','123456789','pepebiondi@gmail.com'),(4,'Berni','Biondi','123456789','pepebiondi@gmail.com'),(5,'Carlos','Biondi','123456789','pepebiondi@gmail.com'),(7,'Juance','Biondi','123456789','pepebiondi@gmail.com'),(9,'JUlian','Biondi','123456789','pepebiondi@gmail.com'),(10,'otro','otro','123456789','otro5@gmail.com'),(11,'Ignacio','Iriondo','123456789','ignacioiri@gmail.com'),(12,'gon','pampin','123456789','javier@gmail.com'),(13,'hola','holaa','123456789','holaaaa@gmail.com');
+INSERT INTO `users` VALUES (35,'Pier','Bohman','EDTpxR411RV','pbohman0@princeton.edu',1),(36,'Carce','Seniour','CjYdoMrFOp','cseniour1@g.co',1),(37,'Alberto','Danko','SEB0s2aU7Z','adanko2@biglobe.ne.jp',1),(38,'Lewie','Junkinson','p9ZqbsypuHQ','ljunkinson3@livejournal.com',1),(39,'Aldrich','Buddington','HZNtZQ7','abuddington4@plala.or.jp',1),(40,'Lind','Rickis','NNLOcsXF','lrickis5@ask.com',1),(41,'Barclay','Lockless','Wg23Gcs','blockless6@nbcnews.com',1),(42,'Darn','Lewton','2ISI9jrvUeS','dlewton7@patch.com',1),(43,'Cheston','Keniwell','Q7CjNJc','ckeniwell8@themeforest.net',1),(44,'Enrique','Mecozzi','fF9sSXTjT','emecozzi9@ted.com',1),(45,'Randie','Hixson','JnptRYkJU','rhixsona@cargocollective.com',1),(46,'Xylia','Eathorne','J0kAsufeQPPN','xeathorneb@eepurl.com',1),(47,'Joaquin','Thomerson','YqAX4gWjRbI','jthomersonc@cbslocal.com',1),(48,'Morley','Letterick','Du0IErZjG','mletterickd@constantcontact.com',1),(49,'Calhoun','Nerne','hOMMZeXR9L','cnernee@patch.com',1),(50,'Fern','Kenzie','p1NnVI32','fkenzief@oracle.com',1),(51,'Karrah','Cotgrove','Z2rvyIlB3','kcotgroveg@studiopress.com',1),(52,'Yolanda','Celle','BMsgt3ss','ycelleh@acquirethisname.com',1),(53,'Lotta','Fetherstan','a840EYjaxu','lfetherstani@zdnet.com',2),(54,'Brenda','Grievson','jYa5S9um','bgrievsonj@ucoz.com',2),(55,'bernardo','segui','123456789','bernardo@bernardo.com',2);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,4 +188,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-16 11:08:44
+-- Dump completed on 2021-12-16 20:11:30

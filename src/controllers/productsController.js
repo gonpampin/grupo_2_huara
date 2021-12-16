@@ -53,6 +53,7 @@ let productController = {
     detail: (req, res) => {
         Products.findByPk(req.params.id)
             .then(function (productoDetalle) {
+                console.log(productoDetalle)
                 res.render('./products/productDetail', {
                     products: productoDetalle
                 });

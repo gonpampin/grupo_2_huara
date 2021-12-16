@@ -26,6 +26,11 @@
                                     <p class="detalle"><%= products[i].description %></p>
                                     <h4 class="descripcion"><%= products[i].name %></h4>
                                     <h4 class="descripcion">$<%= products[i].price %></h4>
+                                    <% if (products[i].product_category_id == 1){ %>
+                                    <h4 class="descripcion">Bariloche</h4>
+                                    <% } else { %>
+                                    <h4 class="descripcion">Tableta</h4>
+                                    <% } %>
                                     </a>         
                                     </div>
                                 </div> 
