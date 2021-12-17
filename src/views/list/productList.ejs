@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %> 
+    
+    <body>
+    
+        <%- include('../partials/header') %> 
+
+        <main>
+
+            <ul>
+                <li>
+                    <% for (  let i = 0 ; i < products.length; i ++ ){%>
+                             
+                             <p class=""><%= products[i].description %></p>
+                             <h4 class=""><%= products[i].name %></h4>
+                             <h4 class="">$<%= products[i].price %></h4>
+                             <h4> <%= products[i].product_category_id %></h4>
+                             <% if (products[i].product_category_id == 1){ %>
+                             <h4 class="">Bariloche</h4>
+                             <% } else { %>
+                             <h4 class="">Tableta</h4>
+                             
+                             <% } %>
+                             </a>         
+                             </div>
+                         </div> 
+                     <% } %>
+                </li>
+            </ul>
+
+        </main>
+
+   
+        <%- include('../partials/footer') %>
+</body>
+</html>

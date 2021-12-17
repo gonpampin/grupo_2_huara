@@ -124,10 +124,10 @@ let userController = {
 editUser:(req, res) => {
 	Users.update({
 		first_name: req.body.name,
-			last_name: req.body.lastname,
-			password: bcryptjs.hashSync(req.body.contrasenia,10),
-			email: req.body.email,
-			image: req.body.image,
+		last_name: req.body.lastname,
+		password: bcryptjs.hashSync(req.body.contrasenia,10),
+		email: req.body.email,
+		image: req.body.image
 	},
 	 {
 		where: {
@@ -137,12 +137,24 @@ editUser:(req, res) => {
 	res.redirect('/usuarios/perfil/'+ req.params.id)
 },
 
+delete: (req,res) =>{
+	Users.destroy({
+		where: {
+			id: req.params.id
+		}
+	})
+	res.clearCookie('userEmail');
+	req.session.destroy();
+	res.redirect('/')
+},
 
-    logout: (req, res) => {
-		res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
-	}
+
+
+logout: (req, res) => {
+	res.clearCookie('userEmail');
+	req.session.destroy();
+	return res.redirect('/');
+}
 }
 
 

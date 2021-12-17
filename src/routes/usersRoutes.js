@@ -8,6 +8,7 @@ const controller = require('../controllers/usersController');
 //Requerir middlewares
 const validations = require('../middlewares/validationRegisterMiddleware');
 const uploadFile = require('../middlewares/multerUsersMiddleware');
+const uploadFileEdit = require('../middlewares/multerUsersEditMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 
@@ -27,7 +28,8 @@ router.post('/login', controller.loginProcess);
 // Perfil de Usuario
 router.get('/perfil/:id', authMiddleware, controller.profile);
 router.get('/editarusuario/:id', controller.formEdit);
-router.put('/editarusuario/:id', uploadFile.single('avatar'), validations, controller.editUser);
+router.put('/editarusuario/:id', uploadFileEdit.single('image'), controller.editUser);
+router.delete('/delete/:id', controller.delete);
 // Logout
 router.get('/logout', controller.logout);
 

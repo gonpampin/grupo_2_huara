@@ -12,13 +12,14 @@
             <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/perfil/<%= locals.userLogged.id %>">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                 Hi <%= locals.userLogged.first_name%> 
+                <li><a href="/usuarios/logout">Logout</a></li></li>
              </a> 
              <% } else { %>
             <li><i class="fas fa-door-open"></i> <a href="/usuarios/login">   Login</a></li>
             <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/registro">   Registrate</a></li> 
             <% } %>
             <li><i class="fas fa-box"> </i><a href="/productos/crearproducto">   Crear producto</a></li>    
-            <li><a href="/usuarios/logout">Logout</a></li></li>
+            
         </ul>
     </div>
 </header>

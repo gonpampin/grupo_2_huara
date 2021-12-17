@@ -94,7 +94,12 @@ let productController = {
             }
         });
         res.redirect('/productos')
+    },
+
+    listado: (req,res) => {
+        res.send("hola mundo perdido")
     }
+   
 }
 
 module.exports = productController;

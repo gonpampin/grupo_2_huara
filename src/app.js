@@ -35,9 +35,11 @@ app.use(userLoggedMiddleware);
 const mainRouter = require('./routes/mainRoutes');
 const productsRouter = require('./routes/productsRoutes');
 const usersRouter = require('./routes/usersRoutes');
+const listRouter = require('./routes/listRoutes');
 
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);
+app.use('/listados', listRouter);
 app.use('/usuarios', usersRouter);
 
 
