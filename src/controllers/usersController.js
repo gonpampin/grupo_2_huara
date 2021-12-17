@@ -28,9 +28,17 @@ let userController = {
              });
         }
 
-        let userInDB = User.findByField('email', req.body.email);
+       Users.findOne({
+		where:{
+			email: req.body.email
+		}
+	   })
+	   .then((resultado)=>{
+		   
 
-		if (userInDB) {
+		console.log(req.body.email === resultado.email)
+		if (resultado.email === req.body.email) {
+			console.log(req.body.email === resultado.email)
 			return res.render('../views/users/register', {
 				errors: {
 					email: {
@@ -40,6 +48,7 @@ let userController = {
 				oldData: req.body
 			});
 		}
+	   })
 
 
 		Users.create({
@@ -49,17 +58,13 @@ let userController = {
 			email: req.body.email,
 			image: req.file.filename
 		})
-		/*.catch(error => {
-			res.send(error)
-		})*/
 		
 		return res.redirect('/usuarios/login');
 
 
 	},
     loginProcess: (req, res) => {
-		console.log('pase por login process')
-		console.log(req.body.contrasenia)
+		
 		Users.findOne({
 			where:{
 				email: req.body.email
@@ -74,10 +79,10 @@ let userController = {
 					req.session.userLogged = resultado;
 	
 					if(req.body.recordarUsuario) {
-						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 100 })
 					}
 	
-					return res.redirect('/usuarios/perfil');
+					return res.redirect('/usuarios/perfil/'+resultado.id);
 				} 
 				return res.render('../views/users/login', {
 					errors: {
@@ -110,9 +115,9 @@ let userController = {
 	},
 
 	formEdit:(req, res) =>{
-		User.findByPk(req.params.id)
-		.then(function (userEditar) {
-			res.render('users/userEdit', {userEditar: userEditar} );
+		Users.findByPk(req.params.id)
+		.then(function (userEdit) {
+			res.render('../views/users/userEdit', {userEdit: userEdit} );
 		})
 },
 
@@ -129,7 +134,7 @@ editUser:(req, res) => {
 			id: req.params.id
 		}
 	})
-	res.redirect('../views/users/profile')
+	res.redirect('/usuarios/perfil/'+ req.params.id)
 },
 
 

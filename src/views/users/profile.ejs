@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,7 @@
 	<div class="cuadro1" style="margin: auto; margin-top: 10px; margin-bottom: 10px;">
 		<div class="row">
 			<div class="usario_perfil">
-				<h2 class="title-login">Hi <%= user.first_name %> <%= user.user_category_id %></h2>
+				<h2 class="title-login">Hi <%= user.first_name %> </h2>
 				<img  src="../images/avatars/<%= user.image %>" alt="avatar">
 				<br>
 				<div style="  color: rgb(114,141,117);" class="alert alert-success"><%= user.email %>  </div>
@@ -21,7 +20,7 @@
 			
 		</div>
 	</div>
-	<button><a class="detail-editar" href="/usuarios/editarusuario/<%= user.id  %>">Editar Usuario</a></button>
+	<button><a class="profile-editar" href="/usuarios/editarusuario/<%= user.id  %>">Editar Usuario</a></button>
     <%- include('../partials/footer') %>
 </body>
 </html>

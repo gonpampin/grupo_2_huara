@@ -13,7 +13,7 @@
                 <p class="title-login-2">Información personal</p>
             </div>
             <div class="formulario">
-                <form action="/usuarios/registro" method="POST" enctype="multipart/form-data">
+                <form action="/usuarios/editarusuario/<%= userEdit.id %>?_method=PUT" method="POST" >
                     <p class="campo">
                         <label for="name" class="label">Nombre</label>
                         <input 
@@ -21,7 +21,7 @@
                         name="name" 
                         id="name" 
                         class="input"
-                        value="<%= locals.oldData ? oldData.name : null %>"
+                        value="<%= userEdit.first_name %>"
                         >
                     </p>
 
@@ -42,7 +42,7 @@
                         name="lastname" 
                         id="lastname" 
                         class="input"
-                        value="<%= locals.oldData ? oldData.lastname : null %>"
+                        value="<%= userEdit.last_name %>"
                         >
                     </p>
 
@@ -64,7 +64,7 @@
                             class="input" 
                             placeholder="ejemplo@gmail.com"
                             style="font-style:italic; font-size: 12px"
-                            value="<%= locals.oldData ? oldData.email : null %>"
+                            value="<%= userEdit.email %>"
                             >
                         </p>
 
@@ -125,11 +125,7 @@
 
                         <br>
                         <p>
-                            <p class="campo">
-                                <label for="birthday" class="label">Fecha de nacimiento</label>
-                                <input type="date" min="1940-01-01" max="2010-01-01" name="birthday" id="birthday" class="input">
-                            </p>
-                            <br>
+                            
                             <button type="submit" class="button"><span>Guardar</span>
                                 <svg>
                                     <rect x="0" y="0" fill="none"></rect>
