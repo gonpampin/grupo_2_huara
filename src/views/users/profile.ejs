@@ -16,9 +16,12 @@
 				<br>
 				<div style="  color: rgb(114,141,117);" class="alert alert-success"><%= user.email %>  </div>
                 <a href="/usuarios/logout">Logout</a>
+				
 			</div>
+			
 		</div>
 	</div>
+	<button><a class="detail-editar" href="/usuarios/editarusuario/<%= user.id  %>">Editar Usuario</a></button>
     <%- include('../partials/footer') %>
 </body>
 </html>

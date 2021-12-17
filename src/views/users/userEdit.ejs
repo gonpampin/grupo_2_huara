@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="login">
+        <h2 class="title-login">Edita tu cuenta</h2>
+        <section class="cuadro">
+            <div>
+                <p class="title-login-2">Información personal</p>
+            </div>
+            <div class="formulario">
+                <form action="/usuarios/registro" method="POST" enctype="multipart/form-data">
+                    <p class="campo">
+                        <label for="name" class="label">Nombre</label>
+                        <input 
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        class="input"
+                        value="<%= locals.oldData ? oldData.name : null %>"
+                        >
+                    </p>
+
+
+                    <span style="color: red; font-size: 10px; font-style:italic">
+                        <% if (locals.errors && errors.name) { %>  
+                            <%= errors.name.msg %> 
+                        <% } %>
+                    </span>
+
+
+                    <br>
+
+                    <p class="campo">
+                        <label for="lastname" class="label">Apellido</label>
+                        <input 
+                        type="text" 
+                        name="lastname" 
+                        id="lastname" 
+                        class="input"
+                        value="<%= locals.oldData ? oldData.lastname : null %>"
+                        >
+                    </p>
+
+
+                    <span style="color: red; font-size: 10px; font-style:italic">
+                        <% if (locals.errors && errors.lastname) { %>  
+                            <%= errors.lastname.msg %> 
+                        <% } %>
+                    </span>
+
+                    <br>
+                    <p>
+                        <p class="campo">
+                            <label for="email" class="label">Dirección de correo electrónico</label>
+                            <input 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            class="input" 
+                            placeholder="ejemplo@gmail.com"
+                            style="font-style:italic; font-size: 12px"
+                            value="<%= locals.oldData ? oldData.email : null %>"
+                            >
+                        </p>
+
+
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.email) { %>  
+                                <%= errors.email.msg %> 
+                            <% } %>
+                        </span>
+                        <br>
+                        <p class="campo">
+                            <label class="label">Ingresá imagen de perfil</label>
+                            <input
+                             type="file"
+                             name="avatar"
+                             accept="image/*"
+                             class="input"
+                             >
+                        </p>
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.avatar) { %>  
+                                <%= errors.avatar.msg %>
+                            <% } %>
+                        </span>
+                        <br>
+                        <p class="campo">
+                            <label for="password" class="label">Contraseña</label>
+                            <input type="password"
+                             name="contrasenia" id="password" class="input"
+                                placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
+                        </p>
+
+
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.contrasenia) { %>  
+                                <%= errors.contrasenia.msg %> 
+                            <% } %>
+                        </span>
+
+                        <br>
+                        <p class="campo">
+                            <label for="password" class="label">Reingresá la contraseña</label>
+                            <input type="password" name="recontrasenia" id="password" class="input"
+                                placeholder="Reingresá tu contraseña" style="font-style:italic; font-size: 12px">
+                        </p>
+
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.recontrasenia) { %>  
+                                <%= errors.recontrasenia.msg %> 
+                            <% } %>
+                        </span>
+
+                        
+
+
+
+                        
+
+                        <br>
+                        <p>
+                            <p class="campo">
+                                <label for="birthday" class="label">Fecha de nacimiento</label>
+                                <input type="date" min="1940-01-01" max="2010-01-01" name="birthday" id="birthday" class="input">
+                            </p>
+                            <br>
+                            <button type="submit" class="button"><span>Guardar</span>
+                                <svg>
+                                    <rect x="0" y="0" fill="none"></rect>
+                                </svg>
+                            </button>
+                        </p>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

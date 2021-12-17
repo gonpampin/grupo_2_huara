@@ -11,14 +11,14 @@
             <% if (locals.isLogged) { %> 
             <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/perfil">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
-                Hi <%= locals.userLogged.name %> 
-             </a></li> 
+                Hi <%= locals.userLogged.first_name%> 
+             </a> 
              <% } else { %>
             <li><i class="fas fa-door-open"></i> <a href="/usuarios/login">   Login</a></li>
             <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/registro">   Registrate</a></li> 
             <% } %>
             <li><i class="fas fa-box"> </i><a href="/productos/crearproducto">   Crear producto</a></li>    
-            
+            <li><a href="/usuarios/logout">Logout</a></li></li>
         </ul>
     </div>
 </header>

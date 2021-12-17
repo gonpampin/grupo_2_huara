@@ -26,7 +26,8 @@ router.post('/login', controller.loginProcess);
 
 // Perfil de Usuario
 router.get('/perfil', authMiddleware, controller.profile);
-
+router.get('/editarusuario/:id',guestMiddleware, controller.formEdit);
+router.put('/editarusuario/:id', uploadFile.single('avatar'), validations, controller.editUser);
 // Logout
 router.get('/logout', controller.logout);
 

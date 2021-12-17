@@ -108,6 +108,31 @@ let userController = {
 			user: req.session.userLogged
 		});
 	},
+
+	formEdit:(req, res) =>{
+		User.findByPk(req.params.id)
+		.then(function (userEditar) {
+			res.render('users/userEdit', {userEditar: userEditar} );
+		})
+},
+
+editUser:(req, res) => {
+	Users.update({
+		first_name: req.body.name,
+			last_name: req.body.lastname,
+			password: bcryptjs.hashSync(req.body.contrasenia,10),
+			email: req.body.email,
+			image: req.body.image,
+	},
+	 {
+		where: {
+			id: req.params.id
+		}
+	})
+	res.redirect('../views/users/profile')
+},
+
+
     logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();
