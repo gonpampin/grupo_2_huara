@@ -17,12 +17,14 @@
                     <div class="detail-otro">
                         
                         <p class="detail-product-name"><%= products.name%></p>
+                        <% if (locals.userLogged.user_category_id != null) {%> 
                         <div class="detail-edit">
                             <a class="detail-editar" href="/productos/editarproducto/<%= products.id  %>">EDITAR PRODUCTO</a>
                                 <form action="/productos/<%= products.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
                                 <button class="detail-eliminar" type="submit">ELIMINAR</button>
                                 </form>
                             </div>
+                        <% } %> 
                         <p class="detail-description"><%= products.description %></p>
                         <div class="detail-numbers">
                         <p class="detail-presentacion">100 gramos</p>
