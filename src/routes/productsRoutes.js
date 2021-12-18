@@ -7,6 +7,7 @@ const productController = require('../controllers/productsController');
 
 //Requerir middlewares
 const uploadFile = require('../middlewares/multerProductsMiddleware');
+const authAdminMiddleware = require('../middlewares/authAdminMiddleware');
 
 
 //Formulario creación productos
@@ -16,11 +17,11 @@ router.delete('/:id', productController.delete);
 
 // Envío de vistas
 router.get('/', productController.products);
-router.get('/crearproducto', productController.formCreate);
-router.get('/editarproducto/:id', productController.formEdit);
+router.get('/crearproducto', authAdminMiddleware, productController.formCreate);
+router.get('/editarproducto/:id', authAdminMiddleware, productController.formEdit);
 router.get('/:id', productController.detail);
 
-
+ 
 
 
 

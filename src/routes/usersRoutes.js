@@ -13,6 +13,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
+
 //Ruta que muestra la vista del formulario de registro
 router.get('/registro', guestMiddleware, controller.register);
 
@@ -27,7 +28,7 @@ router.post('/login', controller.loginProcess);
 
 // Perfil de Usuario
 router.get('/perfil/:id', authMiddleware, controller.profile);
-router.get('/editarusuario/:id', controller.formEdit);
+router.get('/editarusuario/:id', authMiddleware, controller.formEdit);
 router.put('/editarusuario/:id', uploadFileEdit.single('image'), controller.editUser);
 router.delete('/delete/:id', controller.delete);
 // Logout

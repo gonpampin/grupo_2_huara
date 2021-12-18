@@ -5,13 +5,61 @@
 
     <nav class="main-nav-bar">
         <ul class="inside-navbar">
+           
+     
+
+            <% if (!locals.isLogged)  { %> 
             <li><a href="/">Home</a></li>
             <li><a href="/productos">Productos</a></li>
             <li><a href="/usuarios/login">Login</a></li>
-            <li><a href="/usuarios/registro">Registro</a></li>
-            <li><a href="/carrito">Carrito</a></li>
-            <li><a href="/productos/crearproducto">Crear productos</a></li>
+            <li><a href="/usuarios/registro">Registro</a></li> 
+           
+            <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == null) ) { %> 
+                <li><a href="/">Home</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/carrito">Carrito</a></li>
+                <li></i> <a href="/usuarios/perfil/<%= locals.userLogged.id %>">
+                    Ir a Perfil
+                </li></a> 
+                <li><a href="/usuarios/logout">Logout</a></li>
+             
+             <% } else { %>
+                <li><a href="/">Home</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/carrito">Carrito</a></li>
+                <li><a href="/listados">Listados</a></li>
+                <li><a href="/productos/crearproducto">Crear producto</a></li> 
+                <li></i> <a href="/usuarios/perfil/<%= locals.userLogged.id %>">
+                    Ir a Perfil
+                </li></a> 
+                <li><a href="/usuarios/logout">Logout</a></li>
+                
+             
+            <% } %>   
+
         </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </nav>
     <div class="contact-block">
         <h3 class="contact">Contactanos</h3>
