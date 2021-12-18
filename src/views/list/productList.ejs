@@ -14,13 +14,12 @@
 
         <table  >
             <thead>
-                <td class="table-products" >ID</td>
-                <td class="table-products">Nombre</td>
-                <td class="table-products">Precio</td>
-                <td class="table-products">Stock</td>
-                <td class="table-products">Categoría</td>
-                <td class="table-products">Acciones</td>
-                <td><a href="/productos/crearproducto"><button class="detail-eliminar"> Crear nuevo</button></td></a>
+                <td class="listado_productos" >ID</td>
+                <td class="listado_productos">Nombre</td>
+                <td class="listado_productos">Precio</td>
+                <td class="listado_productos">Stock</td>
+                <td class="listado_productos">Categoría</td>
+                <td class="boton-listado-crear"><a href="/productos/crearproducto"><button class="boton-listado"> Crear nuevo</button></td></a>
             </thead>
             <tbody>
                 <% products.forEach(product => { %>
@@ -29,14 +28,29 @@
                         <td class="table-products"><%= product.name %></td>
                         <td class="table-products"><%= product.price %></td>
                         <td class="table-products"><%= product.stock %></td>
-                        <td class="table-products"><%= product.product_category_id ? product.product_category_id : 'Sin categoria' %></td>
+
+
+                        <% if (product.product_category_id == 1){ %>
+                        <td class="table-products">
+                            Bariloche
+                        </td>
+                        <% } else { %>    
+                            <td class="table-products">
+                                Tableta
+                            </td> 
+                            <% } %>    
+                                                     
                         
+                        
+                        <td class="boton-listado">
+                            <a href="/productos/<%= product.id %>" class="boton-listado">Detalle</a>
+                        </td>
+                        <td class="boton-listado">
+                            <a href="/productos/editarproducto/<%= product.id %>" class="boton-listado">Editar</a>
+                        </td>
                         <td>
-                            <a href="/productos/<%= product.id %>" class="detail-eliminar">Detalle</a>
-                            <a href="/productos/editarproducto/<%= product.id %>" class="detail-eliminar">Editar</a>
-                        
-                            <form action="/productos/<%= product.id %>?_method=DELETE" method="post" class="detail-eliminar">
-                                <button class="detail-eliminar" type="submit">Borrar</button>
+                            <form action="/productos/<%= product.id %>?_method=DELETE" method="post" class="boton-listado-borrar">
+                                <button class="boton-listado-borrar" type="submit">Borrar</button>
                             </form>
                         </td>
                     </tr>

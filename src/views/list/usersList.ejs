@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <p class="listado_productos">Listado de usuarios</p>
+        <table>
+            <thead>
+                <td class="listado_productos">ID</td>
+                <td class="listado_productos">Nombre</td>
+                <td class="listado_productos">Apellido</td>
+                <td class="listado_productos">Email</td>
+                <td class="listado_productos">Categoría</td>
+                <td class="boton-listado-crear"><a href="/usuarios/registro"><button class="boton-listado"> Crear
+                            nuevo</button></td></a>
+            </thead>
+            <tbody>
+                <% user.forEach(user => { %>
+                <tr>
+                    <td class="table-products"><%= user.id %></td>
+                    <td class="table-products"><%= user.first_name %></td>
+                    <td class="table-products"><%= user.last_name %></td>
+                    <td class="table-products"><%= user.email %></td>
+
+
+                    <% if (user.user_category_id == 1){ %>
+                    <td class="table-products">
+                        Cliente
+                    </td>
+                    <% } else { %>
+                    <td class="table-products">
+                        Administrador
+                    </td>
+                    <% } %>
+
+
+
+                    <td class="boton-listado">
+                        <a href="/listados/listadousuarios/<%= user.id %>" class="boton-listado">Detalle</a>
+                    </td>
+                    <td class="boton-listado">
+                        <a href="/usuarios/editarusuario/<%= user.id %>" class="boton-listado">Editar</a>
+                    </td>
+                    <td>
+                        <form action="/listados/listadousuarios/delete/<%= user.id %>?_method=DELETE" method="post" class="boton-listado-borrar">
+                            <button class="boton-listado-borrar" type="submit">Borrar</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+
+        </table>
+    </main>
+
+
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

@@ -22,7 +22,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         email: {
             type: dataTypes.STRING(100),
-            notNull: false
+            unique: true,
+            isEmail: true,
+            notNull: true
         },
         image:{
             type: dataTypes.STRING(100),
