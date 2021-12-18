@@ -34,8 +34,7 @@ let userController = {
 		}
 	   })
 	   .then((resultado)=>{
-		   
-		console.log(req.body.email === resultado.email)
+		   		console.log(req.body.email === resultado.email)
 		if (resultado.email === req.body.email) {
 			console.log(req.body.email === resultado.email)
 			return res.render('../views/users/register', {
@@ -46,17 +45,20 @@ let userController = {
 				},
 				oldData: req.body
 			});
-		} else {
-			Users.create({
-				first_name: req.body.name,
-				last_name: req.body.lastname,
-				password: bcryptjs.hashSync(req.body.contrasenia,10),
-				email: req.body.email,
-				image: req.file.filename
-			})
-			return res.redirect('/usuarios/login');
-		}
+		} 
 	   })
+	   .catch(()=>{
+		   console.log("error")
+		   Users.create({
+			first_name: req.body.name,
+			last_name: req.body.lastname,
+			password: bcryptjs.hashSync(req.body.contrasenia,10),
+			email: req.body.email,
+			image: req.file.filename
+		})
+		return res.redirect ('/usuarios/login')
+	   })
+
 	},
     loginProcess: (req, res) => {
 		
