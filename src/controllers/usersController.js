@@ -34,7 +34,7 @@ let userController = {
 		}
 	   })
 	   .then((resultado)=>{
-		   		console.log(req.body.email === resultado.email)
+		console.log(req.body.email === resultado.email)
 		if (resultado.email === req.body.email) {
 			console.log(req.body.email === resultado.email)
 			return res.render('../views/users/register', {
@@ -48,7 +48,6 @@ let userController = {
 		} 
 	   })
 	   .catch(()=>{
-		   console.log("error")
 		   Users.create({
 			first_name: req.body.name,
 			last_name: req.body.lastname,
@@ -60,6 +59,7 @@ let userController = {
 	   })
 
 	},
+
     loginProcess: (req, res) => {
 		
 		Users.findOne({
