@@ -34,9 +34,9 @@ let userController = {
 		}
 	   })
 	   .then((resultado)=>{
-		console.log(req.body.email === resultado.email)
+		
 		if (resultado.email === req.body.email) {
-			console.log(req.body.email === resultado.email)
+			
 			return res.render('../views/users/register', {
 				errors: {
 					email: {

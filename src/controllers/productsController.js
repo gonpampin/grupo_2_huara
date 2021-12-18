@@ -1,6 +1,9 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
 
 const Products = db.Products;
 
@@ -53,7 +56,7 @@ let productController = {
     detail: (req, res) => {
         Products.findByPk(req.params.id)
             .then(function (productoDetalle) {
-                console.log(productoDetalle)
+                
                 res.render('./products/productDetail', {
                     products: productoDetalle
                 });
@@ -98,8 +101,26 @@ let productController = {
 
     listado: (req,res) => {
         res.send("hola mundo perdido")
+    },
+    search: (req,res) => {
+
+    Products.findAll({
+        where: {
+            name: {
+                [Op.like]: `%${req.body.titulo}%`
+            }
+        }
+
+    })
+    .then(function (buscarProducto) {
+        res.render('./products/productDetail', {
+            products: buscarProducto
+
+        })
+    
+        console.log(buscarProducto)
+    })
     }
-   
 }
 
 module.exports = productController;
