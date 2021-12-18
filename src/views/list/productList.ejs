@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head') %> 
-    
-    <body>
-    
-        <%- include('../partials/header') %> 
+<%- include('../partials/head') %>
 
-        <main>
+<body>
 
-            <ul>
-                <li>
-                    <% for (  let i = 0 ; i < products.length; i ++ ){%>
-                             
-                             <p class=""><%= products[i].description %></p>
-                             <h4 class=""><%= products[i].name %></h4>
-                             <h4 class="">$<%= products[i].price %></h4>
-                             <h4> <%= products[i].product_category_id %></h4>
-                             <% if (products[i].product_category_id == 1){ %>
-                             <h4 class="">Bariloche</h4>
-                             <% } else { %>
-                             <h4 class="">Tableta</h4>
-                             
-                             <% } %>
-                             </a>         
-                             </div>
-                         </div> 
-                     <% } %>
-                </li>
-            </ul>
+    <%- include('../partials/header') %>
 
-        </main>
+    <main>
 
-   
-        <%- include('../partials/footer') %>
+        <p class="listado_productos">Listado de productos</p>
+
+
+
+        <table  >
+            <thead>
+                <td class="table-products" >ID</td>
+                <td class="table-products">Nombre</td>
+                <td class="table-products">Precio</td>
+                <td class="table-products">Stock</td>
+                <td class="table-products">Categoría</td>
+                <td class="table-products">Acciones</td>
+                <td><a href="/productos/crearproducto"><button class="detail-eliminar"> Crear nuevo</button></td></a>
+            </thead>
+            <tbody>
+                <% products.forEach(product => { %>
+                    <tr>
+                        <td class="table-products"><%= product.id %></td>
+                        <td class="table-products"><%= product.name %></td>
+                        <td class="table-products"><%= product.price %></td>
+                        <td class="table-products"><%= product.stock %></td>
+                        <td class="table-products"><%= product.product_category_id ? product.product_category_id : 'Sin categoria' %></td>
+                        
+                        <td>
+                            <a href="/productos/<%= product.id %>" class="detail-eliminar">Detalle</a>
+                            <a href="/productos/editarproducto/<%= product.id %>" class="detail-eliminar">Editar</a>
+                        
+                            <form action="/productos/<%= product.id %>?_method=DELETE" method="post" class="detail-eliminar">
+                                <button class="detail-eliminar" type="submit">Borrar</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+
+        </table>
+    </main>
+
+
+    <%- include('../partials/footer') %>
 </body>
+
 </html>

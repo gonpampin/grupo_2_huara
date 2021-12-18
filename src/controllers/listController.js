@@ -8,7 +8,7 @@ const Products = db.Products;
 
 let listController = {
     list: (req,res) => {
-        res.send("ANDATE A LA RPQTM")
+        res.render("./list/list")
     },
     productList: (req,res) => {
         Products.findAll()
