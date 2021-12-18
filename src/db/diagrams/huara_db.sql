@@ -135,7 +135,7 @@ CREATE TABLE `users` (
   `user_category_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,7 +144,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'BERNARDO','www','$2a$10$YroBwbanSRy4EtgU69rHguJL3.EjyT4Yn6g8s0VRB.byjWoby.KAe','bernardo@bernardo.com','user-1639840404164_img.jpg',NULL),(4,'qqq','qqqq','$2a$10$LYU9Q0ubyQY8fa6omZYqSOIOHVxKJdd4IYVUUh9gaVbMo.Y33Tq.S','bernardo.segui@g.com','user-1639840580820_img.jpg',NULL);
+INSERT INTO `users` VALUES (1,'BERNARDO','www','$2a$10$YroBwbanSRy4EtgU69rHguJL3.EjyT4Yn6g8s0VRB.byjWoby.KAe','bernardo@bernardo.com','user-1639840404164_img.jpg',NULL),(4,'qqq','qqqq','$2a$10$LYU9Q0ubyQY8fa6omZYqSOIOHVxKJdd4IYVUUh9gaVbMo.Y33Tq.S','bernardo.segui@g.com','user-1639840580820_img.jpg',NULL),(6,'BERNARDO','SEGUI','$2a$10$DPmpTdssreSONSFkCyb4duFCuE6UezpfJOAuc1z5zm6KqVgTHtOOq','b@b.com','user-1639855839487_img.jpg',NULL),(7,'cacomaster','admin','$2a$10$L6muOHU73IvGLGdO8ZqOjeVlQYKtizAms5Z4UUsLCTjtHsFvXdBW2','admin@admin.com','user-1639856114559_img.jpg',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-18 12:38:01
+-- Dump completed on 2021-12-18 16:46:33
