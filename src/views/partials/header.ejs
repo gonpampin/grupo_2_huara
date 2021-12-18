@@ -8,6 +8,7 @@
             <li ><i class="fas fa-home"> </i><a  href="/">    Home</a></li>
             <li><i class="fas fa-box"> </i><a href="/productos">   Productos</a></li>
             <li><i class="fas fa-shopping-bag"></i> <a href="/carrito">   Carrito</a></li>
+            <li><i class="fas fa-list-alt"></i> <a href="/listados">   Listados</a></li>
             <% if (locals.isLogged) { %> 
             <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/perfil/<%= locals.userLogged.id %>">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
