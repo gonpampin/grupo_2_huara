@@ -55,9 +55,15 @@
 	position: relative;
 	z-index: 2;
 	transition: .3s ease all;
+   color: white;
+    color: rgb(114,141,117);
+    border-radius: 12px;
+    padding: 5px;
+    width: 200px;
+    font-family: nexa-light;
+    margin:5px;
    
 }
-
 
 
 
@@ -68,21 +74,24 @@
 	top: 0;
 	left: 0;
 	fill: none;
+  
 
    }
 
 .button rect {
 	width: 100%;
 	height: 100%;
-	stroke: #000;
+	stroke: rgb(114,141,117);
 	stroke-width: 5px;
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 1000;
 	transition: 2s ease all;
+ 
 }
 
 .button:hover rect {
 	stroke-dashoffset: 0;
+   
  
 }
 

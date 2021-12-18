@@ -5,6 +5,30 @@ main{
        
 }
 
+.category-select{
+    color: rgb(114,141,117);
+    font-size: 12px;
+    padding: 3px;
+    font-family: nexa-light;
+    
+}
+
+div.buscar-titulo{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#titulo{
+    width: 300px;
+    padding: 5px;
+}
+
+button.boton-buscar{
+    padding: 5px;
+    font-family: nexa-light;
+    background-color: white
+}
 
 .descripcion, .precio {
     font-size:16px;

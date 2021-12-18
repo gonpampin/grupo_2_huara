@@ -10,22 +10,27 @@
 	<div class="cuadro1" style="margin: auto; margin-top: 10px; margin-bottom: 10px;">
 		<div class="row">
 			<div class="usario_perfil">
-				<h2 class="title-login">Hi <%= user.first_name %> </h2>
-				<img  src="/images/avatars/<%= user.image %>" alt="avatar">
+				<h2 class="title-login">Hi <%= user.first_name %>! </h2>
+				<br>
+				<img style= "border-radius: 100px;" src="/images/avatars/<%= user.image %>" alt="avatar">
 						
 				<br>
-				<div style="  color: rgb(114,141,117);" class="alert alert-success"><%= user.email %>  </div>
-                <a href="/usuarios/logout">Logout</a>
+				<div style="  color: rgb(114,141,117); font-family: nexa-light; font-size:20px" class="alert alert-success"><%= user.email %>  </div>
+                <br>
+				<a href="/usuarios/logout">Logout</a>
+				
 				
 			</div>
 			
 		</div>
 	</div>
-	<button><a class="profile-editar" href="/usuarios/editarusuario/<%= user.id  %>">Editar Usuario</a></button>
+	<button ><a class="detail-editar" href="/usuarios/editarusuario/<%= user.id  %>">Editar Usuario</a></button>
 
 	<form action="/usuarios/delete/<%= user.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
 	<button class="detail-eliminar" type="submit">Eliminar mi cuenta</button>
 	</form>
+	
+	
 
 
 	
