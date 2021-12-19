@@ -9,13 +9,13 @@
     <main class="login">
         <h2 class="title-login">Formulario de edición de productos</h2>
         <br>
-        <section>
+        <section class="cuadro" style="margin-left: 20px; margin-right: 20px;">
             <div class="detail-group">
-                            
+                      <div style="margin: auto;">     
                 <img src="/images/products/<%= productEdit.image %>"    alt = <%= productEdit.name %> class= "imagen-detalle">
-
-            <div class="detail-otro">
-            <div class="formularioedit">
+            </div> 
+            <div style="width: 50%; margin: auto;">
+            <div class="formulario">
                 <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST">
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
@@ -43,7 +43,11 @@
                         </p>
                     <p>
                     <br>
-                <button type="submit" class="button">MODIFICAR</button>
+                <button type="submit" class="button" style="width: fit-content;" ><span>MODIFICAR</span>
+                    <svg>
+                        <rect x="0" y="0" fill="none"></rect>
+                    </svg>
+                </button>
                 </p>
                 <a href="/crearproducto"><p class="observation">Borrar formulario</p></a>
             </form>

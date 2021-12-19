@@ -104,7 +104,7 @@ let productController = {
     },
     search: (req,res) => {
 
-    Products.findAll({
+    Products.findOne({
         where: {
             name: {
                 [Op.like]: `%${req.body.titulo}%`
@@ -118,7 +118,7 @@ let productController = {
 
         })
     
-        console.log(buscarProducto)
+        
     })
     }
 }
