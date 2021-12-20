@@ -8,18 +8,7 @@ const { Op } = require("sequelize");
 const Products = db.Products;
 
 
-//let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../db/product.json'), 'utf-8');
-//let productosLista = JSON.parse(jsonProducts); 
 
-/*const nuevoId = () => {
-    let ultimo = 0;
-    productosLista.forEach(product => {
-        if (product.id > ultimo) {
-            ultimo = product.id;
-        }
-    });
-    return ultimo + 1;
-}*/
 
 let productController = {
 
@@ -52,7 +41,7 @@ let productController = {
         res.redirect('/productos');
     },
 
-    // hay dos img rotas en la pagina de productos que no pude arreglar
+   
     detail: (req, res) => {
         Products.findByPk(req.params.id)
             .then(function (productoDetalle) {
@@ -72,13 +61,12 @@ let productController = {
                 });
             })
     },
-//falta que venga en el form la imagen ya cargada o poner una validacion para que 
-//no se pueda modificar sin cargarla.
+
     editProduct: (req, res) => {
         Products.update({
             name: req.body.name,
             description: req.body.description,
-            image: req.body.image,
+            image: req.file.filename,
             price: req.body.price,
             stock: req.body.stock
         }, {
@@ -99,9 +87,7 @@ let productController = {
         res.redirect('/productos')
     },
 
-    listado: (req,res) => {
-        res.send("hola mundo perdido")
-    },
+    
     search: (req,res) => {
 
     Products.findOne({
