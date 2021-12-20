@@ -90,7 +90,7 @@ let productController = {
     
     search: (req,res) => {
 
-    Products.findOne({
+    Products.findAll({
         where: {
             name: {
                 [Op.like]: `%${req.body.titulo}%`
@@ -99,7 +99,7 @@ let productController = {
 
     })
     .then(function (buscarProducto) {
-        res.render('./products/productDetail', {
+        res.render('./products/product', {
             products: buscarProducto
 
         })
