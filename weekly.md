@@ -127,4 +127,69 @@
 
 ***
 
+# Weekly-Daily - Sprint 6 #
+
+## *Jueves 2 de diciembre de 2021* ##
+## *18:00 a 19:00hs* ##
+
+* Diagrama de base de datos. Todos los miembros del equipo presentes.
+
+***
+
+
+## *Lunes 6 de diciembre de 2021* ##
+## *18:00 a 19:00hs* ##
+
+* Diagrama de base de datos. Todos los miembros del equipo presentes.
+
+***
+
+## *Jueves 9 de diciembre de 2021* ##
+## *18:00 a 19:00hs* ##
+
+*  Ordenamos los temas y tareas pendientes. Todos los miembros del equipo presentes.
+
+***
+
+## *Lunes 13 de diciembre de 2021* ##
+## *18:00 a 19:00hs* ##
+
+* Coding en equipo. Continuamos arreglando DER. Todos los miembros del equipo presentes.
+
+***
+
+## *Martes 14 de diciembre de 2021* ##
+## *12:00 a 15:00hs* ##
+
+* Coding en equipo. CRUD Productos-Users. Arreglamos workbench, re-armamos las tablas. Todos los miembros del equipo presentes. 
+
+***
+
+## *Miércoles 15 de diciembre de 2021* ##
+## *12:00 a 14:00hs* ##
+
+* Coding en equipo. CRUD Productos-Users. Arreglando errores. Todos los miembros del equipo presentes.
+
+***
+
+## *Jueves 16 de diciembre de 2021* ##
+## *14:00 a 19:00hs* ##
+
+* Coding en equipo. CRUD Productos-Users. Todo el equipo presente.
+
+***
+
+## *Viernes 17 de diciembre de 2021* ##
+## *12:00 a 13:00hs - 15:00 a 20:00 hs* ##
+
+* Coding en equipo. CRUD Productos-Users. Arreglando errores. Todo el equipo presente.
+
+***
+
+## *Sábado 18 de diciembre de 2021* ##
+## *10:00 a 13:00hs - 14:00 a 18:00hs* ##
+
+* Codeamos en equipo. Botón buscador, protección de rutas de admin., vistas de listado products y users. Arreglamos un poco las vistas, unificamos diseño. Todo el equipo presente.
+
+***
 

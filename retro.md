@@ -37,7 +37,7 @@ Empezar a codear todo el equipo junto para determinados puntos de los sprint, es
 Intentar tener más reuniones semanales. 
 
 ## *Continuar haciendo* ##
-Contiunar codeando en equipo.
+Continuar codeando en equipo.
 
 ## *Hacer menos* ##
 
@@ -52,6 +52,15 @@ Contiunar codeando en equipo, con reuniones semanales y buena comunicación. Est
 
 ## *Hacer menos* ##
 No demorar el análisis de la retro, para que tenga efecto inmediato sobre el siguiente sprint.
+
+
+# Retro - Sprint 5 #
+
+## *Continuar haciendo* ##
+Continuar codeando en equipo, con reuniones semanales/diarias. Esta metodología nos funciona como equipo. Estamos todos en tema, equivocándonos y aprendiendo sobre los errores.
+
+## *Hacer más* ##
+Intentar usar más el soporte del Trello, para hacer el seguimiento de los temas pendientes.
 
 
 
