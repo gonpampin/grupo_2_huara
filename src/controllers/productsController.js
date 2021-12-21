@@ -15,7 +15,9 @@ const ProductsCategories = db.ProductsCategories;
 let productController = {
 
     products: (req, res) => {
-        Products.findAll()
+        Products.findAll({
+            include:[{association:"category"}]
+        })
             .then(function (resultados) {
                 res.render("./products/product", {
                     products: resultados
