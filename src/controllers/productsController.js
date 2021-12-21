@@ -8,7 +8,7 @@ const ProductsCategory = require('../database/models/ProductsCategory');
 
 
 const Products = db.Products;
-const ProductsCategories = db.ProductsCategory;
+const ProductsCategories = db.ProductsCategories;
 
 
 
@@ -40,30 +40,27 @@ let productController = {
 
 
     store: (req, res) => {
-        
         Products.create({
-            include: [
-                {association: 'categorias'},
-                {association: 'productos'}                
-            ]
-        },
-            {
             name: req.body.name,
             description: req.body.description,
             image: req.file.filename,
+            product_category_id: req.body.category,
             price: req.body.price,
-            stock: req.body.stock,
-            product_category_id: Products.categorias_producto.product_category_id
+            stock: req.body.stock
         })
         res.redirect('/productos');
     },
 
    
     detail: (req, res) => {
-        Products.findByPk(req.params.id)
+        Products.findByPk(req.params.id, 
+
+            {include: {all: true}}
+                 
+        )
             .then(function (productoDetalle) {
-                
-                res.render('./products/productDetail', {
+                res.render('./products/productDetail', 
+                {
                     products: productoDetalle
                 });
             })
