@@ -17,19 +17,21 @@
 				<br>
 				<div style="  color: rgb(114,141,117); font-family: nexa-light; font-size:20px" class="alert alert-success"><%= user.email %>  </div>
                 <br>
-				<a href="/usuarios/logout">Logout</a>
+				
 				
 				
 			</div>
 			
 		</div>
 	</div>
-	<button ><a class="detail-editar" href="/usuarios/editarusuario/<%= user.id  %>">Editar Usuario</a></button>
+	<button class="detail-eliminar"><a class="detail-editar" href="/usuarios/editarusuario/<%= user.id  %>">Editar Usuario</a></button>
 
 	<form action="/usuarios/delete/<%= user.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
 	<button class="detail-eliminar" type="submit">Eliminar mi cuenta</button>
-	</form>
 	
+	</form>
+	<br>
+	<br>
 	
 
 

@@ -76,7 +76,7 @@ let userController = {
 					req.session.userLogged = resultado;
 	
 					if(req.body.recordarUsuario) {
-						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 100 })
+						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 1000 })
 					}
 	
 					return res.redirect('/usuarios/perfil/'+resultado.id);
@@ -119,18 +119,24 @@ let userController = {
 },
 
 editUser:(req, res) => {
+
+	
 	Users.update({
+		
 		first_name: req.body.name,
 		last_name: req.body.lastname,
 		password: bcryptjs.hashSync(req.body.contrasenia,10),
 		email: req.body.email,
 		image: req.body.image
-	},
+	}
+,	 
 	 {
 		where: {
 			id: req.params.id
-		}
-	})
+		} 
+	}) 
+	
+	
 	res.redirect('/usuarios/perfil/'+ req.params.id)
 },
 

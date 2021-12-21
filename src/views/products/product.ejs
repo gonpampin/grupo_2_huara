@@ -7,6 +7,7 @@
     <%- include('../partials/header') %> 
 
     <main>
+        <h1> <% products.product_category_id %></h1>
         <section>
             <div class="head-products">
                 <img src="images\prueba1.jpeg" class="head-product-image">
@@ -17,7 +18,7 @@
             
             <p class="intro">Tabletitas y chocolates tipo Bariloche a elección. Podés elegir las dulzuras que más te gusten, creadas y elaboradas a mano en San Juan, con la mejor materia prima.</p>
             <div class="buscar-titulo">
-                <form action="/productos/buscar" method="POST">
+                <form action="/productos" method="POST">
                     <input type="text" name="titulo" id="titulo">
                     <button class="boton-buscar" type="submit">Buscar</button>
                 </form>  
@@ -33,11 +34,13 @@
                                     <p class="detalle"><%= products[i].description %></p>
                                     <h4 class="descripcion"><%= products[i].name %></h4>
                                     <h4 class="descripcion">$<%= products[i].price %></h4>
-                                    <% if (products[i].product_category_id == 1){ %>
-                                    <h4 class="descripcion">Bariloche</h4>
-                                    <% } else { %>
-                                    <h4 class="descripcion">Tableta</h4>
-                                    <% } %>
+
+                                 
+
+                                    <h4 class="descripcion"><%= products[i].category %></h4>
+                                 
+                                  
+
                                     </a>         
                                     </div>
                                 </div> 

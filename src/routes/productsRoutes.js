@@ -20,7 +20,7 @@ router.get('/', productController.products);
 router.get('/crearproducto', authAdminMiddleware, productController.formCreate);
 router.get('/editarproducto/:id', authAdminMiddleware, productController.formEdit);
 router.get('/:id', productController.detail);
-router.post('/buscar', productController.search);
+router.post('/', productController.search);
 
  
 

@@ -16,7 +16,7 @@
             </div> 
             <div style="width: 50%; margin: auto;">
             <div class="formulario">
-                <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST">
+                <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST" enctype= "multipart/form-data">
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
                 <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.name %>">
@@ -31,6 +31,24 @@
                     <label for="productImage" class="label">Modifique imagen</label>
                     <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" >
                     </p>
+                    <br>
+                    
+                    <label for="productImage" class="label">Modifique categoría</label>
+                    <select name="category" class="category-select" value="<%= productEdit.product_category_id %>">
+                        <option disabled selected>Seleccioná una opción</option>
+                        <% for( let i = 0; i < category.length; i++ ) { %>
+    
+                            <option value="<%= category[i].id%>" class="input">
+                                
+                                <%= category[i].category%>
+    
+                            </option>
+                             
+                        <% } %>
+                        
+                    </select>
+
+                    <br>
                     <br>
                     <p class="campo">
                         <label for="productPrice" class="label">Modifique precio ARS $</label>

@@ -9,30 +9,22 @@ module.exports = (sequelize, dataTypes) => {
         },
         category: {
             type: dataTypes.STRING(45),
-            notNull: false
         }
 
     };
     let config = {
         tableName: 'products_categories',
-        timestamps: true,
-        underscored: true,
-        paranoid: true
+        timestamps: false
+        
     };
     const ProductsCategories = sequelize.define(alias, cols, config)
 
     ProductsCategories.associate = function(models) {
         ProductsCategories.hasMany(models.Products, {
-            as: "productos",
+            as: "products",
             foreignKey: "product_category_id"
         });
     }
 
-   /* ProductsCategories.associate = models => {
-        ProductsCategories.hasMany(models.Products, {
-            as: 'products',
-            foreignKey: 'product_category_id'});
-    }
-*/
     return ProductsCategories
 }

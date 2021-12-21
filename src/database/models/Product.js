@@ -29,16 +29,13 @@ module.exports = (sequelize, dataTypes) => {
         },
         product_category_id: {
             type: dataTypes.INTEGER,
-            notNull: false
         }
         
 
     };
     let config = {
         tableName: 'products',
-        timestamps: false,
-        underscored: true,
-        paranoid: true
+        timestamps: false
         
     };
     const Products = sequelize.define(alias, cols, config)
@@ -46,21 +43,12 @@ module.exports = (sequelize, dataTypes) => {
 
     Products.associate = function(models) {
         Products.belongsTo(models.ProductsCategories, {
-            as: "categorias_producto",
+            as: "category",
             foreignKey: "product_category_id"
         });
     }
 
-   /* Products.associate = models => {
-        Products.belongsTo(models.ProductsCategories, {
-            as: 'products_categories',
-            foreignKey: 'product_category_id'});
-
-        Products.hasMany(models.OrderDetails, {
-            as: 'order_details',
-            foreignKey: 'product_id'})
-    }*/
-    
+ 
 
     return Products
 }
