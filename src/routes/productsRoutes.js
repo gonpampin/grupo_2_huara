@@ -27,9 +27,4 @@ router.post('/buscar', productController.search);
 
 
 
-
-
-
-
-
 module.exports = router
