@@ -32,6 +32,24 @@
                     <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" >
                     </p>
                     <br>
+                    
+                    <label for="productImage" class="label">Modifique categoría</label>
+                    <select name="category" class="category-select" value="<%= productEdit.product_category_id %>">
+                        <option disabled selected>Seleccioná una opción</option>
+                        <% for( let i = 0; i < category.length; i++ ) { %>
+    
+                            <option value="<%= category[i].id%>" class="input">
+                                
+                                <%= category[i].category%>
+    
+                            </option>
+                             
+                        <% } %>
+                        
+                    </select>
+
+                    <br>
+                    <br>
                     <p class="campo">
                         <label for="productPrice" class="label">Modifique precio ARS $</label>
                         <input type="number" name="price" id="productPrice" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.price %>">

@@ -68,12 +68,30 @@ let productController = {
 
 
     formEdit: function (req, res) {
-        Products.findByPk(req.params.id)
+        /*Products.findByPk(req.params.id)
             .then(function (productoEditar) {
-                res.render('products/formEdit', {
-                    productEdit: productoEditar
-                });
-            })
+                res.render('products/formEdit', {productEdit: productoEditar});
+            })*/
+
+        let productsPromise = Products.findByPk(req.params.id)
+        /*.then(function (productoEditar) {
+            res.render('products/formEdit', {productEdit: productoEditar});
+        })*/
+
+        let categoriesPromise = ProductsCategories.findAll()
+        /*.then(function(resultados){
+             res.render('./products/formCreate', {category: resultados});
+            })*/
+
+        Promise.all([productsPromise, categoriesPromise])
+        .then(function([resultadosProducts, resultadosCategories]){
+            res.render('./products/formEdit',
+            {
+                productEdit: resultadosProducts,
+                category: resultadosCategories
+            });
+        })
+        
     },
 
     editProduct: (req, res) => {
@@ -81,6 +99,7 @@ let productController = {
             name: req.body.name,
             description: req.body.description,
             image: req.file.filename,
+            product_category_id: req.body.category,
             price: req.body.price,
             stock: req.body.stock
         }, {
