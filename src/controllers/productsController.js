@@ -3,6 +3,7 @@ const fs = require('fs');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const Product = require('../database/models/Product');
 
 
 const Products = db.Products;
@@ -31,12 +32,20 @@ let productController = {
 
 
     store: (req, res) => {
+        
         Products.create({
+            include: [
+                {association: 'categorias_producto'},
+                {association: 'productos'}                
+            ]
+        },
+            {
             name: req.body.name,
             description: req.body.description,
             image: req.file.filename,
             price: req.body.price,
-            stock: req.body.stock
+            stock: req.body.stock,
+            product_category_id: Products.categorias_producto.product_category_id
         })
         res.redirect('/productos');
     },

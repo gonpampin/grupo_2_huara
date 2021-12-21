@@ -51,16 +51,7 @@ module.exports = (sequelize, dataTypes) => {
         });
     }
 
-   /* Products.associate = models => {
-        Products.belongsTo(models.ProductsCategories, {
-            as: 'products_categories',
-            foreignKey: 'product_category_id'});
-
-        Products.hasMany(models.OrderDetails, {
-            as: 'order_details',
-            foreignKey: 'product_id'})
-    }*/
-    
+ 
 
     return Products
 }

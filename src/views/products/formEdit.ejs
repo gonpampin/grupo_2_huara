@@ -16,7 +16,7 @@
             </div> 
             <div style="width: 50%; margin: auto;">
             <div class="formulario">
-                <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST">
+                <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST" enctype= "multipart/form-data">
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
                 <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.name %>">
