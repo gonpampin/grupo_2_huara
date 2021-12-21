@@ -9,7 +9,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         category: {
             type: dataTypes.STRING(45),
-            notNull: false
         }
 
     };

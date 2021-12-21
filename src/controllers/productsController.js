@@ -8,7 +8,7 @@ const ProductsCategory = require('../database/models/ProductsCategory');
 
 
 const Products = db.Products;
-
+const ProductsCategories = db.ProductsCategory;
 
 
 
@@ -28,9 +28,12 @@ let productController = {
 
 
     formCreate: (req, res) => {
-        db.ProductsCategory.findAll()
+        ProductsCategories.findAll()
         .then(function(resultados){
-            res.render('./products/formCreate', {category: resultados});
+             res.render('./products/formCreate', {category: resultados});
+        })
+        .catch(function () {
+            console.log("Promise Rejected en formCreate");
         })
         
     },
@@ -40,7 +43,7 @@ let productController = {
         
         Products.create({
             include: [
-                {association: 'categorias_producto'},
+                {association: 'categorias'},
                 {association: 'productos'}                
             ]
         },
