@@ -4,6 +4,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const Product = require('../database/models/Product');
+const ProductsCategory = require('../database/models/ProductsCategory');
 
 
 const Products = db.Products;
@@ -27,7 +28,11 @@ let productController = {
 
 
     formCreate: (req, res) => {
-        res.render('./products/formCreate');
+        db.ProductsCategory.findAll()
+        .then(function(resultados){
+            res.render('./products/formCreate', {category: resultados});
+        })
+        
     },
 
 

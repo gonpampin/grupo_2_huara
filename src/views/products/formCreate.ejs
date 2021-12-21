@@ -31,8 +31,11 @@
                 <label for="productCategory"class="label">Categoría</label>
                 <select name="category" class="category-select">
                     <option disabled selected>Seleccioná una opción</option>
-                    <option value="Chocolates" class="input">Chocolates</option>
-                    <option value="Tabletas" class="input">Tabletas</option>
+                    <% for( let i = 0; i < category.length; i++ ) { %>
+                        <option value="<%= category[i].id%>" class="input"><%= category[i].category%></option>
+                         
+                    <% } %>
+                    
                 </select>
                 </p>
                 <br>
