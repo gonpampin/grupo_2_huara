@@ -130,16 +130,20 @@ let productController = {
             name: {
                 [Op.like]: `%${req.body.titulo}%`
             }
-        }
+        },
 
-    })
+        include:[
+            {association:"category"}
+        ]
+
+    },
+    )
     .then(function (buscarProducto) {
         res.render('./products/product', {
             products: buscarProducto
 
         })
-    
-        
+            
     })
     }
 }
