@@ -124,20 +124,31 @@ let productController = {
 
     
     search: (req,res) => {
-
-    Products.findAll({
+   
+        
+        Products.findAll({
         where: {
-            name: {
-                [Op.like]: `%${req.body.titulo}%`
-            }
-        },
+            [Op.or]: [
+              {
+                name: {
+                  [Op.like]: `%${req.body.titulo}%`
+                }
+              },
+              {
+                description: {
+                  [Op.like]: `%${req.body.titulo}%`
+                }
+              }
+                         
+            ]
+          }
+        ,
 
         include:[
             {association:"category"}
         ]
 
-    },
-    )
+    })
     .then(function (buscarProducto) {
         res.render('./products/product', {
             products: buscarProducto

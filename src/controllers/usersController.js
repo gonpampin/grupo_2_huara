@@ -48,7 +48,7 @@ let userController = {
 		} 
 	   })
 	   .catch(()=>{
-		   Users.create({
+		   	Users.create({
 			first_name: req.body.name,
 			last_name: req.body.lastname,
 			password: bcryptjs.hashSync(req.body.contrasenia,10),

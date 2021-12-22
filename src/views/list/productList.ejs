@@ -31,17 +31,10 @@
                         <td class="table-products"><%= product.name %></td>
                         <td class="table-products">$<%= product.price %></td>
                         <td class="table-products"><%= product.stock %></td>
+                        <td class="table-products"><%= product.category.category %></td>
 
 
-                        <% if (product.product_category_id == 1){ %>
-                        <td class="table-products">
-                            Bariloche
-                        </td>
-                        <% } else { %>    
-                            <td class="table-products">
-                                Tableta
-                            </td> 
-                            <% } %>    
+                          
                                                      
                         
                         

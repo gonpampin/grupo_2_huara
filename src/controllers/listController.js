@@ -12,7 +12,9 @@ let listController = {
         res.render("./list/list")
     },
     productList: (req,res) => {
-        Products.findAll()
+        Products.findAll({
+            include: [{association: "category"}]
+        })
             .then(function (resultados) {
                 res.render("./list/productList", {products: resultados})
             })

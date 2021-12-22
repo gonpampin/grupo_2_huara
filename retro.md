@@ -63,5 +63,13 @@ Continuar codeando en equipo, con reuniones semanales/diarias. Esta metodología
 Intentar usar más el soporte del Trello, para hacer el seguimiento de los temas pendientes.
 
 
+# Retro - Sprint 6 #
+
+## *Continuar haciendo* ##
+Continuar codeando en equipo, con reuniones semanales/diarias. Esta metodología nos funciona como equipo. Estamos todos en tema, equivocándonos y aprendiendo sobre los errores.
+
+
+
+
 
 

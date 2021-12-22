@@ -193,3 +193,27 @@
 
 ***
 
+***
+
+## *Lunes 20 de diciembre de 2021* ##
+## *19:00 a 21:00hs* ##
+
+* Codeamos en equipo. Asociaciones. Listados. Correción en botón de buscador
+
+***
+
+***
+
+## *Martes 21 de diciembre de 2021* ##
+## *Todo el día* ##
+
+* Codeamos en equipo. Carga de imágen en edición de productos. Asociaciones. Listados. Correción en botón de buscador
+
+***
+
+## *Miércoles 22 de diciembre de 2021* ##
+## *Todo el día* ##
+
+* Codeamos en equipo. Asociaciones. Listados. Buscador
+
+***

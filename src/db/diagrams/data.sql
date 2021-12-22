@@ -21,7 +21,6 @@
 
 LOCK TABLES `order_details` WRITE;
 /*!40000 ALTER TABLE `order_details` DISABLE KEYS */;
-INSERT INTO `order_details` (`id`, `product_id`, `order_id`, `price`, `quantity`) VALUES (1,1,1,500,3),(2,4,1,500,2),(3,8,1,500,10),(4,6,1,500,11),(5,3,1,500,8),(6,1,2,500,3),(7,1,2,500,2),(8,1,3,500,4),(9,1,4,500,4),(10,1,5,500,20);
 /*!40000 ALTER TABLE `order_details` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -31,7 +30,6 @@ UNLOCK TABLES;
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,'Delivered',10),(2,'Delivered',9),(3,'Delivered',8),(4,'Pending',2),(5,'Pending',1);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -41,7 +39,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'MARROC','Chocolate con leche y chocolate blanco con pasta de maní','marroc.jpg',500.00,20,1),(2,'BORRACHITO','Chocolate semi amargo con crema de ciruelas al Malbec con dulce de leche','borrachito.jpg',500.00,20,1),(3,'DULCE DE LECHE CON NUEZ','Pasta de dulce de leche y nueces, entre una capa de chocolate con leche y una capa de chocolate blanco','nuez-ddl-blanco.jpg',500.00,20,1),(4,'TABLETA ALMENDRA','Chocolate amargo 70% cacao con naranja, jengibre y almendras','almendra.jpg',500.00,20,1),(5,'PISTACHO','Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo','pistacho.jpg',500.00,20,1),(6,'AVELLANAS','Chocolate amargo con crema de licor de naranja y avellanas tostadas','avellanas2.jpg',500.00,20,1),(7,'PISTACHO','Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo','avellanas2.jpg',500.00,20,1),(8,'TABLETA FRAMBUESAS','Chocolate semi amargo con frambuesas','frambuesa.jpg',500.00,20,2),(9,'TABLETA FRAMBUESAS CHOCO BLANCO','Chocolate blanco con frambuesas y nibs de cacao','frambuesa-blanco.jpg',500.00,20,2),(10,'FRUTOS ROJOS','Crema de chocolate semi amargo y frutos rojos, entre una capa de chocolate amargo y una de chocolate blanco','frutos-rojos.jpg',500.00,20,1),(11,'COOKIES \"N\" CREAM','Chocolate blanco con Oreos relleno de Nutella','huevo1.jpg',500.00,20,1),(12,'WHISKACHO','Crema de chocolate belga y whisky, con nibs de cacao','whisky.jpg',500.00,20,1),(13,'HUEVO TRUFADO DDL','Mucho dulce de leche entre dos capas de chocolate con leche','huevo2.jpg',500.00,20,1);
+INSERT INTO `products` VALUES (14,'MARROC','Chocolate con leche y chocolate blanco con pasta de maní','marroc.jpg',1000,20,1),(15,'BORRACHITO','Chocolate semi amargo con crema de ciruelas al Malbec con dulce de leche','borrachito.jpg',1000,20,1),(16,'DULCE DE LECHE CON NUEZ','Pasta de dulce de leche y nueces, entre una capa de chocolate con leche y una capa de chocolate blanco','nuez-ddl-blanco.jpg',1000,20,1),(17,'TABLETA ALMENDRA','Chocolate amargo 70% cacao con naranja, jengibre y almendras','almendra.jpg',1000,20,1),(18,'PISTACHO','Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo','pistacho.jpg',1000,20,1),(19,'AVELLANAS','Chocolate amargo con crema de licor de naranja y avellanas tostadas','avellanas2.jpg',1000,20,1),(20,'PISTACHO','Crema de chocolate blanco con pistachos, entre dos capas de chocolate semi amargo','avellanas2.jpg',1000,20,1),(21,'TABLETA FRAMBUESAS','Chocolate semi amargo con frambuesas','frambuesa.jpg',1000,20,2),(22,'TABLETA FRAMBUESAS CHOCO BLANCO','Chocolate blanco con frambuesas y nibs de cacao','frambuesa-blanco.jpg',1000,20,2),(23,'FRUTOS ROJOS','Crema de chocolate semi amargo y frutos rojos, entre una capa de chocolate amargo y una de chocolate blanco','frutos-rojos.jpg',1000,20,1),(24,'COOKIES \"N\" CREAM','Chocolate blanco con Oreos relleno de Nutella','product-1640209760692.jpg',1000,20,3),(25,'WHISKACHO','Crema de chocolate belga y whisky, con nibs de cacao','whisky.jpg',1000,20,1),(26,'HUEVO TRUFADO DDL','Mucho dulce de leche entre dos capas de chocolate con leche','huevo2.jpg',1000,20,1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,7 +49,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `products_categories` WRITE;
 /*!40000 ALTER TABLE `products_categories` DISABLE KEYS */;
-INSERT INTO `products_categories` VALUES (1,'Chocolates'),(2,'Trufas');
+INSERT INTO `products_categories` VALUES (1,'Tableta'),(2,'Bariloche'),(3,'Huevo de chocolate');
 /*!40000 ALTER TABLE `products_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +59,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Pier','Bohman','EDTpxR411RV','pbohman0@princeton.edu',1),(2,'Carce','Seniour','CjYdoMrFOp','cseniour1@g.co',1),(3,'Alberto','Danko','SEB0s2aU7Z','adanko2@biglobe.ne.jp',1),(4,'Lewie','Junkinson','p9ZqbsypuHQ','ljunkinson3@livejournal.com',1),(5,'Aldrich','Buddington','HZNtZQ7','abuddington4@plala.or.jp',1),(6,'Lind','Rickis','NNLOcsXF','lrickis5@ask.com',1),(7,'Barclay','Lockless','Wg23Gcs','blockless6@nbcnews.com',1),(8,'Darn','Lewton','2ISI9jrvUeS','dlewton7@patch.com',1),(9,'Cheston','Keniwell','Q7CjNJc','ckeniwell8@themeforest.net',1),(10,'Enrique','Mecozzi','fF9sSXTjT','emecozzi9@ted.com',1),(11,'Randie','Hixson','JnptRYkJU','rhixsona@cargocollective.com',1),(12,'Xylia','Eathorne','J0kAsufeQPPN','xeathorneb@eepurl.com',1),(13,'Joaquin','Thomerson','YqAX4gWjRbI','jthomersonc@cbslocal.com',1),(14,'Morley','Letterick','Du0IErZjG','mletterickd@constantcontact.com',1),(15,'Calhoun','Nerne','hOMMZeXR9L','cnernee@patch.com',1),(16,'Fern','Kenzie','p1NnVI32','fkenzief@oracle.com',1),(17,'Karrah','Cotgrove','Z2rvyIlB3','kcotgroveg@studiopress.com',1),(18,'Yolanda','Celle','BMsgt3ss','ycelleh@acquirethisname.com',1),(19,'Lotta','Fetherstan','a840EYjaxu','lfetherstani@zdnet.com',2),(20,'Brenda','Grievson','jYa5S9um','bgrievsonj@ucoz.com',2);
+INSERT INTO `users` VALUES (1,'BERNARDO','www','$2a$10$YroBwbanSRy4EtgU69rHguJL3.EjyT4Yn6g8s0VRB.byjWoby.KAe','bernardo@bernardo.com','user-1639840404164_img.jpg',2),(4,'qqq','qqqq','$2a$10$LYU9Q0ubyQY8fa6omZYqSOIOHVxKJdd4IYVUUh9gaVbMo.Y33Tq.S','bernardo.segui@g.com','user-1639840580820_img.jpg',2),(6,'BERNARDO','SEGUI','$2a$10$DPmpTdssreSONSFkCyb4duFCuE6UezpfJOAuc1z5zm6KqVgTHtOOq','b@b.com','user-1639855839487_img.jpg',2),(7,'cacomaster','admin','$2a$10$L6muOHU73IvGLGdO8ZqOjeVlQYKtizAms5Z4UUsLCTjtHsFvXdBW2','admin@admin.com','user-1639856114559_img.jpg',1),(8,'b','b','$2a$10$d6NS6J8hg7.mwmOGI0Zzjejmhm6pB6Zv8Ug/Z/55WTA0yrfQS6B2u','b@ahorasi.com','hareeeee.jpg',2),(9,'pendorcho','pendorcho','$2a$10$t4B62qgvLUxPgjC4ZbKRc.LtANrA9J5BAHmB1Slm8vMkoNXHG7lkO','pendorcho@pendorcho.com','user-1640050261059_img.jpg',2),(10,'aaaaaaaa','qqqqqqq','$2a$10$5jTdtjK9nr9H8XQE3BjTMOxd3CuzH1smTjCsbZTe0C3lPZES8LZ6O','aa@qq.com','user-1640201933624_img.jpg',2),(13,'BERNARDO','SEGUI','$2a$10$FwIRLpvW7LMcnm4nSk0RseXZiTajz8f.D.319bmFOLoxaJlWICrgO','bernardo.segui@gil.com','user-1640203298108_img.jpg',2),(14,'www','wwww','$2a$10$jhvQMFuPG4fCj3rjIu9ZlOWWd0Og0icpTorOE5Ng.IXF4P9Ql0DP2','www@www.com','user-1640203853125_img.jpg',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -71,7 +69,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `users_categories` WRITE;
 /*!40000 ALTER TABLE `users_categories` DISABLE KEYS */;
-INSERT INTO `users_categories` VALUES (1,'usuario'),(2,'administrador');
+INSERT INTO `users_categories` VALUES (1,'admin'),(2,'cliente');
 /*!40000 ALTER TABLE `users_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -84,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-13 16:24:54
+-- Dump completed on 2021-12-22 19:03:45

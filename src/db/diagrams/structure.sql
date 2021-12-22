@@ -23,17 +23,13 @@ DROP TABLE IF EXISTS `order_details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `order_details` (
-  `id` int(50) NOT NULL,
-  `product_id` int(50) DEFAULT NULL,
-  `order_id` int(50) DEFAULT NULL,
+  `id` int(100) NOT NULL,
+  `product_id` int(100) DEFAULT NULL,
+  `order_id` int(100) DEFAULT NULL,
   `price` double DEFAULT NULL,
-  `quantity` int(50) DEFAULT NULL,
+  `quantity` int(100) DEFAULT NULL,
   `amount` double GENERATED ALWAYS AS (`price` * `quantity`) VIRTUAL,
-  PRIMARY KEY (`id`),
-  KEY `product_id_idx` (`product_id`),
-  KEY `order_id_idx` (`order_id`),
-  CONSTRAINT `order_id` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -45,12 +41,10 @@ DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
-  `id` int(50) NOT NULL,
+  `id` int(100) NOT NULL,
   `status` varchar(20) DEFAULT NULL,
-  `user_id` int(50) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `user_id_UNIQUE` (`user_id`),
-  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  `user_id` int(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -62,17 +56,17 @@ DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
-  `id` int(50) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
   `description` varchar(500) DEFAULT NULL,
   `image` varchar(500) DEFAULT NULL,
-  `price` decimal(8,2) DEFAULT NULL,
-  `stock` int(255) DEFAULT NULL,
-  `product_category_id` int(50) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `stock` int(11) DEFAULT NULL,
+  `product_category_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `product_category_id_idx` (`product_category_id`),
   CONSTRAINT `product_category_id` FOREIGN KEY (`product_category_id`) REFERENCES `products_categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -83,10 +77,10 @@ DROP TABLE IF EXISTS `products_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products_categories` (
-  `id` int(50) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,16 +91,18 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(50) NOT NULL,
-  `first_name` varchar(50) DEFAULT NULL,
-  `last_name` varchar(50) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL,
-  `user_category_id` int(50) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(100) DEFAULT NULL,
+  `last_name` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `image` varchar(100) DEFAULT NULL,
+  `user_category_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
   KEY `user_category_id_idx` (`user_category_id`),
   CONSTRAINT `user_category_id` FOREIGN KEY (`user_category_id`) REFERENCES `users_categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -117,10 +113,10 @@ DROP TABLE IF EXISTS `users_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users_categories` (
-  `id` int(50) NOT NULL,
-  `category` varchar(45) DEFAULT NULL,
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -132,4 +128,4 @@ CREATE TABLE `users_categories` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-13 16:25:19
+-- Dump completed on 2021-12-22 19:03:21
