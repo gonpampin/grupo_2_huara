@@ -26,12 +26,13 @@ router.get('/login', guestMiddleware, controller.login);
 //Ruta que procesa la vista del login
 router.post('/login', controller.loginProcess);
 
-// Perfil de Usuario
-router.get('/perfil/:id', authMiddleware, controller.profile);
-router.get('/editarusuario/:id', authMiddleware, controller.formEdit);
-router.put('/editarusuario/:id', uploadFileEdit.single('image'), controller.editUser);
-router.delete('/delete/:id', controller.delete);
+
 // Logout
 router.get('/logout', controller.logout);
+// Perfil de Usuario
+router.get('/perfil/:id', authMiddleware, controller.profile);
+router.get('/editarusuario/:id', authMiddleware, uploadFile.single('avatar'),controller.formEdit);
+router.put('/editarusuario/:id',authMiddleware, uploadFile.single('avatar'),controller.editUser);
+router.delete('/delete/:id', controller.delete);
 
 module.exports = router
