@@ -98,6 +98,26 @@
                                 placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
                         </p>
 
+                        <br>
+
+                        <p class="campo">
+                            <% console.log(userEdit)%>
+                            <% if (locals.userLogged.user_category_id == 1) { %>
+                                <label for="userCategory"class="label">Categoría</label>
+                                <select name="category" class="category-select">
+                                                
+                                        <option value=1 class="input">
+                                           Administrador
+                                        </option>
+                                        <option value=2 class="input">
+                                            Cliente
+                                         </option>
+                                    
+                                </select>
+                            <% } %>
+                            
+                        </p>
+
 
                         <span style="color: red; font-size: 10px; font-style:italic">
                             <% if (locals.errors && errors.contrasenia) { %>  

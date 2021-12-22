@@ -53,8 +53,9 @@ let userController = {
 			last_name: req.body.lastname,
 			password: bcryptjs.hashSync(req.body.contrasenia,10),
 			email: req.body.email,
-			image: req.file.filename
-		})
+			image: req.file.filename,
+			user_category_id: req.body.category 
+		},{include: [{association: 'category'}]})
 		return res.redirect ('/usuarios/login')
 	   })
 
@@ -127,11 +128,13 @@ editUser:(req, res) => {
 		last_name: req.body.lastname,
 		email: req.body.email,
 		image: req.body.image,
-		password: bcryptjs.hashSync(req.body.contrasenia,10)
+		password: bcryptjs.hashSync(req.body.contrasenia,10),
+		user_category_id: req.body.category
 	},	 
 	 {where: {
 			id: req.params.id
 		} 
+		
 	}) 
 	
 	
