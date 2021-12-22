@@ -115,11 +115,13 @@ let userController = {
 		Users.findByPk(req.params.id)
 		.then(function (userEdit) {
 			res.render('../views/users/userEdit', {userEdit: userEdit} );
+
 		})
 },
 
 
-editUser:(req, res) => {	
+editUser:(req, res) => {
+	
 	Users.update({
 		first_name: req.body.name,
 		last_name: req.body.lastname,

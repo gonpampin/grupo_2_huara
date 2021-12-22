@@ -29,10 +29,6 @@ module.exports = (sequelize, dataTypes) => {
         image:{
             type: dataTypes.STRING(100),
             notNull: false
-        },
-        user_category_id: {
-            type: dataTypes.INTEGER,
-            notNull: false
         }
         
     };
@@ -45,13 +41,10 @@ module.exports = (sequelize, dataTypes) => {
     
     Users.associate = function(models) {
         Users.belongsTo(models.UsersCategories, {
-            as: "categorias_usuario",
+            as: "category",
             foreignKey: "user_category_id"
         });
     }
-    /*Users.associate = models => {
-        Users.belongsTo(models.Users, {as: 'users', foreignKey: 'category_id'});
-    }*/
 
     return Users
 }
