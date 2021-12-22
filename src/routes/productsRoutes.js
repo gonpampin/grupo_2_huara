@@ -10,11 +10,6 @@ const uploadFile = require('../middlewares/multerProductsMiddleware');
 const authAdminMiddleware = require('../middlewares/authAdminMiddleware');
 
 
-//Formulario creación productos
-router.post('/crearproducto', uploadFile.single('image'), productController.store);
-router.put('/editarproducto/:id', uploadFile.single('image'), productController.editProduct);
-router.delete('/:id', productController.delete);
-
 // Envío de vistas
 router.get('/', productController.products);
 router.get('/crearproducto', authAdminMiddleware, productController.formCreate);
@@ -23,7 +18,10 @@ router.get('/:id', productController.detail);
 router.post('/', productController.search);
 
  
-
+//Formulario creación productos
+router.post('/crearproducto', uploadFile.single('image'), productController.store);
+router.put('/editarproducto/:id', uploadFile.single('image'), productController.editProduct);
+router.delete('/:id', productController.delete);
 
 
 

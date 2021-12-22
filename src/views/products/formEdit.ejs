@@ -22,19 +22,19 @@
                 <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.name %>">
                 </p>
                 <br>
-                <p class="campo">
+                <p class="campo" >
                     <label for="productDescription"class="label">Modifique descripción</label>
-                    <input type="text" name="description" id="productDescription" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.description %>"     >
+                    <input type="text" name="description" id="productDescription" class="input" style="font-style:italic; font-size: 12px"   value="<%= productEdit.description %>"   >
                     </p>
                     <br>
                     <p class="campo">
                     <label for="productImage" class="label">Modifique imagen</label>
-                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" >
+                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px"> 
                     </p>
                     <br>
                     
                     <label for="productImage" class="label">Modifique categoría</label>
-                    <select name="category" class="category-select" value="<%= productEdit.product_category_id %>">
+                    <select name="category" class="category-select">
                         <option disabled selected>Seleccioná una opción</option>
                         <% for( let i = 0; i < category.length; i++ ) { %>
     
