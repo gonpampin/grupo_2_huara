@@ -14,7 +14,7 @@ const validations = [
       }).bail(),
     body('avatar').custom((value, { req }) =>{
       let file = req.file;
-      let acceptedExtensions = ['.jpg', '.png', '.gif'];
+      let acceptedExtensions = ['.jpg', '.png', '.gif','jepg'];
 
       if(!file){
         throw new Error ('Tenés que cargar un archivo de imagen')
