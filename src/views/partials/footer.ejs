@@ -6,7 +6,6 @@
     <nav class="main-nav-bar">
         <ul class="inside-navbar">
            
-     
 
             <% if (!locals.isLogged)  { %> 
             <li><a href="/">Home</a></li>
@@ -14,7 +13,7 @@
             <li><a href="/usuarios/login">Login</a></li>
             <li><a href="/usuarios/registro">Registro</a></li> 
            
-            <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == null) ) { %> 
+            <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == 2) ) { %> 
                 <li><a href="/">Home</a></li>
                 <li><a href="/productos">Productos</a></li>
                 <li><a href="/carrito">Carrito</a></li>

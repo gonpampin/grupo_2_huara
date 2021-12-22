@@ -11,7 +11,7 @@
             <li><i class="fas fa-door-open"></i> <a href="/usuarios/login">   Login</a></li>
             <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/registro">   Registrate</a></li> 
            
-            <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == null) ) { %> 
+            <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == 2) ) { %> 
             <li ><i class="fas fa-home"> </i><a  href="/">    Home</a></li>
             <li><i class="fas fa-box"> </i><a href="/productos">   Productos</a></li>
             <li><i class="fas fa-shopping-bag"></i> <a href="/carrito">   Carrito</a></li>
