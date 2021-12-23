@@ -127,7 +127,7 @@ editUser:(req, res) => {
 		first_name: req.body.name,
 		last_name: req.body.lastname,
 		email: req.body.email,
-		image: req.body.image,
+		image: req.file.filename,
 		password: bcryptjs.hashSync(req.body.contrasenia,10),
 		user_category_id: req.body.category
 	},	 
