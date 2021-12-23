@@ -1,4 +1,4 @@
-const fs = require('fs');
+/*const fs = require('fs');
 const path = require('path')
 
 
@@ -52,4 +52,4 @@ const User ={
 	}
 }
 
-module.exports = User;
+module.exports = User;*/
