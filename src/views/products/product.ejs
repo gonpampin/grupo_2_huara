@@ -23,15 +23,15 @@
                     <button class="boton-buscar" type="submit">Buscar</button>
                 </form>  
             </div>    
-                <div data-audio="/public/sound/paperball5/"> 
+                <div> 
                         <article class="product" >
                             <% for (  let i = 0 ; i < products.length; i ++ ){%>
                               
-                               <div data-audio="/public/sound/paperball5/" class= "product-box" >
+                               <div class= "product-box" >
                                     <a href="/productos/<%= products[i].id%>">
                                     <img src="/images/products/<%= products[i].image %>"    alt = <%= products[i].name %> class="product-img">
-                                    <div data-audio="/public/sound/paperball5/" class="box-description">
-                                    <p data-audio="/public/sound/paperball5/" class="detalle"><%= products[i].description %></p>
+                                    <div class="box-description">
+                                    <p  class="detalle"><%= products[i].description %></p>
                                     <h4 class="descripcion"><%= products[i].name %>  </h4>
                                     <h4 class="descripcion">$<%= products[i].price %></h4>
                                     <h4 class="descripcion"><%= products[i].category.category %></h4>
@@ -48,7 +48,11 @@
                 </div>
                 
         </section>
+
     </main>
+    <script src="js/products.js">
+
+    </script>
             <%- include('../partials/footer') %>
     </body>
 </html>
