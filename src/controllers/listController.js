@@ -23,7 +23,9 @@ let listController = {
             })
     },
     userList: (req,res) => {
-        Users.findAll()
+        Users.findAll({
+            include: [{association: "userCategory"}]
+        })
             .then(function (resultados) {
                 res.render("./list/usersList", {user: resultados})
             })

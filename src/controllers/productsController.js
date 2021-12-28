@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const Product = require('../database/models/Product');
@@ -42,10 +43,19 @@ let productController = {
 
 
     store: (req, res) => {
+        let resultValidation = validationResult(req)
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('./products/formCreate', {
+                errors: resultValidation.mapped(), 
+                oldData: req.body
+             });
+        }
+
         Products.create({
             name: req.body.name,
             description: req.body.description,
-            image: req.file.filename,
+            image: req.file.filename || 'default-image.jpeg',
             product_category_id: req.body.category,
             price: req.body.price,
             stock: req.body.stock
