@@ -14,7 +14,7 @@
                 <div class="titulo"> Productos.</div>
             </div>
         </section>
-        <section>
+        <section id="2">
             
             <p class="intro">Tabletitas y chocolates tipo Bariloche a elección. Podés elegir las dulzuras que más te gusten, creadas y elaboradas a mano en San Juan, con la mejor materia prima.</p>
             <div class="buscar-titulo">
@@ -24,10 +24,10 @@
                 </form>  
             </div>    
                 <div> 
-                        <article class="product" >
+                        <article  class="product" >
                             <% for (  let i = 0 ; i < products.length; i ++ ){%>
                               
-                               <div data-audio="/sound/paperball5.mp3" class= "product-box" >
+                               <div  data-audio="/sound/paperball5.mp3" class= "product-box" >
                                     <a href="/productos/<%= products[i].id%>">
                                     <img src="/images/products/<%= products[i].image %>"    alt = <%= products[i].name %> class="product-img">
                                     <div class="box-description">

@@ -1,5 +1,6 @@
-window.addEventListener('load', function() {
-let rojo = document.querySelector("div.product-box").addEventListener('mouseover', function(e){
-console.log(e)
-})
-});
+
+let rojo = document.querySelector(".product")
+rojo.style.backgroundColor = "red"
+console.log(rojo)
+
+
