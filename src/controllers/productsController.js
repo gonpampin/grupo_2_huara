@@ -115,10 +115,24 @@ let productController = {
     },
 
     editProduct: (req, res) => {
+        let resultEditValidation = validationResult(req)
+        if (resultEditValidation.errors.length > 0) {
+            ProductsCategories.findAll()
+            .then(function(resultados){
+                console.log(resultEditValidation)
+                return res.render('./products/formEdit',{
+                    errors: resultEditValidation.mapped(),
+                    oldProductData: req.body,
+                    category: resultados
+                })
+            }).catch(error => {
+                return res.send(error)
+            })
+        }   else {
         Products.update({
             name: req.body.name,
             description: req.body.description,
-            image: req.file.filename,
+            image: req.file.filename  || 'default-image.jpeg',
             product_category_id: req.body.category,
             price: req.body.price,
             stock: req.body.stock
@@ -127,7 +141,8 @@ let productController = {
                 id: req.params.id
             }
         })
-        res.redirect('/productos')
+    }res.redirect('/productos')
+
     },
 
 
