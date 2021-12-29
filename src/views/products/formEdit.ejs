@@ -21,16 +21,31 @@
                 <label for="productName"class="label">Modifique nombre de producto</label>
                 <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.name %>">
                 </p>
+                <span style="color: red; font-size: 10px; font-style:italic">
+                    <% if (locals.errors && errors.name) { %>  
+                        <%= errors.name.msg %> 
+                    <% } %>
+                </span>
                 <br>
                 <p class="campo" >
                     <label for="productDescription"class="label">Modifique descripción</label>
                     <input type="text" name="description" id="productDescription" class="input" style="font-style:italic; font-size: 12px"   value="<%= productEdit.description %>"   >
                     </p>
+                    <span style="color: red; font-size: 10px; font-style:italic">
+                        <% if (locals.errors && errors.description) { %>  
+                            <%= errors.description.msg %> 
+                        <% } %>
+                    </span>
                     <br>
                     <p class="campo">
                     <label for="productImage" class="label">Modifique imagen</label>
                     <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px"> 
                     </p>
+                    <span style="color: red; font-size: 10px; font-style:italic">
+                        <% if (locals.errors && errors.image) { %>  
+                            <%= errors.image.msg %> 
+                        <% } %>
+                    </span>
                     <br>
                     
                     <label for="productImage" class="label">Modifique categoría</label>
@@ -45,6 +60,10 @@
                             </option>
                              
                         <% } %>
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.category) { %>  
+                                <%= errors.category.msg %> 
+                            <% } %>
                         
                     </select>
 
@@ -54,11 +73,21 @@
                         <label for="productPrice" class="label">Modifique precio ARS $</label>
                         <input type="number" name="price" id="productPrice" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.price %>">
                         </p>
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.price) { %>  
+                                <%= errors.price.msg %> 
+                            <% } %>
+                        </span>
                     <br>
                     <p class="campo">
                         <label for="productStock" class="label">Modifique Stock</label>
                         <input type="number" name="stock" id="productStock" class="input" step="0.01" style="font-style:italic; font-size: 12px" value="<%= productEdit.stock %>">
                         </p>
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.stock) { %>  
+                                <%= errors.stock.msg %> 
+                            <% } %>
+                        </span>
                     <p>
                     <br>
                 <button type="submit" class="button" style="width: fit-content;" ><span>MODIFICAR</span>
