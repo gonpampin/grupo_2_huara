@@ -9,7 +9,7 @@ const path = require('path');
 const productController = require('../controllers/productsController');
 
 //Requerir middlewares
-const validations = require('../middlewares/validationProductsMiddleware');
+const productValidations = require('../middlewares/validationProductsMiddleware');
 const authAdminMiddleware = require('../middlewares/authAdminMiddleware');
 const uploadFile = require('../middlewares/multerProductsMiddleware');
 
@@ -17,15 +17,19 @@ const uploadFile = require('../middlewares/multerProductsMiddleware');
 
 
 // Envío de vistas
+router.post('/crearproducto', productValidations, uploadFile.single('image'), productController.store);
+
 router.get('/', productController.products);
+
 router.get('/crearproducto', authAdminMiddleware, productController.formCreate);
+
+
 router.get('/editarproducto/:id', authAdminMiddleware, productController.formEdit);
 router.get('/:id', productController.detail);
 router.post('/', productController.search);
 
  
 //Formulario creación productos
-router.post('/crearproducto',validations, uploadFile.single('image'), productController.store);
 router.put('/editarproducto/:id', uploadFile.single('image'), productController.editProduct);
 router.delete('/:id', productController.delete);
 

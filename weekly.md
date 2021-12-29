@@ -217,3 +217,12 @@
 * Codeamos en equipo. Asociaciones. Listados. Buscador
 
 ***
+
+# Weekly-Daily - Sprint 7 #
+
+## *Miércoles 28 de diciembre de 2021* ##
+## *17:00 a 19:00hs* ##
+
+* Se trabajó en el Trello para planear el sprint. Se comenzó a trabajar en las validaciones de productos.
+
+***

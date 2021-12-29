@@ -46,13 +46,20 @@ let productController = {
         let resultValidation = validationResult(req)
 
         if (resultValidation.errors.length > 0) {
-            return res.render('./products/formCreate', {
-                errors: resultValidation.mapped(), 
-                oldData: req.body
-             });
-        }
-
-        Products.create({
+            
+            ProductsCategories.findAll()
+                .then(function(resultados){
+                    console.log(resultValidation)
+                    return res.render('./products/formCreate',{
+                        errors: resultValidation.mapped(),
+                        oldProductData: req.body,
+                        category: resultados
+                    })
+                }).catch(error => {
+                return res.send(error)
+            })
+        } else {
+         Products.create({
             name: req.body.name,
             description: req.body.description,
             image: req.file.filename || 'default-image.jpeg',
@@ -61,6 +68,7 @@ let productController = {
             stock: req.body.stock
         })
         res.redirect('/productos');
+        }
     },
 
    
