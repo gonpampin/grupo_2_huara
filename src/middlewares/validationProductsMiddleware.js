@@ -20,7 +20,7 @@ const productValidations = [
         }).bail(),
     body('category').notEmpty().withMessage('Debes seleccionar una categoría').bail(),
     body('price').notEmpty().withMessage('Debes ingresar un precio').bail(),
-    body('stock').notEmpty().withMessage('Debes ingresar stock').bail().isLength({ min: 8, max: 12 }).withMessage('Debes ingresar entre 8 y 12 caracteres').bail()
+    body('stock').notEmpty().withMessage('Debes ingresar stock').bail()
     
     
 

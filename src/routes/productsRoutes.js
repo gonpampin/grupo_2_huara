@@ -17,7 +17,7 @@ const uploadFile = require('../middlewares/multerProductsMiddleware');
 
 
 // Envío de vistas
-router.post('/crearproducto', productValidations, uploadFile.single('image'), productController.store);
+
 
 router.get('/', productController.products);
 
@@ -27,7 +27,7 @@ router.get('/crearproducto', authAdminMiddleware, productController.formCreate);
 router.get('/editarproducto/:id', authAdminMiddleware, productController.formEdit);
 router.get('/:id', productController.detail);
 router.post('/', productController.search);
-
+router.post('/crearproducto', uploadFile.single('image'), productValidations, productController.store);
  
 //Formulario creación productos
 router.put('/editarproducto/:id', uploadFile.single('image'), productController.editProduct);
