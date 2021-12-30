@@ -20,8 +20,8 @@
                         <% if ( locals.userLogged && locals.userLogged.user_category_id != 2) {%> 
                         <div class="detail-edit">
                             <a class="detail-editar" href="/productos/editarproducto/<%= products.id  %>">EDITAR PRODUCTO</a>
-                                <form action="/productos/<%= products.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
-                                <button class="detail-eliminar" type="submit">ELIMINAR</button>
+                                <form class="formDeleteJS" action="/productos/<%= products.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button class="detail-eliminar " type="submit">ELIMINAR</button>
                                 </form>
                             </div>
                         <% } %> 
@@ -42,8 +42,9 @@
                 </article>
                 
         </section>
+        
     </main>
-
+    <script src="/js/products.js"></script>
     <%- include('../partials/footer') %>
 
 </body>

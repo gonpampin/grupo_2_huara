@@ -45,8 +45,8 @@
                             <a href="/productos/editarproducto/<%= product.id %>" class="boton-listado">Editar</a>
                         </td>
                         <td>
-                            <form action="/productos/<%= product.id %>?_method=DELETE" method="post" class="boton-listado-borrar">
-                                <button class="boton-listado-borrar" type="submit">Borrar</button>
+                            <form action="/productos/<%= product.id %>?_method=DELETE" method="post" class="boton-listado-borrar formDeleteJS">
+                                <button class="boton-listado-borrar " type="submit">Borrar</button>
                             </form>
                         </td>
                     </tr>
@@ -54,6 +54,7 @@
             </tbody>
 
         </table>
+        <script src="/js/products.js"></script>
     </main>
 
 
