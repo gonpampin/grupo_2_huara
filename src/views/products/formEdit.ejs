@@ -19,7 +19,7 @@
                 <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST" enctype= "multipart/form-data">
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
-                <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.name %>">
+                <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.name : productEdit.name %>">
                 </p>
                 <span style="color: red; font-size: 10px; font-style:italic">
                     <% if (locals.errors && errors.name) { %>  
@@ -29,7 +29,7 @@
                 <br>
                 <p class="campo" >
                     <label for="productDescription"class="label">Modifique descripción</label>
-                    <input type="text" name="description" id="productDescription" class="input" style="font-style:italic; font-size: 12px"   value="<%= productEdit.description %>"   >
+                    <input type="text" name="description" id="productDescription" class="input" style="font-style:italic; font-size: 12px"   value="<%= locals.oldProductEdit ? oldProductEdit.description : productEdit.description %>"   >
                     </p>
                     <span style="color: red; font-size: 10px; font-style:italic">
                         <% if (locals.errors && errors.description) { %>  
@@ -60,12 +60,15 @@
                             </option>
                              
                         <% } %>
-                        <span style="color: red; font-size: 10px; font-style:italic">
-                            <% if (locals.errors && errors.category) { %>  
-                                <%= errors.category.msg %> 
-                            <% } %>
+                       
                         
                     </select>
+                    <br>
+                    <span style="color: red; font-size: 10px; font-style:italic">
+                        <% if (locals.errors && errors.category) { %>  
+                            <%= errors.category.msg %> 
+                        <% } %>
+                    </span>
 
                     <br>
                     <br>

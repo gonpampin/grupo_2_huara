@@ -116,19 +116,24 @@ let productController = {
 
     editProduct: (req, res) => {
         let resultEditValidation = validationResult(req)
+
         if (resultEditValidation.errors.length > 0) {
-            ProductsCategories.findAll()
-            .then(function(resultados){
+
+            let productsPromise = Products.findByPk(req.params.id)
+
+            let categoriesPromise = ProductsCategories.findAll()
+
+            Promise.all([productsPromise,categoriesPromise])
+             .then(function([resultadosProducts, resultadosCategories]){
                 console.log(resultEditValidation)
                 return res.render('./products/formEdit',{
                     errors: resultEditValidation.mapped(),
-                    oldProductData: req.body,
-                    category: resultados
+                    oldProductEdit: req.body,
+                    productEdit: resultadosProducts,
+                    category: resultadosCategories        
                 })
-            }).catch(error => {
-                return res.send(error)
             })
-        }   else {
+        }  else {
         Products.update({
             name: req.body.name,
             description: req.body.description,
@@ -141,7 +146,8 @@ let productController = {
                 id: req.params.id
             }
         })
-    }res.redirect('/productos')
+        res.redirect('/productos')
+    }
 
     },
 
