@@ -39,7 +39,7 @@
                     <br>
                     <p class="campo">
                     <label for="productImage" class="label">Modifique imagen</label>
-                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px"> 
+                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.image : productEdit.image %>"> 
                     </p>
                     <span style="color: red; font-size: 10px; font-style:italic">
                         <% if (locals.errors && errors.image) { %>  
@@ -74,7 +74,7 @@
                     <br>
                     <p class="campo">
                         <label for="productPrice" class="label">Modifique precio ARS $</label>
-                        <input type="number" name="price" id="productPrice" class="input" style="font-style:italic; font-size: 12px" value="<%= productEdit.price %>">
+                        <input type="number" name="price" id="productPrice" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.price : productEdit.price %>">
                         </p>
                         <span style="color: red; font-size: 10px; font-style:italic">
                             <% if (locals.errors && errors.price) { %>  
@@ -84,7 +84,7 @@
                     <br>
                     <p class="campo">
                         <label for="productStock" class="label">Modifique Stock</label>
-                        <input type="number" name="stock" id="productStock" class="input" step="0.01" style="font-style:italic; font-size: 12px" value="<%= productEdit.stock %>">
+                        <input type="number" name="stock" id="productStock" class="input" step="0.01" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.stock : productEdit.stock %>">
                         </p>
                         <span style="color: red; font-size: 10px; font-style:italic">
                             <% if (locals.errors && errors.stock) { %>  
