@@ -32,6 +32,15 @@
       width: 100%;
    
 }
+.pos-rel{
+   position: relative;
+}
+.ojo-abierto{
+   position: absolute;
+   top: 35px;
+   left: 270px;
+}
+
 
 .button{
    margin: auto;
