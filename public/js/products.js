@@ -22,23 +22,23 @@ formDelete.forEach(deleteJS => {
 })
 
 //validacion de creación de producto
-let formCreate = document.querySelector('.createForm')
+let formCreateEdit = document.querySelector('.createEditForm')
 
 
-formCreate.addEventListener('submit', (e) => {
+formCreateEdit.addEventListener('submit', (e) => {
   e.preventDefault()
   /*validacion de nombre*/
-  if (formCreate.name.value == '') {
+  if (formCreateEdit.name.value == '') {
     swal('El nombre no puede estar vacío')
-  } else if (formCreate.name.value.length < 5) {
-    swal('El nombre debe tener al menos cinco caracteres')
+  } else if (formCreateEdit.name.value.length < 5) {
+    swal('El nombre debe tener al menos 5 caracteres')
     /*validacion de descripcion*/
-  } else if (formCreate.description.value == '') {
+  } else if (formCreateEdit.description.value == '') {
     swal('La descripcion no puede estar vacía')
-  } else if (formCreate.description.value.length < 20) {
-    swal('La descripcion debe tener al menos veinte caracteres')
+  } else if (formCreateEdit.description.value.length < 20) {
+    swal('La descripcion debe tener al menos 20 caracteres')
     //validacion de imagen
-  } else if (formCreate.image.value == '') {
+  } else if (formCreateEdit.image.value == '') {
     swal('Debes cargar una imagen')
 
     /*} else if (form.avatar.file.includes(".jpg") ||
@@ -50,13 +50,13 @@ formCreate.addEventListener('submit', (e) => {
 
 
     //validacion de precio
-  } else if (formCreate.price.value == '') {
+  } else if (formCreateEdit.price.value == '') {
     swal('Debes cargar un precio')
     //validacion de stock
-  } else if (formCreate.stock.value == '') {
+  } else if (formCreateEdit.stock.value == '') {
     swal('Debes cargar un valor de stock')
   } else {
-    formCreate.submit()
+    formCreateEdit.submit()
   }
 
 

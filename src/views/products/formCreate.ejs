@@ -11,7 +11,7 @@
         <br>
         <section class="cuadro">
             <div class="formulario">
-            <form action="/productos/crearproducto" method="POST" enctype= "multipart/form-data" class='createForm'>
+            <form action="/productos/crearproducto" method="POST" enctype= "multipart/form-data" class='createEditForm'>
                 <p class="campo">
                 <label for="productName"class="label">Nombre de producto</label>
                 <input type="text" name="name" id="productName" class="input" placeholder="Nombre" style="font-style:italic; font-size: 12px" value="<%= typeof oldProductData != 'undefined'? oldProductData.name: '' %>">

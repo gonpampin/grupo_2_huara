@@ -16,7 +16,7 @@
             </div> 
             <div style="width: 50%; margin: auto;">
             <div class="formulario">
-                <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST" enctype= "multipart/form-data">
+                <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST" enctype= "multipart/form-data" class='createEditForm'>
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
                 <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.name : productEdit.name %>">
@@ -103,6 +103,7 @@
             </form>
             </div>
         </section>
+        <script src="/js/products.js"></script>
     </main>
     <%- include('../partials/footer') %>
 </body>
