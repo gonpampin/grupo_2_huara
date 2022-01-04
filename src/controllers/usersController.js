@@ -57,7 +57,7 @@ let userController = {
 			email: req.body.email,
 			image: req.file.filename,
 			user_category_id: req.body.category 
-		},{include: [{association: 'category'}]})
+		},{include: [{association: 'userCategory'}]})
 		return res.redirect ('/usuarios/login')
 	   })
 

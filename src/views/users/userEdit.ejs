@@ -13,7 +13,7 @@
                 <p class="title-login-2">Información personal</p>
             </div>
             <div class="formulario">
-                <form action="/usuarios/editarusuario/<%= userEdit.id %>?_method=PUT" method="POST" >
+                <form id="editUserFront" action="/usuarios/editarusuario/<%= userEdit.id %>?_method=PUT" method="POST" >
                     <p class="campo">
                         <label for="name" class="label">Nombre</label>
                         <input 
@@ -23,6 +23,7 @@
                         class="input"
                         value="<%= userEdit.first_name %>"
                         >
+                      <span style="color:red" id="spanEdit"></span>  
                     </p>
 
 
@@ -96,6 +97,7 @@
                             <input type="password"
                              name="contrasenia" id="password" class="input"
                                 placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
+                                <span class="fas fa-eye-slash ojo-abierto" id="ojo"></span>
                         </p>
 
                         <br>
@@ -128,9 +130,10 @@
                         <br>
                         <p class="campo">
                             <label for="password" class="label">Reingresá la contraseña</label>
-                            <input type="password" name="recontrasenia" id="password" class="input"
+                            <input type="password" name="recontrasenia" id="passwordRe" class="input"
                                 placeholder="Reingresá tu contraseña" style="font-style:italic; font-size: 12px">
-                        </p>
+                                <span class="fas fa-eye-slash ojo-abierto" id="ojoRe"></span>
+                            </p>
 
                         <span style="color: red; font-size: 10px; font-style:italic">
                             <% if (locals.errors && errors.recontrasenia) { %>  
@@ -150,6 +153,7 @@
             </div>
         </section>
     </main>
+    <script src="/js/userEdit.js"></script>
     <%- include('../partials/footer') %>
 </body>
 
