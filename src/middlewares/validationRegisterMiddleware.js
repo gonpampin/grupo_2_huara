@@ -2,8 +2,8 @@ const path = require('path');
 const { body } = require('express-validator')
 
 const validations = [
-    body('name').notEmpty().withMessage('Debes escribir tu nombre').bail(),
-    body('lastname').notEmpty().withMessage('Debes escribir tu apellido').bail(),
+    body('name').notEmpty().withMessage('Debes escribir tu nombre').bail().isLength({ min: 2}).withMessage('El nombre debe tener al menos dos caracteres').bail(),
+    body('lastname').notEmpty().withMessage('Debes escribir tu apellido').bail().isLength({ min: 2}).withMessage('El apellido debe tener al menos dos caracteres').bail(),
     body('email').notEmpty().withMessage('Debes ingresar tu email').bail().isEmail().withMessage('Debes ingresar un mail válido').bail(),
     body('contrasenia').notEmpty().withMessage('Debes ingresar una contraseña').bail().isLength({ min: 8, max: 12 }).withMessage('Debes ingresar entre 8 y 12 caracteres').bail(),
     body('recontrasenia').notEmpty().withMessage('No puede estar vacio').bail().custom((repass, { req }) => {
