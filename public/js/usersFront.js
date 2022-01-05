@@ -28,7 +28,9 @@ ojoRe.addEventListener('click', () => {
 })
 
 /* validacion de form*/
-const regexValidationEmail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+const regexValidationEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+const regexImageFormat = /\.(jpe?g|png|gif)(?:\?.*|)$/i;
 let form = document.querySelector('#registerForm')
 
 
@@ -55,11 +57,9 @@ form.addEventListener('submit', (e) => {
     //validacion de imagen
     } else if (form.avatar.value == '') {
         swal('Debes cargar una imagen')
-    /*} else if (form.avatar.file.includes(".jpg") ||
-                form.avatar.file.includes(".png") ||
-                form.avatar.file.includes(".gif") || 
-                form.avatar.file.includes(".jpeg") ) {
-        swal('Debes cargar una imagen en formato ".jpg", ".png", ".gif",".jpeg"')*/
+    }else if (!(regexImageFormat.test(form.avatar.value))) {
+        swal('Debes cargar una imagen en formato ".jpg", ".png", ".gif",".jpeg"')
+    
     //validacion de password
     } else if (form.contrasenia.value == '') {
         swal('La contraseña no puede estar vacía')
