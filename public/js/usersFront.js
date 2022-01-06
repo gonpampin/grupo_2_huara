@@ -29,6 +29,8 @@ ojoRe.addEventListener('click', () => {
 
 /* validacion de form*/
 const regexValidationEmail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+
 let form = document.querySelector('#registerForm')
 
 
