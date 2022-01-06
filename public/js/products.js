@@ -22,6 +22,8 @@ formDelete.forEach(deleteJS => {
 })
 
 //validacion de creación de producto
+const regexImageFormat = /\.(jpe?g|png|gif)(?:\?.*|)$/i;
+
 let formCreateEdit = document.querySelector('.createEditForm')
 
 
@@ -37,19 +39,15 @@ formCreateEdit.addEventListener('submit', (e) => {
     swal('La descripcion no puede estar vacía')
   } else if (formCreateEdit.description.value.length < 20) {
     swal('La descripcion debe tener al menos 20 caracteres')
-    //validacion de imagen
+    
+
+  //validacion de imagen
   } else if (formCreateEdit.image.value == '') {
     swal('Debes cargar una imagen')
+  }else if (!(regexImageFormat.test(formCreateEdit.image.value))) {
+    swal('Debes cargar una imagen en formato ".jpg", ".png", ".gif",".jpeg"')
 
-    /*} else if (form.avatar.file.includes(".jpg") ||
-                form.avatar.file.includes(".png") ||
-                form.avatar.file.includes(".gif") || 
-                form.avatar.file.includes(".jpeg") ) {
-        swal('Debes cargar una imagen en formato ".jpg", ".png", ".gif",".jpeg"')*/
-    //validacion de password
-
-
-    //validacion de precio
+        //validacion de precio
   } else if (formCreateEdit.price.value == '') {
     swal('Debes cargar un precio')
     //validacion de stock

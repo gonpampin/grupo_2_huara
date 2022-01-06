@@ -13,17 +13,17 @@
                 <p class="title-login-2">Ingresá a tu cuenta</p>
             </div>
             <div class="formulario">
-            <form action="/usuarios/login" method="POST">
+            <form action="/usuarios/login" method="POST" id="loginForm">
                 <p class="campo">
                 <label for="email"class="label">Dirección de correo electrónico</label>
-                <input type="email" name="email" id="email" class="input" placeholder="ejemplo@gmail.com" style="font-style:italic; font-size: 12px">
+                <input type="text" name="email" id="email" class="input" placeholder="ejemplo@gmail.com" style="font-style:italic; font-size: 12px">
                 </p>
 
                 
                 <br>   
                 <p class="campo pos-rel">
                 <label for="password" class="label">Contraseña</label>
-                <input type="password" name="contrasenia" id="password"class="input" placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
+                <input type="password" name="contrasenia" id="password" class="input" placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
                 <span class="fas fa-eye-slash ojo-abierto" id="ojo"></span>   
             </p>
                 
@@ -66,7 +66,7 @@
                 </form>
             </div>
         </section>
-        <script src="/js/usersFront.js"></script>
+        <script src="/js/usersFrontLogin.js"></script>
     </main>
     <%- include('../partials/footer') %>
 </body>
