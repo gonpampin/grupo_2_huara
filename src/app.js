@@ -36,11 +36,13 @@ const mainRouter = require('./routes/mainRoutes');
 const productsRouter = require('./routes/productsRoutes');
 const usersRouter = require('./routes/usersRoutes');
 const listRouter = require('./routes/listRoutes');
+const apiRouter = require('./routes/apiRoutes');
 
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);
 app.use('/listados', listRouter);
 app.use('/usuarios', usersRouter);
+app.use('/api', apiRouter);
 
 
 //servidor
