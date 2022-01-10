@@ -12,15 +12,18 @@ let apiController = {
                 status: 200,
                 count: users.length,
                 users: users
+            
             })
         })
         .catch(()=>{
+         
             return res.render('./list/error404')
         })
     },
 
     singleUser: (req, res) => {
         Users.findByPk(req.params.id)
+       
         .then(user => {
             return res.status(200).json({
                 status: 200,
@@ -28,9 +31,11 @@ let apiController = {
                 first_name: user.first_name,
                 last_name: user.last_name,
                 email: user.email,
-                image: user.image
+                image: user.image,
+                user_category: user.user_category_id == 1 ? 'Admin' : 'Cliente'
+		})
             })
-        })
+        
         .catch(()=>{
             return res.render('./list/error404')
         })
