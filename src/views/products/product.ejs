@@ -35,11 +35,13 @@
                                     <h4 class="descripcion"><%= products[i].name %>  </h4>
                                     <h4 class="descripcion">$<%= products[i].price %></h4>
                                     <h4 class="descripcion"><%= products[i].category.category %></h4>
-                                
-                            
+                                    </a>   
+                                    <% if (locals.isLogged)  { %> 
+                                    <button value="<%= products[i].id %>" class="add-to-cart">Comprar</button>
+                                    <% } %> 
                                   
 
-                                    </a>         
+                                          
                                     </div>    
                                 </div> 
                             <% } %>
@@ -52,10 +54,15 @@
                 </audio>
         </section>
 
+       
+
     </main>
 
-    </script>
-            <%- include('../partials/footer') %>
-    </body>
+    <%- include('../partials/footer') %>
+
+    <script src="/js/cart.js"></script>
+
+</body>
+
 </html>
                 
