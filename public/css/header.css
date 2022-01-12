@@ -92,15 +92,17 @@ ul {
 
     }
 
+    .desplegado {
+        display: block
+    }
+    
+
 }
 
 @media (min-width: 768px) {
     .box-header {
         display: flex;
         background-color: rgb(250, 212, 184);
-
-
-
     }
 
     .logo-header {
@@ -132,11 +134,18 @@ ul {
     .hamburger-header {
         display: none;
     }
+
+    .desplegado {
+        display: none
+    }
 }
+
+
 @media (min-width: 950px){
 .nav-bar-header{
     font-size: 100%;
 }
+
 }
 /*
 * {
