@@ -21,22 +21,45 @@
         </div>
     </section>
 
+    <section> 
+        <article  class="product" >
+            <% for (  let i = 0 ; i < 4; i ++ ){%>
+              
+               <div  data-audio="/sound/paperball5.mp3" class= "product-box" >
+                    <a href="/productos/<%= products[i].id%>">
+                    <img src="/images/products/<%= products[i].image %>"    alt = <%= products[i].name %> class="product-img">
+                    <div class="box-description">
+                    <p  class="detalle"><%= products[i].description %></p>
+                    <h4 class="descripcion"><%= products[i].name %>  </h4>
+                    <h4 class="descripcion">$<%= products[i].price %></h4>
+                    <h4 class="descripcion"><%= products[i].category.category %></h4>
+                    </a>   
+                    <% if (locals.isLogged)  { %> 
+                    <button value="<%= products[i].id %>" class="add-to-cart">Comprar</button>
+                    <% } %> 
+                  
+
+                          
+                    </div>    
+                </div> 
+            <% } %>
+        </article>
+        
+    </section>
+
+
+
+
     <section class="banner-home-2">
         
-        <img src="/images/variados-hojas.jpg" alt="Huära Chocolates" width="100%">
+        <img src="/images/variados-hojas-corto.jpg" alt="Huära Chocolates" width="100%">
         
-        <a href="/productos">
-        <div>
-            <ul class="list-banner">
-                <li>Verdadero</li>
-                <li>Chocolate Andino</li>
-            </ul>
-        </div>
-        </a>
+       
 
         <a href="/productos">
         <div>
             <ul class="list-banner-2">
+                <li style= 'color: palevioletred '> PRODUCTOS </li>
                 <li>Chocolates</li>
                 <li>Tabletas</li>
             </ul>

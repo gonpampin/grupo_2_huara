@@ -46,7 +46,7 @@ app.use('/api', apiRouter);
 
 
 //servidor
-app.listen(3000, () => {
-    console.log('Servidor levantado en el puerto 3000')
+app.listen(3001, () => {
+    console.log('Servidor levantado en el puerto 3001')
 })
 
