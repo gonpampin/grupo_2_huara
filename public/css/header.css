@@ -55,7 +55,9 @@ ul {
 .nav-bar-header {
     display: none;
 }
-
+.desplegado {
+    display: block
+}
 
 
 @media (min-width: 360px) {
@@ -65,6 +67,9 @@ ul {
         background-color: rgb(250, 212, 184);
 
 
+    }
+    .desplegado {
+        display: none
     }
 
     .logo-header {
@@ -92,14 +97,15 @@ ul {
 
     }
 
-    .desplegado {
-        display: block
-    }
+   
     
 
 }
 
 @media (min-width: 768px) {
+    .hamburger-header {
+        display: none;
+    }
     .box-header {
         display: flex;
         background-color: rgb(250, 212, 184);
@@ -131,19 +137,18 @@ ul {
     font-size: 24px;
 }
 
-    .hamburger-header {
-        display: none;
-    }
+    
 
-    .desplegado {
-        display: none
-    }
+ 
 }
 
 
 @media (min-width: 950px){
 .nav-bar-header{
     font-size: 100%;
+}
+.hamburger-header {
+    display: none;
 }
 
 }
