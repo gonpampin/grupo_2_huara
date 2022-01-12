@@ -10,7 +10,11 @@
 .banner-home-3 {
     width: 100%;
 }
-
+.banner-izquierda-1{
+    position: relative;
+    z-index: -1;
+    
+}
 .banner-izquierda-1 div img{
     width: 100%;
 }
