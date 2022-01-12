@@ -19,18 +19,18 @@ let listController = {
                 res.render("./list/productList", {products: resultados})
             })
             .catch(function () {
-                console.log("Promise Rejected");
+                console.log("1Promise ");
             })
     },
     userList: (req,res) => {
         Users.findAll({
-            include: [{association: "userCategory"}]
+        // include: [{association: "userCategory"}]
         })
-            .then(function (resultados) {
+            .then((resultados) => {
                 res.render("./list/usersList", {user: resultados})
             })
-            .catch(function () {
-                console.log("Promise Rejected");
+            .catch(() => {
+                console.log("2Promise Rejected");
             })
     },
     delete: (req,res) =>{
@@ -47,7 +47,7 @@ let listController = {
             res.render("./list/profile_admin", {user: resultados})
         })
         .catch(function () {
-            console.log("Promise Rejected");
+            console.log("3Promise Rejected");
         })
         
     }
