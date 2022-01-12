@@ -18,10 +18,7 @@ let controller = {
         .catch(function () {
             console.log("Promise Rejected");
         })
-    },
-    productCart:(req, res) => {
-        res.render('products/productCart');
-    },
+    }
 }    
      
     

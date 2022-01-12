@@ -5,7 +5,7 @@ let carritNumero = document.querySelector('.fa-shopping-bag')
 //Definimos la variable cart con un array vacío
 let cart = [];
 
-//localStorage.clear()
+localStorage.clear()
 
 //preguntamos si hay algo en el localstorage. Sin esto, cada vez que refresquemos, el array "cart" se vaciaría
 if(localStorage.getItem('cart')) {

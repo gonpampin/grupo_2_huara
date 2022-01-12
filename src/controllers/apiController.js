@@ -1,6 +1,7 @@
 const path = require('path');
 const db = require ('../database/models');
 
+
 const Products = db.Products;
 const Users = db.Users;
 
