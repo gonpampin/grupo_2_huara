@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
 }
 .no-desplegado{
     display: none;
@@ -61,6 +62,24 @@ ul {
 .nav-bar-header {
     display: none;
 }
+
+.perfil-desplegable{
+    display: none;
+    position:absolute;
+    background-color:rgb(250, 212, 184) ;
+    list-style-type: none;
+    text-align: center;
+    left: 75%;
+    width:20%;
+    line-height: 30px;
+    padding-bottom: 10px;
+    top: 100%;
+    z-index: 10;
+    
+    
+}
+
+
 
 
 

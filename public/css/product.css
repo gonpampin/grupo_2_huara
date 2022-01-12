@@ -48,6 +48,7 @@ button.boton-buscar{
     margin:auto;
     box-shadow: 0px 0px 10px rgb(100,100,100);
     
+    
 }
 
 .product-box{
@@ -67,6 +68,7 @@ section{
 .head-product-image{
     width: 100%;
     opacity: 0.8;
+   
 }
 .intro{
     text-align: center;
