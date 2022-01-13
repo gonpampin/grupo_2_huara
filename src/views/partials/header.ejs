@@ -30,7 +30,18 @@
             <li><i class="fas fa-home"> </i><a href="/"> Home</a></li>
             <li><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
             <li><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
-            <li><i class="fas fa-list-alt"></i> <a href="/listados"> Listados</a></li>
+            <li id="desplegable-listado"><i class="fas fa-list-alt"></i> <a href="/listados"> Listados</a>
+            </li>
+            <div class="perfil-desplegable-listado" id="desple-listado">
+                    <li>
+                        <a href="/listados/listadoproductos">Listado de productos</a>
+                    </li>
+                    <li>
+                        <a href="/listados/listadousuarios">Listado de usuarios</a>
+                    </li>
+            
+            </div>
+            
             <li><i class="fas fa-box"> </i><a href="/productos/crearproducto"> Crear producto</a></li>
             <li id="desplegable"><i class="fas fa-sign-in-alt"></i>
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40"

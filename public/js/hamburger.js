@@ -10,7 +10,7 @@ if ( elm.style.display == '' || elm.style.display == 'none' ){
    
 });
 
-
+//Menu desplegable de login/logout
 let desplegable = document.querySelector('#desplegable')
 let desple = document.getElementById('desple')
 desplegable.addEventListener('mouseover', (e) => {
@@ -29,5 +29,28 @@ desple.addEventListener('mouseover', (e) => {
 desple.addEventListener('mouseout', (e) => {
 if ( desple.style.display == '' || desple.style.display == 'block' ){
     desple.style.display = 'none';
+}
+});
+
+//Menu desplegable de listados
+let desplegableListado = document.querySelector('#desplegable-listado')
+let despleListado = document.getElementById('desple-listado')
+
+desplegableListado.addEventListener('mouseover', (e) => {
+  
+if ( despleListado.style.display == '' || despleListado.style.display == 'none' ){
+    despleListado.style.display = 'block';
+}
+});
+
+despleListado.addEventListener('mouseover', (e) => {
+    if ( despleListado.style.display == '' || despleListado.style.display == 'none' ){
+        despleListado.style.display = 'block';
+    }
+    });
+
+despleListado.addEventListener('mouseout', (e) => {
+if ( despleListado.style.display == '' || despleListado.style.display == 'block' ){
+    despleListado.style.display = 'none';
 }
 });

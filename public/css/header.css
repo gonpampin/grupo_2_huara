@@ -23,6 +23,10 @@ i {
     color: rgb(114, 141, 117);
 }
 
+li {
+    color: rgb(114, 141, 117);
+}
+
 ul {
     list-style-type: none;
 }
@@ -79,6 +83,20 @@ ul {
     
 }
 
+.perfil-desplegable-listado{
+    display: none;
+    position:absolute;
+    background-color:rgb(250, 212, 184) ;
+    list-style-type: none;
+    text-align: center;
+    left: 47%;
+    width:20%;
+    line-height: 30px;
+    padding-bottom: 10px;
+    top: 100%;
+    z-index: 10;
+    
+}
 
 
 
