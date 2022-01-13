@@ -12,13 +12,22 @@ if ( elm.style.display == '' || elm.style.display == 'none' ){
 
 
 let desplegable = document.querySelector('#desplegable')
-
+let desple = document.getElementById('desple')
 desplegable.addEventListener('mouseover', (e) => {
-    let desple = document.getElementById('desple')
+  
 if ( desple.style.display == '' || desple.style.display == 'none' ){
     desple.style.display = 'block';
-}else {
-    desple.style.display = 'none'
 }
+});
 
+desple.addEventListener('mouseover', (e) => {
+    if ( desple.style.display == '' || desple.style.display == 'none' ){
+        desple.style.display = 'block';
+    }
+    });
+
+desple.addEventListener('mouseout', (e) => {
+if ( desple.style.display == '' || desple.style.display == 'block' ){
+    desple.style.display = 'none';
+}
 });
