@@ -62,7 +62,7 @@
 }
 .button span {
 	position: relative;
-	z-index: 2;
+	z-index: 0;
 	transition: .3s ease all;
    color: white;
     color: rgb(114,141,117);
