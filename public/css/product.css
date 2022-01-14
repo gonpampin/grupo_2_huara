@@ -68,7 +68,8 @@ section{
 .head-product-image{
     width: 100%;
     opacity: 0.8;
-   
+position: relative;
+   z-index: 1;
 }
 .intro{
     text-align: center;
@@ -82,27 +83,24 @@ section{
 .head-products{
     position:relative;
     text-align: center;
+    z-index: 0;
 }
 
 .titulo{
     position:absolute;
-    top: 10px;
-    left: 10px;
     letter-spacing: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size:30px;
     color: white;
-    padding: 20px;
-}
+    z-index: 2;
+    top: 40%;
+    left: 30%;
+    
 
+}
 .box-description{
     margin-top: 20px;
         
 }
-
- 
 
 @media(min-width: 768px){
 
