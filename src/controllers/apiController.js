@@ -9,7 +9,9 @@ let apiController = {
     allUsers: (req, res) => {
         Users.findAll()
         .then(users => {
-            return res.status(200).json({
+            return res.status(200)
+            .header('Access-Control-Allow-Origin', '*')
+            .json({
                 status: 200,
                 count: users.length,
                 users: users
@@ -26,7 +28,9 @@ let apiController = {
         Users.findByPk(req.params.id)
        
         .then(user => {
-            return res.status(200).json({
+            return res.status(200)
+            .header('Access-Control-Allow-Origin', '*')
+            .json({
                 status: 200,
                 id: user.id,
                 first_name: user.first_name,
@@ -45,8 +49,9 @@ let apiController = {
     allProducts: (req, res) => {
         Products.findAll()
         .then(products => {
-            return res.status(200).json({
-                status: 200,
+            return res.status(200)
+            .header('Access-Control-Allow-Origin', '*')
+            .json({
                 count: products.length,
                 products: products
             })
@@ -59,8 +64,9 @@ let apiController = {
     singleProduct: (req, res) => {
         Products.findByPk(req.params.id)
         .then(product => {
-            return res.status(200).json({
-                status: 200,
+            return res.status(200)
+            .header('Access-Control-Allow-Origin', '*')
+            .json({
                 id: product.id,
                 name: product.name,
                 description: product.description,
