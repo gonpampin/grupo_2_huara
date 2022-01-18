@@ -72,6 +72,7 @@ position: relative;
    z-index: 1;
 }
 .intro{
+    display: none;
     text-align: center;
     padding: 30px;
     font-size: 20px;
@@ -82,11 +83,11 @@ position: relative;
 
 .head-products{
     position:relative;
-    text-align: center;
+    
     z-index: 0;
 }
 
-.titulo{
+div.titulo{
     position:absolute;
     letter-spacing: 10px;
     font-size:30px;
@@ -94,6 +95,7 @@ position: relative;
     z-index: 2;
     top: 40%;
     left: 30%;
+  
     
 
 }
@@ -113,6 +115,14 @@ position: relative;
     .product-box{
         width: 45%;
     }
+    div.titulo{
+        font-size:40px;
+        
+        top: 40%;
+        left: 35%;
+     
+
+    }
 
     div .box-description{
        
@@ -120,6 +130,15 @@ position: relative;
         padding: 5px;
        
         
+    }
+    .intro{
+        display: flex;
+        text-align: center;
+        padding: 30px;
+        font-size: 20px;
+        color: #666;
+        font-family: nexa-light;
+        background-color: white;
     }
 
    
@@ -132,9 +151,13 @@ position: relative;
     .logo{
         width: 200px;
     }
-    .titulo{
-        font-size:40px;
+    div.titulo{
+        font-size:50px;
         
+        top: 40%;
+        left: 40%;
+     
+
     }
     article.product{
         display: flex;
@@ -145,5 +168,6 @@ position: relative;
     .product-box{
         width: 22%;
     }
-}
+    
 
+}
