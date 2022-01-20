@@ -12,9 +12,9 @@ let apiController = {
             return res.status(200)
             .header('Access-Control-Allow-Origin', '*')
             .json({
-                status: 200,
                 count: users.length,
-                users: users
+                users: users,
+                detail: 'http://localhost:3001/api/users/'
             
             })
         })
@@ -31,13 +31,11 @@ let apiController = {
             return res.status(200)
             .header('Access-Control-Allow-Origin', '*')
             .json({
-                status: 200,
                 id: user.id,
                 first_name: user.first_name,
                 last_name: user.last_name,
                 email: user.email,
-                image: user.image,
-                user_category: user.user_category_id == 1 ? 'Admin' : 'Cliente'
+                image: user.image
 		})
             })
         
@@ -53,7 +51,8 @@ let apiController = {
             .header('Access-Control-Allow-Origin', '*')
             .json({
                 count: products.length,
-                products: products
+                products: products,
+                detail: 'http://localhost:3001/api/products/'
             })
         })
         .catch(()=>{
