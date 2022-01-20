@@ -1,16 +1,5 @@
-
-
-
-
-
-
 let addToCart = document.querySelectorAll('.add-to-cart')
-
-let tr = document.querySelector('tr')
-
 let tbody = document.querySelector('#tbody')
-
-
 
 let carrito = [];
 
@@ -65,22 +54,21 @@ function addItemCarrito(newItem){
 
 function renderCarrito(){
 
-    let tbody = document.querySelector('#tbody')
+    //tbody.innerHTML = '';
     
    
     carrito.map(item => {
         
-        //tbody.innerHTML = '';
-        let tr = document.querySelector('tr')
-        console.log(tr)
+        //let tr = document.createElement('tr')
+       
         
         
-        //let prueba = "hola"
+       
       
         //tr.classList.add('itemCarrito)
     
 
-       /* let content = `
+       let content = `
     
                 <td class="table__productos">
                 <img src=${item.image}  alt="">
@@ -93,9 +81,9 @@ function renderCarrito(){
                 <button class="delete btn btn-danger">X</button>
             </td>
     
-        `*/
+        `
         
-        //tr.innerText = prueba;
+        //tr.innerText = content;
         //tbody.append(tr)
 
         //tr.querySelector(".delete").addEventListener('click',removeItemCarrito)
@@ -110,7 +98,14 @@ function renderCarrito(){
 
 /*function carritoTotal(){
     let total = 0;
-    const
+    let itemCartTotal = document.querySelector('.itemCartTotal');
+    carrito.forEach((item) => {
+        let precio = Number(item.price.replace("$",''))
+        total = total + precio*item.cantidad
+    })
+    
+    itemCartTotal.innerHTML = `Total $${total}`;
+    addLocalStorage()
 }*/
 
 
