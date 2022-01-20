@@ -6,6 +6,14 @@
 <body>
     <%- include('../partials/header') %> 
 
+    <!-- <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+        Producto Añadido al carrito!
+    </div>
+
+    <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+        Producto removido!
+    </div> -->
+
 
     <main>
         <section>
@@ -14,6 +22,43 @@
                 <div class="titulo-carrito"> Carrito.</div>
             </div>
         </section>
+
+
+        <br>
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr class="text-primary">
+            <th scope="col">Producto</th>
+            <th scope="col">Descripción/th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+
+        <tbody class="tabla-body" id="tbody">
+
+           <tr>
+                
+           </tr>
+         
+                 
+        
+          
+        </tbody>
+        
+      </table>
+      <br><br>
+
+
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal text-white">Total: 0</h3>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button class="btn btn-success">COMPRAR</button>
+        </div>
+      </div>
+      
 
         <section class="section-product-carrito">
             <div class= "todos-productos-carrito">
@@ -91,11 +136,13 @@
         </section>
     </main>
 
+    
+
 
 
     <%- include('../partials/footer') %>
 
-    <script src="/js/cart.js"></script>
+    <script src="./js/cart.js"></script>
 
  </body>
  

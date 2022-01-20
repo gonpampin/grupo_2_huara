@@ -8,7 +8,6 @@ let cartController = {
     productCart:(req, res) => {
         res.render('products/productCart');
         
-        console.log(usserLogged.localStorage.getItem('cart'))
         ;
     },
 
