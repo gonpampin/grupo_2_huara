@@ -59,12 +59,7 @@ function renderCarrito(){
    
     carrito.map(item => {
         
-        //let tr = document.createElement('tr')
-       
-        
-        
-       
-      
+        let tr = document.createElement('tr')
         //tr.classList.add('itemCarrito)
     
 
