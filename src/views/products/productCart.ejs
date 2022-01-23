@@ -26,7 +26,7 @@
 
         <br>
         <div>
-        <table class="table table-dark table-hover" id="lista-compra" >
+        <table class="table table-dark table-hover" >
             <thead>
                 <tr class="text-primary">
                     <th scope="col">Producto</th>
@@ -36,13 +36,24 @@
                 </tr>
             </thead>
                 
-                <tbody>
-                    
-                    
-                    <tr>
+                <tbody id="lista-compra">
+                    <% for (  let i = 0 ; i < products.length; i ++ ){%>
+                        <tr>
+                        <td class="table__productos">
+                            <img class="product-img-carrito" src="/images/products/<%= products[i].image %>" alt = <%= products[i].name %>>
+                            
+                            </td>
+                            <td class="title"><%= products[i].name %></td>
+                            <td class="table__price"><p><%= products[i].description %></p></td>
+                            <td class="table__price"><p><%= products[i].price %></p></td>
+                            <td class="table__cantidad">
+                                <input type="number" min="1" value="" class="input-element">
+                                <button class="delete btn btn-danger">X</button>
+                            </td>
+                        </tr>
+                    <% } %>
 
-                    </tr>
-                    
+                              
                     
                     
                 </tbody>
@@ -64,13 +75,15 @@
 
         <section class="section-product-carrito">
             <div class= "todos-productos-carrito">
+
+                <% for (  let i = 0 ; i < products.length; i ++ ){%>
                 <article class="product-carrito">
                     <div>
-                        <img src= "images/products/frambuesa.jpg" alt = "Chocolate con frambuesa" class="product-img-carrito">
+                        <img src= "/images/products/<%= products[i].image %>" alt = <%= products[i].name %> class="product-img-carrito">
                     </div>
                     <div class= "product-box-carrito">
-                        <h4 class="descripcion-carrito">TABLETA FRAMBUESAS 100gr</h4>
-                        <h4 class="descripcion-carrito">$550,00</h4>
+                        <h4 class="descripcion-carrito"><%= products[i].description %></h4>
+                        <h4 class="descripcion-carrito"><%= products[i].name %></h4>
                         <div class="cantidad-producto">
                             <i class="fas fa-minus"></i>
                             <h4 class="cantidad">2</h4>
@@ -83,46 +96,11 @@
                         <i class="fas fa-trash"></i>
                     </div> 
                 </article>
+                <% } %>
 
-                <article class="product-carrito">
-                    <div>
-                        <img src= "images/products/marroc.jpg" alt = "Marroc" class="product-img-carrito">
-                    </div>
-                    <div class= "product-box-carrito" >
-                        <h4 class="descripcion-carrito">MARROC 100gr</h4>
-                        <h4 class="descripcion-carrito">$550,00</h4>
-                        <div class="cantidad-producto">
-                            <i class="fas fa-minus"></i>
-                            <h4 class="cantidad">2</h4>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="total">
-                            <h4 class="descripcion-carrito">Total</h4>
-                            <h4 class="descripcion-carrito">$1100,00</h4>
-                        </div>
-                        <i class="fas fa-trash"></i>
-                    </div> 
-                </article>
+               
 
-                <article class="product-carrito">
-                    <div>
-                        <img src= "images/products/pistacho.jpg" alt = "Marroc" class="product-img-carrito">
-                    </div>
-                    <div class= "product-box-carrito">
-                        <h4 class="descripcion-carrito">PISTACHO 100gr</h4>
-                        <h4 class="descripcion-carrito">$550,00</h4>
-                        <div class="cantidad-producto">
-                            <i class="fas fa-minus"></i>
-                            <h4 class="cantidad">2</h4>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="total">
-                            <h4 class="descripcion-carrito">Total</h4>
-                            <h4 class="descripcion-carrito">$1100,00</h4>
-                        </div>
-                        <i class="fas fa-trash"></i>
-                    </div> 
-                </article>
+               
 
                 <div class="pagar">
                     <div>

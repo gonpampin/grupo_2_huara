@@ -5,6 +5,7 @@ const methodOverride = require ('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const cartMiddleware = require('./middlewares/cartMiddleware');
 
 
 //config put y delete
@@ -31,6 +32,8 @@ app.use(cookies());
 
 app.use(userLoggedMiddleware);
 
+app.use(cartMiddleware);
+
 //config rutas
 const mainRouter = require('./routes/mainRoutes');
 const productsRouter = require('./routes/productsRoutes');
@@ -41,7 +44,7 @@ const apiRouter = require('./routes/apiRoutes');
 
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);
-app.use('/carrito', cartRouter)
+app.use(cartRouter)
 app.use('/listados', listRouter);
 app.use('/usuarios', usersRouter);
 app.use('/api', apiRouter);

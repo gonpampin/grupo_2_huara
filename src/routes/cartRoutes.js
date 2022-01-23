@@ -7,7 +7,9 @@ const controller = require('../controllers/cartController');
 const authAdminMiddleware = require('../middlewares/authAdminMiddleware');
 
 
-router.get('/', authAdminMiddleware, controller.productCart);
+router.get('/carrito', authAdminMiddleware, controller.productCart);
+router.post('/carrito', controller.addToCart);
+
 
 
 module.exports = router;
