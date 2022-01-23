@@ -45,7 +45,7 @@ let apiController = {
 
     },
     allProducts: (req, res) => {
-        Products.findAll()
+        Products.findAll({include: { all: true }})
         .then(products => {
             return res.status(200)
             .header('Access-Control-Allow-Origin', '*')
