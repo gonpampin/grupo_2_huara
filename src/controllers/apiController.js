@@ -16,8 +16,17 @@ let apiController = {
             .header('Access-Control-Allow-Origin', '*')
             .json({
                 count: users.length,
-                users: users,
-                detail: 'http://localhost:3001/api/users/'
+                users: users.map(element =>{
+                    return {
+                        id: element.id,
+                        name: element.first_name,
+                        last_name: element.last_name,
+                        email: element.email,
+                        detalle: `http://localhost:3001/api/users/${element.id}`,
+                       
+                    }
+                }),
+                
             
             })
         })
@@ -38,7 +47,7 @@ let apiController = {
                 first_name: user.first_name,
                 last_name: user.last_name,
                 email: user.email,
-                image: user.image
+                image: `http://localhost:3001/images/avatars/${user.image}`
 		})
             })
         
