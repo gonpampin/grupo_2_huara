@@ -88,10 +88,11 @@ let apiController = {
                             image: `http://localhost:3001/images/products/${element.image}`,
                             price: element.price,
                             stock: element.stock,
-                            product_category_id: element.product_category_id,
-                            category: element.category
+                            category: element.category.category
                         }
                     }),
+                relacion_uno_muchos: resultadoCategory,
+
             })
         })
         .catch(()=>{
@@ -100,21 +101,40 @@ let apiController = {
     },
 
     singleProduct: (req, res) => {
-        Products.findByPk(req.params.id)
-        .then(product => {
+        let products = Products.findByPk(req.params.id,{include: { all: true }})
+        let category = ProductsCategories.findByPk(req.params.id,
+            {
+                include: { all: true },
+                
+            }
+            
+            
+            )
+
+           
+        Promise.all([products, category])
+        
+        
+        .then(function ([resultadoProducts, resultadoCategory]) {
             return res.status(200)
             .header('Access-Control-Allow-Origin', '*')
             .json({
-                id: product.id,
-                name: product.name,
-                description: product.description,
-                image: "http://localhost:3001/images/products/" + product.image,
-                price: product.price,
-                stock: product.stock
+                id: resultadoProducts.id,
+                name: resultadoProducts.name,
+                description: resultadoProducts.description,
+                image: "http://localhost:3001/images/products/" + resultadoProducts.image,
+                price: resultadoProducts.price,
+                stock: resultadoProducts.stock,
+                category:resultadoCategory
+                // filter(function(item){
+                //     return item.id==resultadoProducts.product_category_id
+                     
+                //  })
             })
         })
-        .catch(()=>{
-            return res.render('./list/error404')
+        
+        .catch((e)=>{
+            return res.send(e)
         })
         
     }
