@@ -24,53 +24,10 @@
         </section>
 
 
-        <br>
-        <div>
-        <table class="table table-dark table-hover" >
-            <thead>
-                <tr class="text-primary">
-                    <th scope="col">Producto</th>
-                    <th scope="col">Descripción</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Cantidad</th>
-                </tr>
-            </thead>
-                
-                <tbody id="lista-compra">
-                    <% for (  let i = 0 ; i < products.length; i ++ ){%>
-                        <tr>
-                        <td class="table__productos">
-                            <img class="product-img-carrito" src="/images/products/<%= products[i].image %>" alt = <%= products[i].name %>>
-                            
-                            </td>
-                            <td class="title"><%= products[i].name %></td>
-                            <td class="table__price"><p><%= products[i].description %></p></td>
-                            <td class="table__price"><p><%= products[i].price %></p></td>
-                            <td class="table__cantidad">
-                                <input type="number" min="1" value="" class="input-element">
-                                <button class="delete btn btn-danger">X</button>
-                            </td>
-                        </tr>
-                    <% } %>
-
-                              
-                    
-                    
-                </tbody>
-                
-            </table>
-        </div>
-      <br><br>
+       
 
 
-      <div class="row mx-4">
-        <div class="col">
-          <h3 class="itemCartTotal text-white">Total: 0</h3>
-        </div>
-        <div class="col d-flex justify-content-end">
-          <button class="btn btn-success">COMPRAR</button>
-        </div>
-      </div>
+      
       
 
         <section class="section-product-carrito">
@@ -84,14 +41,18 @@
                     <div class= "product-box-carrito">
                         <h4 class="descripcion-carrito"><%= products[i].description %></h4>
                         <h4 class="descripcion-carrito"><%= products[i].name %></h4>
-                        <div class="cantidad-producto">
-                            <i class="fas fa-minus"></i>
-                            <h4 class="cantidad">2</h4>
-                            <i class="fas fa-plus"></i>
+                        <h4 class="descripcion-carrito" id="precio-unitario">Precio $<%= products[i].price %></h4>
+                        <div >
+                            <input  type="number" value="1" min="1" id="quantity">
                         </div>
+
                         <div class="total">
                             <h4 class="descripcion-carrito">Total</h4>
-                            <h4 class="descripcion-carrito">$1100,00</h4>
+                            <h4 class="descripcion-carrito" id="price-per-product">
+                                
+                                    $<%= products[i].price %>
+                                
+                            </h4>
                         </div>
                         <i class="fas fa-trash"></i>
                     </div> 
@@ -104,9 +65,9 @@
 
                 <div class="pagar">
                     <div>
-                        <h4 class="descripcion-carrito">6 Productos</h4>
+                        <h4 class="descripcion-carrito"><%= products.length %> Productos</h4>
                         <h4 class="descripcion-carrito">Total a pagar</h4>
-                        <h4 class="descripcion-carrito">$3300,00</h4>
+                        <h4 class="descripcion-carrito" id="total">$000.00</h4>
                     </div>
                     <div class="boton-compra">
                         <h4 class="descripcion-carrito">Terminar compra</h4>
@@ -122,7 +83,8 @@
 
     <%- include('../partials/footer') %>
 
-    <script src="./js/cart.js"></script>
+    <script src="./js/shopCart.js"></script>
+
 
  </body>
  

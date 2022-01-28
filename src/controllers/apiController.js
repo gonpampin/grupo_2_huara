@@ -63,9 +63,8 @@ let apiController = {
     allProducts: (req, res) => {
         let products = Products.findAll({include: { all: true }})
         let category = ProductsCategories.findAll(
-            {
-                include: { all: true },
-                
+{
+                include: { all: true }
             }
             
             
@@ -95,7 +94,6 @@ let apiController = {
                             category: element.category.category
                         }
                     }),
-                relacion_uno_muchos: resultadoCategory,
 
             })
         })
