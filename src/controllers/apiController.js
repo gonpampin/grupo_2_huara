@@ -10,7 +10,11 @@ const ProductsCategories = db.ProductsCategories;
 
 let apiController = {
     allUsers: (req, res) => {
-        Users.findAll({include: { all: true }})
+        Users.findAll(
+            {limit:5},
+            {offset:5},
+            
+            {include: { all: true }})
         .then(users => {
             return res.status(200)
             .header('Access-Control-Allow-Origin', '*')
@@ -101,35 +105,21 @@ let apiController = {
     },
 
     singleProduct: (req, res) => {
-        let products = Products.findByPk(req.params.id,{include: { all: true }})
-        let category = ProductsCategories.findByPk(req.params.id,
-            {
-                include: { all: true },
-                
-            }
-            
-            
-            )
-
-           
-        Promise.all([products, category])
+        Products.findByPk(req.params.id, {include: {all:true}})
         
         
-        .then(function ([resultadoProducts, resultadoCategory]) {
+        .then(product => {
             return res.status(200)
             .header('Access-Control-Allow-Origin', '*')
             .json({
-                id: resultadoProducts.id,
-                name: resultadoProducts.name,
-                description: resultadoProducts.description,
-                image: "http://localhost:3001/images/products/" + resultadoProducts.image,
-                price: resultadoProducts.price,
-                stock: resultadoProducts.stock,
-                category:resultadoCategory
-                // filter(function(item){
-                //     return item.id==resultadoProducts.product_category_id
-                     
-                //  })
+                id: product.id,
+                name: product.name,
+                description: product.description,
+                image: "http://localhost:3001/images/products/" + product.image,
+                price: product.price,
+                stock: product.stock,
+                category: product.category.category
+                  
             })
         })
         
