@@ -10,14 +10,27 @@ const ProductsCategories = db.ProductsCategories;
 
 let apiController = {
     allUsers: (req, res) => {
-        Users.findAll({include: { all: true }})
+        Users.findAll(
+            {limit:5},
+            {offset:5},
+            
+            {include: { all: true }})
         .then(users => {
             return res.status(200)
             .header('Access-Control-Allow-Origin', '*')
             .json({
                 count: users.length,
-                users: users,
-                detail: 'http://localhost:3001/api/users/'
+                users: users.map(element =>{
+                    return {
+                        id: element.id,
+                        name: element.first_name,
+                        last_name: element.last_name,
+                        email: element.email,
+                        detalle: `http://localhost:3001/api/users/${element.id}`,
+                       
+                    }
+                }),
+                
             
             })
         })
@@ -38,7 +51,7 @@ let apiController = {
                 first_name: user.first_name,
                 last_name: user.last_name,
                 email: user.email,
-                image: user.image
+                image: `http://localhost:3001/images/avatars/${user.image}`
 		})
             })
         
@@ -78,8 +91,7 @@ let apiController = {
                             image: `http://localhost:3001/images/products/${element.image}`,
                             price: element.price,
                             stock: element.stock,
-                            product_category_id: element.product_category_id,
-                            category: element.category
+                            category: element.category.category
                         }
                     }),
 
@@ -91,7 +103,9 @@ let apiController = {
     },
 
     singleProduct: (req, res) => {
-        Products.findByPk(req.params.id)
+        Products.findByPk(req.params.id, {include: {all:true}})
+        
+        
         .then(product => {
             return res.status(200)
             .header('Access-Control-Allow-Origin', '*')
@@ -101,11 +115,14 @@ let apiController = {
                 description: product.description,
                 image: "http://localhost:3001/images/products/" + product.image,
                 price: product.price,
-                stock: product.stock
+                stock: product.stock,
+                category: product.category.category
+                  
             })
         })
-        .catch(()=>{
-            return res.render('./list/error404')
+        
+        .catch((e)=>{
+            return res.send(e)
         })
         
     }
