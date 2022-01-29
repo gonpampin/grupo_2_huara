@@ -27,6 +27,16 @@ let cartController = {
 		console.log("esto es req.session.cart",req.session.cart);
 		//console.log('======');
 		return res.redirect('/productos')
+	},
+
+	removeFromCart: (req, res) => {
+		req.session.cart.filter()
+
+	},
+
+	terminarCompra: (req, res) => {
+		req.session.cart = []
+		return res.redirect('/carrito');
 	}
 
    

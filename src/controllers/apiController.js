@@ -131,4 +131,3 @@ let apiController = {
 
 module.exports = apiController;
 
-Prueba

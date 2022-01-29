@@ -41,7 +41,7 @@
                     <div class= "product-box-carrito">
                         <h4 class="descripcion-carrito"><%= products[i].description %></h4>
                         <h4 class="descripcion-carrito"><%= products[i].name %></h4>
-                        <h4 class="descripcion-carrito" id="precio-unitario">Precio $<%= products[i].price %></h4>
+                        <h4 class="descripcion-carrito" id="precio-unitario">Precio 500gr $<%= products[i].price %></h4>
                         <div >
                             <input  type="number" value="1" min="1" id="quantity">
                         </div>
@@ -54,7 +54,20 @@
                                 
                             </h4>
                         </div>
-                        <i class="fas fa-trash"></i>
+
+                        <form action="/carrito?_method=PUT method="POST" style="display: inline-flex">
+                            <button class="detail-eliminar " type="submit">
+
+                                <i class="fas fa-trash"></i>
+
+                            </button>
+                        </form>
+                        
+
+                        
+
+                        
+
                     </div> 
                 </article>
                 <% } %>
@@ -70,7 +83,15 @@
                         <h4 class="descripcion-carrito" id="total">$000.00</h4>
                     </div>
                     <div class="boton-compra">
-                        <h4 class="descripcion-carrito">Terminar compra</h4>
+                        <form action="/carrito?_method=DELETE" method="POST" style="display: inline-flex" id="terminar-compra">
+                            <button class="detail-eliminar " type="submit">
+
+                                <h4 class="descripcion-carrito">Terminar compra</h4>
+
+                            </button>
+                        </form>
+                        
+
                     </div>
                 </div>
             </div>
