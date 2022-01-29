@@ -4,6 +4,8 @@ module.exports = (req, res, next) => {
 		req.session.cart = [];
 	}
 	// Setear en locals la cantidad de productos
-	res.locals.cartQty = req.session.cart.length;
+	res.locals.cart = true;
+	res.locals.cart = req.session.cart
 	next();
+	console.log("esto es",res.locals.cart)
 }

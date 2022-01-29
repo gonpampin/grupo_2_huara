@@ -49,6 +49,11 @@ qtyPerPdto.forEach(qtyInput => {
 
 let terminarCompra = document.querySelector('#terminar-compra');
 
+
+
+
+
+
 terminarCompra.addEventListener("submit", (e) => {
      e.preventDefault()
       swal({
@@ -69,6 +74,26 @@ terminarCompra.addEventListener("submit", (e) => {
           });
         
 })
+
+
+
+/*let iniciarCompra = document.querySelector('.detail-compra');
+iniciarCompra.style.display = 'none'
+
+let terminarCompra = document.querySelector('.detail-eliminar');
+terminarCompra.style.display = 'none'
+
+iniciarCompra.addEventListener('click', (e) => {
+    // let iniciarCompra = document.querySelector('.detail-compra');
+    
+    if ( iniciarCompra.style.display == '' || iniciarCompra.style.display == 'block' ){
+        terminarCompra.style.display = 'none';
+
+    }
+    });*/
+
+
+
 
 
 

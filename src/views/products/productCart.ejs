@@ -55,11 +55,12 @@
                             </h4>
                         </div>
 
+
+
+
                         <form action="/carrito?_method=PUT method="POST" style="display: inline-flex">
                             <button class="detail-eliminar " type="submit">
-
                                 <i class="fas fa-trash"></i>
-
                             </button>
                         </form>
                         
@@ -83,15 +84,25 @@
                         <h4 class="descripcion-carrito" id="total">$000.00</h4>
                     </div>
                     <div class="boton-compra">
-                        <form action="/carrito?_method=DELETE" method="POST" style="display: inline-flex" id="terminar-compra">
-                            <button class="detail-eliminar " type="submit">
-
-                                <h4 class="descripcion-carrito">Terminar compra</h4>
-
-                            </button>
-                        </form>
+                        
                         
 
+                        <form action="/carrito?_method=DELETE" method="POST" style="display: inline-flex" class="terminarCompra" id="terminar-compra">
+                            <button class="detail-eliminar " type="submit">
+                                <h4 class="descripcion-carrito">Terminar compra</h4>
+                            </button>
+                        </form>
+
+
+                       
+                            <button class="detail-comprar " type="submit">
+                                <h4 class="descripcion-carrito">
+                                    <a href="/productos">Iniciar Compra</a>
+                                </h4>
+                            </button>
+                        
+                        
+                       
                     </div>
                 </div>
             </div>

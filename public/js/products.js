@@ -5,7 +5,7 @@ formDelete.forEach(deleteJS => {
     swal({
         title: "Estás por eliminar el producto",
         text: "¡Una vez borrado no podrás recuperarlo!",
-        icon: "warning",
+        icon: "info",
         buttons: true,
         dangerMode: true,
       })
@@ -16,7 +16,7 @@ formDelete.forEach(deleteJS => {
           });
         } else {
           deleteJS.submit();
-        }
+        }   
       });
   })
 })
