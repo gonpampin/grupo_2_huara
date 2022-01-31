@@ -7,5 +7,7 @@ module.exports = (req, res, next) => {
 	res.locals.cart = true;
 	res.locals.cart = req.session.cart
 	next();
-	console.log("esto es",res.locals.cart)
+
+	console.log("esto es locals", res.locals.cart)
+	//console.log("esto es",res.locals.cart)
 }

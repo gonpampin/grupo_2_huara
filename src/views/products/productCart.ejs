@@ -23,15 +23,23 @@
             </div>
         </section>
 
-
        
-
-
-      
       
 
         <section class="section-product-carrito">
             <div class= "todos-productos-carrito">
+
+                <% if (locals.cart.length != 0)  { %>
+                            
+                    <button class="detail-comprar " type="submit">
+                        <h4 class="descripcion-carrito">
+                            <a href="/productos">Seguir comprando</a>
+                        </h4>
+                    </button>
+                    
+                    
+                        
+                <% } %>
 
                 <% for (  let i = 0 ; i < products.length; i ++ ){%>
                 <article class="product-carrito">
@@ -58,8 +66,9 @@
 
 
 
-                        <form action="/carrito?_method=PUT method="POST" style="display: inline-flex">
-                            <button class="detail-eliminar " type="submit">
+                        <form action="/carrito?_method=PUT" method="POST" style="display: inline-flex">
+                            <input name="deleteProduct" type="hidden" value="<%= products[i].id %>">
+                            <button class="detail-eliminar" type="submit" >
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>
@@ -86,22 +95,23 @@
                     <div class="boton-compra">
                         
                         
-
-                        <form action="/carrito?_method=DELETE" method="POST" style="display: inline-flex" class="terminarCompra" id="terminar-compra">
-                            <button class="detail-eliminar " type="submit">
-                                <h4 class="descripcion-carrito">Terminar compra</h4>
-                            </button>
-                        </form>
-
-
-                       
+                        <% if (locals.cart.length === 0)  { %>
+                            
                             <button class="detail-comprar " type="submit">
                                 <h4 class="descripcion-carrito">
                                     <a href="/productos">Iniciar Compra</a>
                                 </h4>
                             </button>
-                        
-                        
+                            
+                            <% } else { %>
+                                
+                            <form action="/carrito?_method=DELETE" method="POST" style="display: inline-flex" class="terminarCompra" id="terminar-compra">
+                                <button class="detail-eliminar " type="submit">
+                                    <h4 class="descripcion-carrito">Terminar compra</h4>
+                                </button>
+                            </form>
+                                
+                        <% } %>
                        
                     </div>
                 </div>

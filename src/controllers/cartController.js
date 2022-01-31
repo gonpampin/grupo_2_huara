@@ -30,7 +30,32 @@ let cartController = {
 	},
 
 	removeFromCart: (req, res) => {
-		req.session.cart.filter()
+
+		let cart = req.session.cart
+
+		let carrito = cart.filter(function(carrito){
+		return carrito != req.body.deleteProduct
+		})
+
+		req.session.cart = carrito;
+
+
+		Products
+		.findAll({
+			where: {
+				id: req.session.cart
+			}
+		})
+		.then(products => {
+			if(req.session.cart.length === 0){
+				return res.redirect('/carrito');
+
+		} else {
+
+			return res.render('./products/productCart', { products });
+
+		}
+		});
 
 	},
 

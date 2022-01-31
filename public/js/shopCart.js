@@ -50,10 +50,6 @@ qtyPerPdto.forEach(qtyInput => {
 let terminarCompra = document.querySelector('#terminar-compra');
 
 
-
-
-
-
 terminarCompra.addEventListener("submit", (e) => {
      e.preventDefault()
       swal({
