@@ -11,8 +11,7 @@ const ProductsCategories = db.ProductsCategories;
 let apiController = {
     allUsers: (req, res) => {
         Users.findAll(
-            {limit:5},
-            {offset:5},
+           
             
             {include: { all: true }})
         .then(users => {
@@ -27,6 +26,7 @@ let apiController = {
                         last_name: element.last_name,
                         email: element.email,
                         detalle: `http://localhost:3001/api/users/${element.id}`,
+                        image: `http://localhost:3001/images/avatars/${element.image}`
                        
                     }
                 }),
