@@ -122,6 +122,21 @@ let userController = {
 
 
 editUser:(req, res) => {
+	let resultValidation = validationResult(req)
+	
+        if (resultValidation.errors.length > 0) {
+			Users.findByPk(req.params.id)
+				.then(resultado=>{
+					return res.render('.users/userEdit', {
+						userEdit: resultado
+					}
+					)
+				})
+			
+            
+        } else {
+
+		
 	
 	Users.update({
 		first_name: req.body.name,
@@ -136,7 +151,7 @@ editUser:(req, res) => {
 		} 
 		
 	}) 
-	
+}
 	
 	res.redirect('/usuarios/perfil/'+ req.params.id)
 },

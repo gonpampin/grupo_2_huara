@@ -89,6 +89,7 @@ let apiController = {
                             name: element.name,
                             detalle: `http://localhost:3001/api/products/${element.id}`,
                             image: `http://localhost:3001/images/products/${element.image}`,
+                            description: element.description,
                             price: element.price,
                             stock: element.stock,
                             category: element.category.category

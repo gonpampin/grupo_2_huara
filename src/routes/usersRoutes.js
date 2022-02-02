@@ -21,7 +21,7 @@ router.post('/registro', uploadFile.single('avatar'), validations, controller.pr
 router.get('/perfil/:id', authMiddleware, controller.profile);
 router.get('/editarusuario/:id', authMiddleware, controller.formEdit);
 // edicion de usuarios
-router.put('/editarusuario/:id', uploadFile.single('avatar'), controller.editUser);
+router.put('/editarusuario/:id', uploadFile.single('avatar'), validations, controller.editUser);
 router.delete('/delete/:id', controller.delete);
 //Ruta que muestra la vista del login
 router.get('/login', guestMiddleware, controller.login);

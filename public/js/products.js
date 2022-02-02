@@ -47,7 +47,7 @@ formCreateEdit.addEventListener('submit', (e) => {
   }else if (!(regexImageFormat.test(formCreateEdit.image.value))) {
     swal('Debes cargar una imagen en formato ".jpg", ".png", ".gif",".jpeg"')
       // validacion de categoria
-  }else if(formCreateEdit.category.value !=('1' || '2')){
+  }else if(formCreateEdit.category.value !='1' && formCreateEdit.category.value != '2' && formCreateEdit.category.value != '3'){
     swal('Debes cargar una categoria')
         //validacion de precio
   } else if (formCreateEdit.price.value == '') {
