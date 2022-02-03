@@ -30,7 +30,20 @@
                         <p class="detail-presentacion">100 gramos</p>
                         <p class="detail-price">$<%= products.price %></p>
                         </div>
-                        <div class="shopping"><i class="fas fa-shopping-bag bolsita"></i></div>
+
+                        <div class="shopping">
+                            <i class="fas fa-shopping-bag bolsita"></i>
+                        </div>
+
+                        <% if (locals.isLogged)  { %>
+                            <form action="/carrito" method="post">
+                                <input name="productCart" type="hidden" value="<%= products.id %>">
+                                <button type="submit" class="add-to-cart">
+                                    Agregar al carrito
+                                </button>
+                            </form> 
+                        <% } %> 
+
                         <br>
                         
                     </div>

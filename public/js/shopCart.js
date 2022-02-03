@@ -55,7 +55,7 @@ terminarCompra.addEventListener("submit", (e) => {
       swal({
           title: "Gracias por tu compra",
           text: "¿Querés terminar tu compra?",
-          icon: "warning",
+          icon: "info",
           buttons: true,
           dangerMode: true,
         })
