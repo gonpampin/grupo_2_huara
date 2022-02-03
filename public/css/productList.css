@@ -71,3 +71,17 @@ main {
     font-size: 8px;
     background-color:rgb(104, 104, 104);
    }
+
+
+   .add-to-cart{
+    background-color: rgb(250,212,184);
+    width: 200px; 
+    border-radius: 20px;
+    margin: auto;
+    border: none;
+
+    font-size:16px;
+    color: rgb(114,141,117);
+    font-family: nexa-light;
+    padding: 5px;
+}

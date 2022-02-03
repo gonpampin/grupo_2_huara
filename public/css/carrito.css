@@ -17,7 +17,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size:30px;
+    font-size:40px;
     color: white;
     padding: 20px;
 }
@@ -72,13 +72,13 @@ section{
 
 .fa-trash{
     display: block;
-    margin: auto;
+    padding-top: 5px;
     font-size: 18px;
     width: 10%;
     text-align: center;
     color: rgb(114,141,117);
     font-size: 20px;
-    padding: 5px;
+    
 }
 
 div.cantidad-producto{
@@ -121,6 +121,18 @@ div.pagar{
     background-color: #f8f8f8;
 }
 
+div.boton-compra-compra{
+    text-align: center;
+    background-color: rgb(250,212,184);
+    width: 200px; 
+    border-radius: 20px;
+    margin: auto;
+    margin-top:15px;
+    margin-bottom:15px;
+
+}
+
+
 .boton-compra{
     background-color: rgb(250,212,184);
     width: 200px; 
@@ -136,6 +148,40 @@ div.pagar{
     border-left: solid 2px rgb(240, 100, 149);
     padding-left: 5px;
     
+   }
+
+
+.detail-comprar-producto{
+    
+    font-size: 8px;
+    border: none;
+    background-color: rgb(250,212,184);
+    padding-left: 5px;
+    
+   }
+
+   .detail-eliminar-producto{
+    
+    font-size: 8px;
+    border: none;
+    background-color: white;
+    text-align: center;
+    
+    
+   }
+
+   input.cantidad-producto{
+    background-color:  #ebebeb;
+    border: none;
+    padding: 2px;
+    max-width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(114,141,117);
+    font-family: nexa-bold;
+
+
+
    }
 
 

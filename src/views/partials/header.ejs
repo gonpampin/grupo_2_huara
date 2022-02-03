@@ -16,7 +16,7 @@
             <li><i class="fas fa-home"> </i><a href="/"> Home</a></li>
             <li><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
             <li><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
-            <li id="desplegable"><i class="fas fa-sign-in-alt"></i>
+            <li id="desplegable">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                 Hi <%= locals.userLogged.first_name%>
             </li>
@@ -31,7 +31,7 @@
             <li><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
             <li><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
             <li><i class="fas fa-grip-vertical"></i> <a href="http://localhost:3000/"> Dashboard</a></li>
-            <li id="desplegable-listado"><i class="fas fa-list-alt"></i> <a href="/listados"> Listados</a>
+            <li id="desplegable-listado"><a href="/listados"> Listados</a>
             </li>
             <div class="perfil-desplegable-listado" id="desple-listado">
                     <li>
@@ -44,7 +44,7 @@
             </div>
             
             <li><i class="fas fa-box"> </i><a href="/productos/crearproducto"> Crear producto</a></li>
-            <li id="desplegable"><i class="fas fa-sign-in-alt"></i>
+            <li id="desplegable">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40"
                     style="border-radius: 100%; color:blue">
                 Hi Admin <%= locals.userLogged.first_name%>
@@ -69,7 +69,7 @@
             <li class="desplegable-item"><i class="fas fa-home"> </i><a href="/"> Home</a></li>
             <li class="desplegable-item"><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
             <li class="desplegable-item"><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
-            <li class="desplegable-item"><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/perfil/<%= locals.userLogged.id %>">
+            <li class="desplegable-item"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">
                     <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                     Hi <%= locals.userLogged.first_name%>
             <li class="desplegable-item"><a href="/usuarios/logout">Logout</a></li>
@@ -82,7 +82,7 @@
             <li class="desplegable-item"><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
             <li class="desplegable-item"><i class="fas fa-list-alt"></i> <a href="/listados"> Listados</a></li>
             <li class="desplegable-item"><i class="fas fa-box"> </i><a href="/productos/crearproducto"> Crear producto</a></li>
-            <li class="desplegable-item"><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/perfil/<%= locals.userLogged.id %>">
+            <li class="desplegable-item"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">
                     <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                     Hi Admin <%= locals.userLogged.first_name%>
             <li class="desplegable-item"><a href="/usuarios/logout">Logout</a></li>

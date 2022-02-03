@@ -27,7 +27,8 @@ div.buscar-titulo{
 button.boton-buscar{
     padding: 5px;
     font-family: nexa-light;
-    background-color: white
+    background-color: #ebebeb;
+    border: none;
 }
 
 .descripcion, .precio {

@@ -23,6 +23,8 @@ let cartController = {
 			req.session.cart.push(req.body.productCart);
 		}
 
+		res.cookie('cartCookie', req.session.cart, { maxAge: (1000 * 60) * 100 })
+
 		//console.log('======');
 		console.log("esto es req.session.cart",req.session.cart);
 		//console.log('======');

@@ -20,7 +20,7 @@ qtyPerPdto.forEach(qtyInput => {
     qtyInput.addEventListener('change', function(){
         let qty = Number(this.value);
         let pdtoPrice = this.parentElement.previousElementSibling.innerText;
-        let newpdtoPrice = Number(pdtoPrice.replace('Precio 500gr $',''))
+        let newpdtoPrice = Number(pdtoPrice.replace('500gr | $',''))
         let totalPrice = qty * newpdtoPrice;
         let totalPdtoPrice = this.parentElement.nextElementSibling.querySelector('#price-per-product')
         totalPdtoPrice.innerText = "$" + totalPrice;
@@ -70,6 +70,42 @@ terminarCompra.addEventListener("submit", (e) => {
           });
         
 })
+
+
+let borrarProducto = document.querySelector('#eliminar-producto');
+
+
+borrarProducto.addEventListener("submit", (e) => {
+     e.preventDefault()
+      swal({
+        title: "Eliminar producto del carrito",
+        text: "¿Seguro quieres eliminar este producto del carrito?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((resultado) => {
+        if (!resultado) {
+          swal("Continua con tu compra", {
+            icon: "success",
+          });
+        } else {
+          borrarProducto.submit();
+        }
+      });
+        
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 
