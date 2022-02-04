@@ -65,6 +65,9 @@ terminarCompra.addEventListener("submit", (e) => {
                 icon: "success",
               });
             } else {
+              swal("Continua con tu compra", {
+            icon: "success",
+          });
               terminarCompra.submit();
             }
           });
@@ -77,6 +80,7 @@ let borrarProducto = document.querySelector('#eliminar-producto');
 
 borrarProducto.addEventListener("submit", (e) => {
      e.preventDefault()
+    
       swal({
         title: "Eliminar producto del carrito",
         text: "¿Seguro quieres eliminar este producto del carrito?",
@@ -95,6 +99,13 @@ borrarProducto.addEventListener("submit", (e) => {
       });
         
 })
+
+
+
+
+
+
+
 
 
 

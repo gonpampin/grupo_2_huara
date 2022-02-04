@@ -70,9 +70,9 @@
 
 
 
-                        <form action="/carrito?_method=PUT" method="POST" style="display: inline-flex" >
+                        <form action="/carrito?_method=PUT" method="POST" style="display: inline-flex" id="eliminar-producto" >
                             <input name="deleteProduct" type="hidden" value="<%= products[i].id %>">
-                            <button class="detail-eliminar-producto" type="submit" id="eliminar-producto" >
+                            <button class="detail-eliminar-producto" type="submit">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>
