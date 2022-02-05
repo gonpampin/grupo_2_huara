@@ -2,6 +2,7 @@
 .head-carrito{
     position:relative;
     text-align: center;
+    z-index: 0;
 }
 
 .head-carrito-image{
@@ -20,6 +21,7 @@
     font-size:40px;
     color: white;
     padding: 20px;
+    z-index: 2;
 }
 
 section{
