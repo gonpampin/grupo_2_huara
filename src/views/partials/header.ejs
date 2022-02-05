@@ -23,7 +23,6 @@
             </li>
 
             <div class="perfil-desplegable" id="desple">
-<<<<<<< HEAD
                 <li id="desple"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">Perfil</a></li>
                 <li id="desple"><a href="/usuarios/logout">Logout</a></li>
             </div>
@@ -41,25 +40,6 @@
                     </li>
                     <li>
                         <a href="/listados/listadousuarios">Usuarios</a>
-=======
-                <li id="desple"><a href="/usuarios/perfil/<%= locals.userLogged.id %>"><i class="fas fa-user"></i> Ir a Perfil</a></li>
-                <li id="desple"><a href="/usuarios/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-            </div>
-
-            <% } else { %>
-            <li><i class="fas fa-home"> </i><a href="/"> Home</a></li>
-            <li><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
-            <li><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
-            <li><i class="fas fa-grip-vertical"></i> <a href="http://localhost:3000/"> Dashboard</a></li>
-            <li id="desplegable-listado"><i class="fas fa-list"></i><a href="/listados"> Listados</a>
-            </li>
-            <div class="perfil-desplegable-listado" id="desple-listado">
-                    <li>
-                        <a href="/listados/listadoproductos"><i class="fas fa-bars"></i> Listado de productos</a>
-                    </li>
-                    <li>
-                        <a href="/listados/listadousuarios"><i class="fas fa-users"></i> Listado de usuarios</a>
->>>>>>> d8405d1546656c80fe5337982877acb55e64069d
                     </li>
             
             </div>
@@ -71,13 +51,8 @@
                  <div>Hi Admin <%= locals.userLogged.first_name%></div>
             </li>
             <div class="perfil-desplegable" id="desple">
-<<<<<<< HEAD
                 <li><a href="/usuarios/perfil/<%= locals.userLogged.id %>">Perfil</a></li>
                 <li><a href="/usuarios/logout">Logout</a></li>
-=======
-                <li><a href="/usuarios/perfil/<%= locals.userLogged.id %>"><i class="fas fa-user"></i> Ir a Perfil</a></li>
-                <li><a href="/usuarios/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
->>>>>>> d8405d1546656c80fe5337982877acb55e64069d
             </div>
             <% } %>
         </ul>
