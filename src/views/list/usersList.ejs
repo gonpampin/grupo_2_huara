@@ -8,7 +8,7 @@
 
     <main>
 
-        <p class="listado_productos">Listado de usuarios</p>
+        <p class="listado_productos_title">Listado de usuarios</p>
         <table>
             <thead>
                 <td class="listado_productos">ID</td>
@@ -25,20 +25,7 @@
                     <td class="table-products"><%= user.first_name %></td>
                     <td class="table-products"><%= user.last_name %></td>
                     <td class="table-products"><%= user.email %></td>
-
-
-                    <% if (user.user_category_id != 1){ %>
-                    <td class="table-products">
-                        Cliente
-                    </td>
-                    <% } else { %>
-                    <td class="table-products">
-                        Administrador
-                    </td>
-                    <% } %>
-
-
-
+                    <td class="table-products"><%= user.userCategory.category %></td>
                     <td class="boton-listado">
                         <a href="/listados/listadousuarios/<%= user.id %>" class="boton-listado">Detalle</a>
                     </td>
@@ -59,6 +46,5 @@
 
 
     <%- include('../partials/footer') %>
-</body>
-
+</body>  <script src="/js/products.js"></script>
 </html>

@@ -25,6 +25,7 @@ let apiController = {
                         name: element.first_name,
                         last_name: element.last_name,
                         email: element.email,
+                        category: element.userCategory.category,
                         detalle: `http://localhost:3001/api/users/${element.id}`,
                         image: `http://localhost:3001/images/avatars/${element.image}`
                        
@@ -41,7 +42,7 @@ let apiController = {
     },
 
     singleUser: (req, res) => {
-        Users.findByPk(req.params.id)
+        Users.findByPk(req.params.id, {include: {all:true}})
        
         .then(user => {
             return res.status(200)
@@ -51,6 +52,7 @@ let apiController = {
                 first_name: user.first_name,
                 last_name: user.last_name,
                 email: user.email,
+                category: user.userCategory.category,
                 image: `http://localhost:3001/images/avatars/${user.image}`
 		})
             })
