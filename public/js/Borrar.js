@@ -57,8 +57,6 @@ function addToCarritoItem(e){
         cantidad: 1
     }
 
-    //console.log(productName,productDescription,productImg,productPrice)
-    //console.log(newCarrit
     //addItemCarrito(newItem);
 }
 

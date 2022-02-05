@@ -72,7 +72,7 @@
 
                         <form action="/carrito?_method=PUT" method="POST" style="display: inline-flex" id="eliminar-producto" >
                             <input name="deleteProduct" type="hidden" value="<%= products[i].id %>">
-                            <button class="detail-eliminar-producto" type="submit">
+                            <button class="detail-eliminar-producto" type="submit" value="<%= products[i].id %>">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>
@@ -111,7 +111,7 @@
                             <% } else { %>
                                 
                             <form action="/carrito?_method=DELETE" method="POST" style="display: inline-flex" class="terminarCompra" id="terminar-compra">
-                                <button class="detail-comprar-producto" type="submit">
+                                <button class="detail-comprar-producto" type="submit" value="<%= products.id %>" >
                                     <h4 class="descripcion-carrito">Terminar compra</h4>
                                 </button>
                             </form>
