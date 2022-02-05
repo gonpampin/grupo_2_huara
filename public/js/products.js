@@ -20,6 +20,28 @@ formDelete.forEach(deleteJS => {
       });
   })
 })
+let formDeleteUser = document.querySelectorAll(".formDeleteUserJS")
+formDeleteUser.forEach(deleteJS => {
+  deleteJS.addEventListener("submit", (e) => {
+    e.preventDefault();
+    swal({
+        title: "Estás por eliminar al Usuario",
+        text: "¡Una vez borrado no podrás recuperarlo!",
+        icon: "info",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((resultado) => {
+        if (!resultado) {
+          swal("¡El usuario no se borrará!", {
+            icon: "success",
+          });
+        } else {
+          deleteJS.submit();
+        }   
+      });
+  })
+})
 
 //validacion de creación de producto
 const regexImageFormat = /\.(jpe?g|png|gif)(?:\?.*|)$/i;

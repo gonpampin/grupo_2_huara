@@ -33,7 +33,7 @@
                         <a href="/usuarios/editarusuario/<%= user.id %>" class="boton-listado">Editar</a>
                     </td>
                     <td>
-                        <form action="/listados/listadousuarios/delete/<%= user.id %>?_method=DELETE" method="post" class="boton-listado-borrar">
+                        <form action="/listados/listadousuarios/delete/<%= user.id %>?_method=DELETE" method="post" class="boton-listado-borrar formDeleteUserJS">
                             <button class="boton-listado-borrar" type="submit">Borrar</button>
                         </form>
                     </td>
@@ -42,9 +42,10 @@
             </tbody>
 
         </table>
+    </body>  <script src="/js/products.js"></script>
     </main>
 
 
     <%- include('../partials/footer') %>
-</body>  <script src="/js/products.js"></script>
+
 </html>
