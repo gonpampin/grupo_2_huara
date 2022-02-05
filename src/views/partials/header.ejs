@@ -7,50 +7,50 @@
         </a>
         <ul class="nav-bar-header">
             <% if (!locals.isLogged)  { %>
-            <li><i class="fas fa-home"> </i><a href="/"> Home</a></li>
-            <li><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
-            <li><i class="fas fa-door-open"></i> <a href="/usuarios/login"> Login</a></li>
-            <li><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/registro"> Registrate</a></li>
+            <li><a href="/"> Home</a></li>
+            <li><a href="/productos"> Productos</a></li>
+            <li><a href="/usuarios/login"> Login</a></li>
+            <li><a href="/usuarios/registro"> Registrate</a></li>
 
             <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == 2) ) { %>
-            <li><i class="fas fa-home"> </i><a href="/"> Home</a></li>
-            <li><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
-            <li><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
+            <li><a href="/"> HOME</a></li>
+            <li><a href="/productos"> PRODUCTOS</a></li>
+            <li><a href="/carrito"> CARRITO</a></li>
             <li id="desplegable">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                 Hi <%= locals.userLogged.first_name%>
             </li>
 
             <div class="perfil-desplegable" id="desple">
-                <li id="desple"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">Ir a Perfil</a></li>
+                <li id="desple"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">Perfil</a></li>
                 <li id="desple"><a href="/usuarios/logout">Logout</a></li>
             </div>
 
             <% } else { %>
-            <li><i class="fas fa-home"> </i><a href="/"> Home</a></li>
-            <li><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
-            <li><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
-            <li><i class="fas fa-grip-vertical"></i> <a href="http://localhost:3000/"> Dashboard</a></li>
-            <li id="desplegable-listado"><a href="/listados"> Listados</a>
+            <li><a href="/"> HOME</a></li>
+            <li><a href="/productos"> PRODUCTOS</a></li>
+            <li><a href="/carrito"> CARRITO</a></li>
+            <li><a href="http://localhost:3000/"> DASHBOARD</a></li>
+            <li id="desplegable-listado"><a href="/listados"> LISTADOS</a>
             </li>
             <div class="perfil-desplegable-listado" id="desple-listado">
                     <li>
-                        <a href="/listados/listadoproductos">Listado de productos</a>
+                        <a href="/listados/listadoproductos">Productos</a>
                     </li>
                     <li>
-                        <a href="/listados/listadousuarios">Listado de usuarios</a>
+                        <a href="/listados/listadousuarios">Usuarios</a>
                     </li>
             
             </div>
             
-            <li><i class="fas fa-box"> </i><a href="/productos/crearproducto"> Crear producto</a></li>
+            <li><a href="/productos/crearproducto"> CREAR PRODUCTO</a></li>
             <li id="desplegable">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40"
                     style="border-radius: 100%; color:blue">
                 Hi Admin <%= locals.userLogged.first_name%>
             </li>
             <div class="perfil-desplegable" id="desple">
-                <li><a href="/usuarios/perfil/<%= locals.userLogged.id %>">Ir a Perfil</a></li>
+                <li><a href="/usuarios/perfil/<%= locals.userLogged.id %>">Perfil</a></li>
                 <li><a href="/usuarios/logout">Logout</a></li>
             </div>
             <% } %>
@@ -61,14 +61,14 @@
     <div class='no-desplegado ' id="ham">
         <ul>
             <% if (!locals.isLogged)  { %>
-            <li class="desplegable-item"><i class="fas fa-home"> </i><a href="/"> Home</a></li>
-            <li class="desplegable-item"><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
-            <li class="desplegable-item"><i class="fas fa-door-open"></i> <a href="/usuarios/login"> Login</a></li>
-            <li class="desplegable-item"><i class="fas fa-sign-in-alt"></i> <a href="/usuarios/registro"> Registrate</a></li>
+            <li class="desplegable-item"><a href="/"> HOME</a></li>
+            <li class="desplegable-item"><a href="/productos"> PRODUCTOS</a></li>
+            <li class="desplegable-item"> <a href="/usuarios/login"> LOGIN</a></li>
+            <li class="desplegable-item"><a href="/usuarios/registro"> REGISTRATE</a></li>
             <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == 2) ) { %>
-            <li class="desplegable-item"><i class="fas fa-home"> </i><a href="/"> Home</a></li>
-            <li class="desplegable-item"><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
-            <li class="desplegable-item"><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
+            <li class="desplegable-item"><a href="/"> HOME</a></li>
+            <li class="desplegable-item"><a href="/productos"> PRODUCTOS</a></li>
+            <li class="desplegable-item"><a href="/carrito"> CARRITO</a></li>
             <li class="desplegable-item"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">
                     <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                     Hi <%= locals.userLogged.first_name%>
@@ -77,11 +77,11 @@
             </a>
 
             <% } else { %>
-            <li class="desplegable-item"><i class="fas fa-home"> </i><a href="/"> Home</a></li>
-            <li class="desplegable-item"><i class="fas fa-box"> </i><a href="/productos"> Productos</a></li>
-            <li class="desplegable-item"><i class="fas fa-shopping-bag"></i> <a href="/carrito"> Carrito</a></li>
-            <li class="desplegable-item"><i class="fas fa-list-alt"></i> <a href="/listados"> Listados</a></li>
-            <li class="desplegable-item"><i class="fas fa-box"> </i><a href="/productos/crearproducto"> Crear producto</a></li>
+            <li class="desplegable-item"><a href="/"> HOME</a></li>
+            <li class="desplegable-item"><a href="/productos"> PRODUCTOS</a></li>
+            <li class="desplegable-item"><a href="/carrito"> CARRITO</a></li>
+            <li class="desplegable-item"><a href="/listados"> LISTADOS</a></li>
+            <li class="desplegable-item"><a href="/productos/crearproducto"> CREAR PRODUCTO</a></li>
             <li class="desplegable-item"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">
                     <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                     Hi Admin <%= locals.userLogged.first_name%>

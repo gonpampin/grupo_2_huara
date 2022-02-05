@@ -114,12 +114,13 @@
       display:block;
       margin:auto;
       padding:5px 5px;
-      color: rgb(167, 100, 66);
+      color: black;
       font-family: nexa-light;
        width: 300px;
        border: none;
        box-shadow: 0px 0px 10px rgb(100,100,100);
        margin-top: 10px;
+       font-size: 15px;
 
   }
 

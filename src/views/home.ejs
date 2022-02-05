@@ -4,7 +4,7 @@
 
 <%- include('./partials/head') %> 
 
-<body>
+<body class="fondo-home">
     
 <%- include('./partials/header') %> 
     
@@ -12,10 +12,10 @@
         
         <div class="banner-izquierda-1 slider">
             <ul>
-                <li><img src="/images/caja-abierta-fondo.jpg" alt="Huära Chocolates"></li>
-                <li><img src="/images/cajas-chocolates-bolsa.jpg" alt="Huära Chocolates"></li>
-                <li><img src="/images/presentacion-caja.jpg" alt="Huära Chocolates"></li>
-                <li><img src="/images/mouse.jpg" alt="Huära Chocolates"></li>
+                <li><img src="/images/caja-abierta-fondo.jpg" class="img-slider" alt="Huära Chocolates"></li>
+                <li><img src="/images/cajas-chocolates-bolsa.jpg" class="img-slider" alt="Huära Chocolates"></li>
+                <li><img src="/images/presentacion-caja.jpg" class="img-slider" alt="Huära Chocolates"></li>
+                <li><img src="/images/mouse.jpg" class="img-slider" alt="Huära Chocolates"></li>
             </ul>
         </div>
 
@@ -29,15 +29,12 @@
     </section>
 
     <section> 
-        
-
-            <div class="container-slider">
-            <div class="slider-2" id="slider-2">
+        <article  class="product" >
             <% for (  let i = 0 ; i < 4; i ++ ){%>
               
-                <div class= "slider-section" >
+               <div  data-audio="/sound/paperball5.mp3" class= "product-box" >
                     <a href="/productos/<%= products[i].id%>">
-                    <img class="slider-img" src="/images/products/<%= products[i].image %>"    alt = <%= products[i].name %> class="product-img">
+                    <img src="/images/products/<%= products[i].image %>"    alt = <%= products[i].name %> class="product-img">
                     <div class="box-description">
                     <p  class="detalle"><%= products[i].description %></p>
                     <h4 class="descripcion"><%= products[i].name %>  </h4>
@@ -47,18 +44,15 @@
                     <% if (locals.isLogged)  { %> 
                     <button value="<%= products[i].id %>" class="add-to-cart">Agregar al carrito</button>
                     <% } %> 
+                  
+                          
                     </div>    
                 </div> 
-
             <% } %>
-            </div>
-            <div class="slider-boton boton-right" id="boton-right"> &#62; </div>
-            <div class="slider-boton boton-left" id="boton-left"> &#60; </div>
-            </div>
-
-      
+        </article>
         
     </section>
+
 
 
 

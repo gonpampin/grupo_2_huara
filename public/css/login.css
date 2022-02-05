@@ -1,9 +1,13 @@
+body.fondo-login{
+    background-image: url('/images/fondo-cactus.png');
+}
+
 .login{
     color: rgb(114,141,117);
    text-align: center;
    width:100%;
    font-family: nexa-light;
-   background-color: white;
+   background-image: url('/images/fondo-cactus.png');
    margin:0;
 }
 
@@ -33,10 +37,10 @@
 }
 
 .button{
-    color: white;
+
     color: rgb(114,141,117);
     border-radius: 12px;
-    padding: 5px;
+    padding: 20px;
     width: 200px;
     border: solid 0.5px rgb(114,141,117);
     font-family: nexa-light;
@@ -53,10 +57,13 @@
        display:block;
        margin:auto;
        padding:2px 5px;
-       color: rgb(167, 100, 66);
+       color: black;
+       font-weight: bolder;
        font-family: nexa-light;
         width: 300px;
         margin-top: 10px;
+        background-color: transparent;
+        font-size: 15px;
 
    }
 

@@ -3,7 +3,7 @@
 
 <%- include('../partials/head') %> 
 
-<body>
+<body class="fondo-login">
     <%- include('../partials/header') %> 
 
     <main class="login">
@@ -16,14 +16,14 @@
             <form action="/usuarios/login" method="POST" id="loginForm">
                 <p class="campo">
                 <label for="email"class="label">Dirección de correo electrónico</label>
-                <input type="text" name="email" id="email" class="input" placeholder="ejemplo@gmail.com" style="font-style:italic; font-size: 12px">
+                <input type="text" name="email" id="email" class="input" placeholder="ejemplo@gmail.com">
                 </p>
 
                 
                 <br>   
                 <p class="campo pos-rel">
                 <label for="password" class="label">Contraseña</label>
-                <input type="password" name="contrasenia" id="password" class="input" placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
+                <input type="password" name="contrasenia" id="password" class="input" placeholder="Ingresá tu contraseña">
                 <span class="fas fa-eye-slash ojo-abierto" id="ojo"></span>   
             </p>
                 
