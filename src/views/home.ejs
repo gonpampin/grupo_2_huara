@@ -9,9 +9,16 @@
 <%- include('./partials/header') %> 
     
     <section class="banner-home-1">
-        <div class="banner-izquierda-1">
-            <img src="/images/presentacion-caja.png" alt="Huära Chocolates">
+        
+        <div class="banner-izquierda-1 slider">
+            <ul>
+                <li><img src="/images/caja-abierta-fondo.jpg" alt="Huära Chocolates"></li>
+                <li><img src="/images/cajas-chocolates-bolsa.jpg" alt="Huära Chocolates"></li>
+                <li><img src="/images/presentacion-caja.jpg" alt="Huära Chocolates"></li>
+                <li><img src="/images/mouse.jpg" alt="Huära Chocolates"></li>
+            </ul>
         </div>
+
         <div class="banner-derecha-1">
                 <img src="/images/logo-huara-sinfondo.png" alt="Huära Chocolates">
         </div>
@@ -22,12 +29,15 @@
     </section>
 
     <section> 
-        <article  class="product" >
+        
+
+            <div class="container-slider">
+            <div class="slider-2" id="slider-2">
             <% for (  let i = 0 ; i < 4; i ++ ){%>
               
-               <div  data-audio="/sound/paperball5.mp3" class= "product-box" >
+                <div class= "slider-section" >
                     <a href="/productos/<%= products[i].id%>">
-                    <img src="/images/products/<%= products[i].image %>"    alt = <%= products[i].name %> class="product-img">
+                    <img class="slider-img" src="/images/products/<%= products[i].image %>"    alt = <%= products[i].name %> class="product-img">
                     <div class="box-description">
                     <p  class="detalle"><%= products[i].description %></p>
                     <h4 class="descripcion"><%= products[i].name %>  </h4>
@@ -37,13 +47,16 @@
                     <% if (locals.isLogged)  { %> 
                     <button value="<%= products[i].id %>" class="add-to-cart">Agregar al carrito</button>
                     <% } %> 
-                  
-
-                          
                     </div>    
                 </div> 
+
             <% } %>
-        </article>
+            </div>
+            <div class="slider-boton boton-right" id="boton-right"> &#62; </div>
+            <div class="slider-boton boton-left" id="boton-left"> &#60; </div>
+            </div>
+
+      
         
     </section>
 
@@ -59,9 +72,8 @@
         <a href="/productos">
         <div>
             <ul class="list-banner-2">
-                <li style= 'color: palevioletred '> PRODUCTOS </li>
-                <li>Chocolates</li>
-                <li>Tabletas</li>
+                <li>Nuestros productos</li>
+
             </ul>
         </div>
         </a>
@@ -80,13 +92,13 @@
                 
                 </div>
             </form>
-            <img src="/images/logo-figuras-2.png" alt="Huära Chocolates">
+            <img src="/images/luna.jpg" alt="Huära Chocolates">
                 
         </div>
     </section>
     <%- include('./partials/footer') %> 
     
-
+<script src="./js/slider.js"></script>
 </body>
 
 
