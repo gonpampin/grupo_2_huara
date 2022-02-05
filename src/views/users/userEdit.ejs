@@ -13,7 +13,7 @@
                 <p class="title-login-2">Información personal</p>
             </div>
             <div class="formulario">
-                <form id="editUserFront" action="/usuarios/editarusuario/<%= userEdit.id %>?_method=PUT" method="POST" >
+                <form id="registerForm" action="/usuarios/editarusuario/<%= userEdit.id %>?_method=PUT" method="POST" >
                     <p class="campo">
                         <label for="name" class="label">Nombre</label>
                         <input 
@@ -70,7 +70,7 @@
                         <p class="campo">
                             <label for="email" class="label">Dirección de correo electrónico</label>
                             <input 
-                            type="email" 
+                            type="text" 
                             name="email" 
                             id="email" 
                             class="input" 
@@ -105,19 +105,23 @@
                         </span>
                         
                         <br>
-                        <p class="campo">
+                        <p class="campo pos-rel">
                             <label for="password" class="label">Contraseña</label>
                             <input type="password"
                              name="contrasenia" id="password" class="input"
                                 placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
-                                <span class="fas fa-eye-slash ojo-abierto" id="ojo"></span>
-                                <span style="color:red" id="spanEdit"></span>
-                        </p>
+                       <span class="fas fa-eye-slash ojo-abierto" id="ojo"></span>
+                            </p>
 
+
+                        <span style="color: red; font-size: 10px; font-style:italic">
+                            <% if (locals.errors && errors.contrasenia) { %>  
+                                <%= errors.contrasenia.msg %> 
+                            <% } %>
+                        </span>
                         <br>
 
                         <p class="campo">
-                            <% console.log(userEdit)%>
                             <% if (locals.userLogged.user_category_id == 1) { %>
                                 <label for="userCategory"class="label">Categoría</label>
                                 <select name="category" class="category-select">
@@ -133,28 +137,19 @@
                             <% } %>
                             
                         </p>
-
-
-                        <span style="color: red; font-size: 10px; font-style:italic">
-                            <% if (locals.errors && errors.contrasenia) { %>  
-                                <%= errors.contrasenia.msg %> 
-                            <% } %>
-                        </span>
-
                         <br>
-                        <p class="campo">
+                        <p class="campo pos-rel">
                             <label for="password" class="label">Reingresá la contraseña</label>
                             <input type="password" name="recontrasenia" id="passwordRe" class="input"
                                 placeholder="Reingresá tu contraseña" style="font-style:italic; font-size: 12px">
                                 <span class="fas fa-eye-slash ojo-abierto" id="ojoRe"></span>
-                                <span style="color:red" id="spanEdit"></span>
                             </p>
 
                         <span style="color: red; font-size: 10px; font-style:italic">
                             <% if (locals.errors && errors.recontrasenia) { %>  
                                 <%= errors.recontrasenia.msg %> 
                             <% } %>
-                        </span>     
+                        </span>   
 
                         <br>
                         <p>
@@ -168,7 +163,7 @@
             </div>
         </section>
     </main>
-    <script src="/js/userEdit.js"></script>
+    <script src="/js/usersFront.js"></script>
     <%- include('../partials/footer') %>
 </body>
 
