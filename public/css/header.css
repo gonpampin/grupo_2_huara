@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    z-index: 10;
   
 }
 .no-desplegado{
@@ -83,7 +84,7 @@ ul {
 .perfil-desplegable{
     display: none;
     position:absolute;
-    background-color:rgb(250, 212, 184) ;
+    background-color:white;
     list-style-type: none;
     text-align: center;
     left: 75%;
@@ -92,23 +93,57 @@ ul {
     padding-bottom: 10px;
     top: 100%;
     z-index: 3;
-    
+    opacity: 0.8;
+}
+
+div.perfil-desplegable li{
+    border-bottom: dotted 0.5px rgb(114, 141, 117);
+    box-sizing: content-box;
+    padding: 8px;
     
 }
+
+div.perfil-desplegable li:hover{
+    background-color: rgb(250, 212, 184);
+}
+
+li#desplegable{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+}
+
+
+
+
+
 
 .perfil-desplegable-listado{
     display: none;
     position:absolute;
-    background-color:rgb(250, 212, 184) ;
+    background-color:white;
     list-style-type: none;
     text-align: center;
     left: 54%;
-    width:20%;
+    width:23%;
     line-height: 30px;
     padding-bottom: 10px;
     top: 100%;
     z-index: 10;
+    opacity: 0.8;
     
+}
+
+div.perfil-desplegable-listado li{
+    border-bottom: dotted 0.5px rgb(114, 141, 117);
+    box-sizing: content-box;
+    padding: 8px;
+    
+}
+
+div.perfil-desplegable-listado li:hover{
+    background-color: rgb(250, 212, 184);
 }
 
 
