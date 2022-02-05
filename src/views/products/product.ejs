@@ -37,9 +37,9 @@
                                     <h4 class="descripcion" id="category"><%= products[i].category.category %></h4>
                                     </a>   
                                     <% if (locals.isLogged)  { %>
-                                    <form action="/carrito" method="post">
-                                        <input name="productCart" type="hidden" value="<%= products[i].id %>">
-                                        <button type="submit" class="add-to-cart">Agregar al carrito</button>
+                                    <form action="/carrito" method="post" id="agregar-producto-carrito" >
+                                        <input name="productCart" type="hidden" value="<%= products[i].id %>" >
+                                        <button type="submit" class="add-to-cart" value="<%= products[i].id %>" >Agregar al carrito</button>
                                     </form> 
                                     <% } %> 
                                   
@@ -60,7 +60,8 @@
 
     <%- include('../partials/footer') %>
 
-    <script src="/js/shopCart.js"></script>
+    <script src="./js/shopCart.js"></script>
+    
     
   
     
