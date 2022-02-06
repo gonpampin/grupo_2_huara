@@ -9,3 +9,26 @@
 .title-login{
     color: rgb(114,141,117);
 }
+
+.profile{
+color: rgb(114,141,117);
+   width:100%;
+   font-family: nexa-light;
+   background-image: url('/images/fondo-cactus.png');
+   margin:0;
+}
+
+.cuadro-profile{
+    margin-top: 10px;
+    border:dotted rgb(114,141,117) 2px;
+    width:fit-content;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+.alert-success{
+    border: solid 1px;
+    border-radius: 10px;
+}

@@ -198,8 +198,7 @@ borrarProducto.forEach(borrarProducto => {
           title: "Tu producto no se eliminó",
           text: "",
           icon: "error",
-          buttons: true,
-          dangerMode: true,
+          buttons: "ok",
         });
        } else {
          e.preventDefault()
@@ -207,8 +206,7 @@ borrarProducto.forEach(borrarProducto => {
           title: "Producto eliminado del carrito",
           text: "",
           icon: "success",
-          buttons: true,
-          dangerMode: true,
+          buttons: "ok",
         })
           .then((resultado) => {
             borrarProducto.submit();

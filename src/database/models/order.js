@@ -22,7 +22,10 @@ module.exports = (sequelize, dataTypes) => {
     const Orders = sequelize.define(alias, cols, config)
 
     Orders.associate = models => {
-        Orders.belongsTo(models.Orders, {as: 'orders',});
+        Orders.belongsTo(models.Users, {
+            as: 'orders',
+            foreignKey: "user_id",
+        });
     }
 
     return Orders

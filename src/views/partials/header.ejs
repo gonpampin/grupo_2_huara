@@ -7,32 +7,29 @@
         </a>
         <ul class="nav-bar-header">
             <% if (!locals.isLogged)  { %>
-            <li><a href="/"> Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/productos"> Productos</a></li>
             <li><a href="/usuarios/login"> Login</a></li>
             <li><a href="/usuarios/registro"> Registrate</a></li>
-
             <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == 2) ) { %>
-            <li><a href="/"> HOME</a></li>
-            <li><a href="/productos"> PRODUCTOS</a></li>
-            <li><a href="/carrito"> CARRITO</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/productos"> Productos</a></li>
+            <li><a href="/carrito"> Carrito</a></li>
             <li id="desplegable">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                 
                 <div>Hi <%= locals.userLogged.first_name%></div>
             </li>
-
             <div class="perfil-desplegable" id="desple">
                 <li id="desple"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">Perfil</a></li>
                 <li id="desple"><a href="/usuarios/logout">Logout</a></li>
             </div>
-
             <% } else { %>
-            <li><a href="/"> HOME</a></li>
-            <li><a href="/productos"> PRODUCTOS</a></li>
-            <li><a href="/carrito"> CARRITO</a></li>
-            <li><a href="http://localhost:3000/"> DASHBOARD</a></li>
-            <li id="desplegable-listado"><a href="/listados"> LISTADOS</a>
+            <li><a href="/">Home</a></li>
+            <li><a href="/productos"> Productos</a></li>
+            <li><a href="/carrito">Carrito</a></li>
+            <li><a href="http://localhost:3000/"> Dashboard</a></li>
+            <li id="desplegable-listado"><a href="/listados"> Listados</a>
             </li>
             <div class="perfil-desplegable-listado" id="desple-listado">
                     <li>
@@ -44,7 +41,7 @@
             
             </div>
             
-            <li><a href="/productos/crearproducto"> CREAR PRODUCTO</a></li>
+            <li><a href="/productos/crearproducto"> Crear Producto</a></li>
             <li id="desplegable">
                 <img src="/images/avatars/<%= locals.userLogged.image %>" width="40"
                     style="border-radius: 100%; color:blue">
@@ -62,27 +59,26 @@
     <div class='no-desplegado ' id="ham">
         <ul>
             <% if (!locals.isLogged)  { %>
-            <li class="desplegable-item"><a href="/"> HOME</a></li>
-            <li class="desplegable-item"><a href="/productos"> PRODUCTOS</a></li>
-            <li class="desplegable-item"> <a href="/usuarios/login"> LOGIN</a></li>
-            <li class="desplegable-item"><a href="/usuarios/registro"> REGISTRATE</a></li>
+            <li class="desplegable-item"><a href="/"> Home</a></li>
+            <li class="desplegable-item"><a href="/productos"> Productos</a></li>
+            <li class="desplegable-item"> <a href="/usuarios/login"> Login</a></li>
+            <li class="desplegable-item"><a href="/usuarios/registro"> Registrate</a></li>
             <% } else if ( (locals.isLogged) && (locals.userLogged.user_category_id == 2) ) { %>
-            <li class="desplegable-item"><a href="/"> HOME</a></li>
-            <li class="desplegable-item"><a href="/productos"> PRODUCTOS</a></li>
-            <li class="desplegable-item"><a href="/carrito"> CARRITO</a></li>
+            <li class="desplegable-item"><a href="/"> Home</a></li>
+            <li class="desplegable-item"><a href="/productos"> Productos</a></li>
+            <li class="desplegable-item"><a href="/carrito"> Carritos</a></li>
             <li class="desplegable-item"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">
                     <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                     Hi <%= locals.userLogged.first_name%>
             <li class="desplegable-item"><a href="/usuarios/logout">Logout</a></li>
             </li>
             </a>
-
             <% } else { %>
-            <li class="desplegable-item"><a href="/"> HOME</a></li>
-            <li class="desplegable-item"><a href="/productos"> PRODUCTOS</a></li>
-            <li class="desplegable-item"><a href="/carrito"> CARRITO</a></li>
-            <li class="desplegable-item"><a href="/listados"> LISTADOS</a></li>
-            <li class="desplegable-item"><a href="/productos/crearproducto"> CREAR PRODUCTO</a></li>
+            <li class="desplegable-item"><a href="/"> Home</a></li>
+            <li class="desplegable-item"><a href="/productos"> Productos</a></li>
+            <li class="desplegable-item"><a href="/carrito"> Carrito</a></li>
+            <li class="desplegable-item"><a href="/listados"> Listados</a></li>
+            <li class="desplegable-item"><a href="/productos/crearproducto"> Crear Producto</a></li>
             <li class="desplegable-item"><a href="/usuarios/perfil/<%= locals.userLogged.id %>">
                     <img src="/images/avatars/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
                     Hi Admin <%= locals.userLogged.first_name%>

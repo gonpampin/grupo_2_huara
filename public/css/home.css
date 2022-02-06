@@ -97,7 +97,7 @@ body.fondo-home{
 
 @media screen and (max-width: 800px) {
 	body {
-		padding: 40px 0;
+		padding: 0;
 	}
 
 	.contenido-principal {
