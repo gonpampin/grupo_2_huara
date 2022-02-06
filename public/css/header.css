@@ -113,14 +113,7 @@ li#desplegable{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
- 
 }
-
-
-
-
-
 
 .perfil-desplegable-listado{
     display: none;
@@ -134,14 +127,12 @@ li#desplegable{
     top: 100%;
     z-index: 10;
     opacity: 0.8;
-    
 }
 
 div.perfil-desplegable-listado li{
     border-bottom: dotted 0.5px rgb(114, 141, 117);
     box-sizing: content-box;
     padding: 8px;
-    
 }
 
 div.perfil-desplegable-listado li:hover{
@@ -221,6 +212,7 @@ div.perfil-desplegable-listado li:hover{
     
     text-decoration: underline;
     text-decoration-thickness: 3px;
+    text-transform: uppercase;
 }
 
 }
