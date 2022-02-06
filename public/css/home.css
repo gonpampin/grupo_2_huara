@@ -33,6 +33,10 @@ body.fondo-home{
 .img-slider{
     object-fit:fill
 }
+.carrusel{
+    margin: 30px;
+   width:90%;
+}
 .carousel__contenedor {
 	position: relative;
 }

@@ -32,13 +32,14 @@
             </section>
 
             <div class="carrusel">
-                <div class="product carousel__contenedor">
-                    <button aria-label="Anterior" class="carousel__anterior">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
+                <button aria-label="Anterior" class="carousel__anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class=" carousel__contenedor">
+                  
                     <div class="carousel__lista">
                     <% for ( let i=0 ;  i < products.length; i ++ ){%>
-                        <div class="product-box carrusel__elemento">
+                        <div class=" carrusel__elemento">
                             <a href="/productos/<%= products[i].id%>">
                                 <img class="product-img" src="/images/products/<%= products[i].image %>"
                                     alt=<%=products[i].name %> >
