@@ -2,6 +2,7 @@ module.exports= {
   "development": {
     "username": "root",
     "password": null,
+    //"database": "huara",
     "database": "huara_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -9,6 +10,7 @@ module.exports= {
   "test": {
     "username": "root",
     "password": null,
+    //"database": "huara",
     "database": "huara_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -16,7 +18,8 @@ module.exports= {
   "production": {
     "username": "root",
     "password": null,
-    "database": "huara",
+   // "database": "huara",
+   "database": "huara_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

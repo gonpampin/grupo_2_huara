@@ -23,8 +23,6 @@ window.addEventListener('load', function(){
                 draggable: true,
                 dragVelocity: 1.5,
                 rewind: true,
-                duration: 0.25
-
 			  }
 			}
 		]
