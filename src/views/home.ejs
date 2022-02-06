@@ -32,9 +32,27 @@
             </section>
 
 
-            <!-- <div class="box-description"><h2 > Productos destacados</h2></div> -->
+            
+
+            <section class="banner-home-2">
+
+                <img src="/images/variados-hojas-corto.jpg" alt="Huära Chocolates" width="100%">
+
+
+
+                <a href="/productos">
+                    <div>
+                        <ul class="list-banner-2">
+                            <li>Nuestros productos</li>
+
+                        </ul>
+                    </div>
+                </a>
+            </section>
+
+            
             <div class="carrusel">
-      
+                <div class="carru-titulo"><h2 > PRODUCTOS DESTACADOS</h2></div>
                 <div class=" carousel__contenedor">
                     
                     <button aria-label="Anterior" class="carousel__anterior">
@@ -46,7 +64,7 @@
                     <% for ( let i=0 ;  i < products.length; i ++ ){%>
                         <div class=" carrusel__elemento">
                             <a href="/productos/<%= products[i].id%>">
-                                <img class="product-img" src="/images/products/<%= products[i].image %>"
+                                <img class="product-img carrusel-img" src="/images/products/<%= products[i].image %>"
                                     alt=<%=products[i].name %> >
                                 <div class="box-description">
                                <%= products[i].name %>
@@ -69,38 +87,15 @@
 
             </div>
 
-            <section class="banner-home-2">
-
-                <img src="/images/variados-hojas-corto.jpg" alt="Huära Chocolates" width="100%">
-
-
-
-                <a href="/productos">
-                    <div>
-                        <ul class="list-banner-2">
-                            <li>Nuestros productos</li>
-
-                        </ul>
-                    </div>
-                </a>
-            </section>
-
-
             <section class="banner-home-3">
                 <div class="img-newsletter">
                     <img src="/images/genericas/taza-chocolate-partido.jpg" alt="Huära Chocolates">
                 </div>
                 <div class="newsletter">
-                    <form action="/login" method="POST">
-                        <div class="email-newsletter">
+                    
                             <h3> Compartí tu foto chocolatosa en Instagram mencionando a @huarachocolate y accedé
                                 automáticamente a un 20% de descuento en tu próxima compra!</h3>
-                            <br>
-
-                        </div>
-                    </form>
-                    <img src="/images/luna-PhotoRoom.png" alt="Huära Chocolates">
-
+                       
                 </div>
             </section>
             <%- include('./partials/footer') %>

@@ -42,6 +42,12 @@ body.fondo-home{
 	position: relative;
 }
 
+.product-img.carrusel-img{
+    border-radius: 200%;
+    box-shadow: none;
+    border: solid white 5px;
+}
+
 .carousel__anterior,
 .carousel__siguiente {
 	position: absolute;
@@ -78,6 +84,7 @@ body.fondo-home{
 
 .carousel__elemento {
 	text-align: center;
+    align-items: center;
 }
 
 .carousel__indicadores .glider-dot {
@@ -96,10 +103,7 @@ button.carousel__anterior{
 
 }
 
-.boton-left{
-    background-color: white;
-    border-radius: 15px;
-}
+
 
 .carousel__indicadores .glider-dot:hover {
 	opacity: .5;
@@ -215,6 +219,11 @@ button.carousel__anterior{
     padding: 5px;
     border-radius: 5%;
    
+}
+
+.carru-titulo{
+    color: rgb(77, 77, 77);
+    font-family: nexa-light;
 }
 
 .list-banner-2 li{
