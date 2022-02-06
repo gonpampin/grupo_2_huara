@@ -85,6 +85,7 @@ ul {
 }
 
 .perfil-desplegable{
+    background-color: white;
     display: none;
     position:absolute;
     list-style-type: none;
@@ -95,7 +96,7 @@ ul {
     padding-bottom: 10px;
     top: 100%;
     z-index: 3;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 div.perfil-desplegable li{
@@ -116,6 +117,7 @@ li#desplegable{
 }
 
 .perfil-desplegable-listado{
+    background-color: white;
     display: none;
     position:absolute;
     list-style-type: none;
@@ -126,7 +128,7 @@ li#desplegable{
     padding-bottom: 5px;
     top: 100%;
     z-index: 10;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 div.perfil-desplegable-listado li{
