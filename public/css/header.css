@@ -204,8 +204,7 @@ div.perfil-desplegable-listado li:hover{
         font-size: 21px;
         flex-wrap: nowrap;
         padding-bottom: 10px;
-       
-       font-size: 90%;
+       font-size: 85%;
        transition: all 2s;
     }
 .nav-bar-header :hover{
