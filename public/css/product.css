@@ -48,30 +48,30 @@ button.boton-buscar{
     height:200px;
     margin:auto;
     box-shadow: 0px 0px 10px rgb(100,100,100);
-    
-    
 }
+
 
 .product-box{
     margin-bottom: 10px;
     background-color: white;
     border-top: solid 2px #2222;
     padding-top: 20px;
-    text-align: center;
-   
+    text-align: center; 
+    opacity: 0.7;
 }
-
 
 section{
     width:90%;
     margin:auto;
 }
+
 .head-product-image{
     width: 100%;
     opacity: 0.8;
 position: relative;
    z-index: 1;
 }
+
 .intro{
     display: none;
     text-align: center;
@@ -102,7 +102,6 @@ div.titulo{
 }
 .box-description{
     margin-top: 20px;
-        
 }
 
 @media(min-width: 768px){
