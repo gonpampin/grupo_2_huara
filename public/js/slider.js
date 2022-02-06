@@ -12,13 +12,17 @@ window.addEventListener('load', function(){
 			  breakpoint: 450,
 			  settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 2,
+                draggable: true
 			  }
 			},{
 			  breakpoint: 800,
 			  settings: {
 				slidesToShow: 4,
-				slidesToScroll: 4,
+				slidesToScroll: 2,
+                draggable: true,
+                dragVelocity: 1.5,
+                rewind: true,
                 duration: 0.25
 
 			  }

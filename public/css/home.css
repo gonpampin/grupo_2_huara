@@ -34,8 +34,8 @@ body.fondo-home{
     object-fit:fill
 }
 .carrusel{
-    margin: 30px;
-   width:90%;
+    margin: 40px;
+    width: 95%;
 }
 .carousel__contenedor {
 	position: relative;
