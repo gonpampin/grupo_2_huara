@@ -31,8 +31,6 @@ a {
     text-decoration: none;
     color: rgb(114, 141, 117);
     font-family: nexa-light;
-    font-weight: bold;
-    font-size: 18px;
 }
 
 i {
@@ -113,7 +111,6 @@ li#desplegable{
     display: flex;
     align-items: center;
     justify-content: space-between;
- 
 }
 
 
@@ -218,9 +215,7 @@ div.perfil-desplegable-listado li:hover{
        transition: all 2s;
     }
 .nav-bar-header :hover{
-    
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+    font-size: 24px;
 }
 
 }
