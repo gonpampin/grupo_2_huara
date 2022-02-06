@@ -156,6 +156,8 @@ body.fondo-home{
     margin: auto;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    z-index: 0;
 }
 
 .banner-derecha-1 h3{
