@@ -31,7 +31,8 @@ body.fondo-home{
 }
 
 .img-slider{
-    object-fit:fill
+    object-fit:cover;
+    max-height: 400px;
 }
 .carrusel{
     margin: 40px;
@@ -64,6 +65,7 @@ body.fondo-home{
 
 .carousel__anterior {
 	left: -30px;
+
 }
 
 .carousel__siguiente {
@@ -82,9 +84,21 @@ body.fondo-home{
 	display: block;
 	width: 30px;
 	height: 4px;
-	background: #fff;
+	background-color:rgb(114,141,117);
 	opacity: .2;
 	border-radius: 0;
+}
+
+button.carousel__siguiente,
+button.carousel__anterior{
+    
+    font-size: 30px;
+
+}
+
+.boton-left{
+    background-color: white;
+    border-radius: 15px;
 }
 
 .carousel__indicadores .glider-dot:hover {
@@ -223,7 +237,7 @@ body.fondo-home{
 
 .newsletter{
    
-    background-image: rgba(255, 255, 255, 0.5);
+    background-color:transparent;
     margin: auto;
     width: 100%;
 }
@@ -250,11 +264,7 @@ body.fondo-home{
     color: white;
     text-align: left;
 }*/
-.newsletter input{
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-}
+
 
 
 @media (min-width: 360px) {

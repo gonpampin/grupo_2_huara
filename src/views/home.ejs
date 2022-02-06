@@ -31,12 +31,16 @@
                 </div>
             </section>
 
+
+            <!-- <div class="box-description"><h2 > Productos destacados</h2></div> -->
             <div class="carrusel">
       
                 <div class=" carousel__contenedor">
+                    
                     <button aria-label="Anterior" class="carousel__anterior">
                         <i class="fas fa-chevron-left"></i>
                     </button>
+                   
                   
                     <div class="carousel__lista">
                     <% for ( let i=0 ;  i < products.length; i ++ ){%>
@@ -44,7 +48,7 @@
                             <a href="/productos/<%= products[i].id%>">
                                 <img class="product-img" src="/images/products/<%= products[i].image %>"
                                     alt=<%=products[i].name %> >
-                                <div class="box-description  ">
+                                <div class="box-description">
                                <%= products[i].name %>
                             </a>
                         </div>
@@ -52,8 +56,11 @@
                     <% } %>
                     
                 </div>
+                
                 <button aria-label="Siguiente" class="carousel__siguiente">
+                
                     <i class="fas fa-chevron-right"></i>
+               
                 </button>
                     <div role="tablist" class="carousel__indicadores"></div>
                 
@@ -92,7 +99,7 @@
 
                         </div>
                     </form>
-                    <img src="/images/luna.jpg" alt="Huära Chocolates">
+                    <img src="/images/luna-PhotoRoom.png" alt="Huära Chocolates">
 
                 </div>
             </section>
