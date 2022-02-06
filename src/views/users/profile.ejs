@@ -4,18 +4,43 @@
 
 <%- include('../partials/head') %>
 
-<body>
+<body class="profile">
+	
     <%- include('../partials/header') %>
 	
-	<div class="cuadro1" style="margin: auto; margin-top: 10px; margin-bottom: 10px;">
+	<div class="cuadro-profile" style="margin: auto; margin-top: 10px; margin-bottom: 10px;">
 		<div class="row">
 			<div class="usario_perfil">
-				<h2 class="title-login">Hi <%= user.first_name %>! </h2>
+				<h2 class="title-login">Bienvenido <%= user.first_name %>! </h2>
 				<br>
 				<img style= "border-radius: 100px;" src="/images/avatars/<%= user.image %>" alt="avatar">
-						
+				
 				<br>
-				<div style="  color: rgb(114,141,117); font-family: nexa-light; font-size:20px" class="alert alert-success"><%= user.email %>  </div>
+				<br>
+				<h2>Datos personales </h2>
+						
+
+
+				<br>
+				<div style="  color: rgb(114,141,117); font-family: nexa-light; font-size:20px; font-style: italic" class="alert alert-success">
+					<h4>Email:</h4>
+					<%= user.email %>  
+				</div>
+                <br>
+				<div style="  color: rgb(114,141,117); font-family: nexa-light; font-size:20px; font-style: italic" class="alert alert-success">
+					<h4>Nombre: </h4>
+					<%= user.first_name %>  
+				</div>
+                <br>
+				<div style="  color: rgb(114,141,117); font-family: nexa-light; font-size:20px; font-style: italic" class="alert alert-success">
+					<h4>Apellido:</h4> 
+					<%= user.last_name %>  
+				</div>
+                <br>
+				<div style="  color: rgb(114,141,117); font-family: nexa-light; font-size:20px; font-style: italic" class="alert alert-success">
+					<h4>ID de usuario:</h4>  
+					#<%= user.id %>  
+				</div>
                 <br>
 				
 				

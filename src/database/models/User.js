@@ -46,5 +46,14 @@ module.exports = (sequelize, dataTypes) => {
         });
     }
 
+    // Users.associate = function(models) {
+    //     Users.hasMany(models.Orders, {
+    //         as: "userOrder",
+    //         foreignKey: "user_id"
+    //     });
+    // }
+
+
+
     return Users
 }
