@@ -3,7 +3,7 @@
 
 <%- include('../partials/head') %>
 
-<body>
+<body class="fondo-login">
     <%- include('../partials/header') %>
 
     <main class="login">
@@ -16,7 +16,7 @@
                 <form id="registerForm" action="/usuarios/editarusuario/<%= userEdit.id %>?_method=PUT" method="POST" >
                     <p class="campo">
                         <label for="name" class="label">Nombre</label>
-                        <input 
+                        <input style="outline: none"
                         type="text" 
                         name="name" 
                         id="name" 
@@ -43,7 +43,7 @@
 
                     <p class="campo">
                         <label for="lastname" class="label">Apellido</label>
-                        <input 
+                        <input style="outline: none"
                         type="text" 
                         name="lastname" 
                         id="lastname" 
@@ -69,7 +69,7 @@
                     <p>
                         <p class="campo">
                             <label for="email" class="label">Dirección de correo electrónico</label>
-                            <input 
+                            <input style="outline: none"
                             type="text" 
                             name="email" 
                             id="email" 
@@ -90,7 +90,7 @@
                         <br>
                         <p class="campo">
                             <label class="label">Ingresá imagen de perfil</label>
-                            <input
+                            <input style="outline: none"
                              type="file"
                              name="avatar"
                              accept="image/*"
@@ -107,7 +107,7 @@
                         <br>
                         <p class="campo pos-rel">
                             <label for="password" class="label">Contraseña</label>
-                            <input type="password"
+                            <input type="password" style="outline: none"
                              name="contrasenia" id="password" class="input"
                                 placeholder="Ingresá tu contraseña" style="font-style:italic; font-size: 12px">
                        <span class="fas fa-eye-slash ojo-abierto" id="ojo"></span>
@@ -140,7 +140,7 @@
                         <br>
                         <p class="campo pos-rel">
                             <label for="password" class="label">Reingresá la contraseña</label>
-                            <input type="password" name="recontrasenia" id="passwordRe" class="input"
+                            <input style="outline: none" type="password" name="recontrasenia" id="passwordRe" class="input"
                                 placeholder="Reingresá tu contraseña" style="font-style:italic; font-size: 12px">
                                 <span class="fas fa-eye-slash ojo-abierto" id="ojoRe"></span>
                             </p>

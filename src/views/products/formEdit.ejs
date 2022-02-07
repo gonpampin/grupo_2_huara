@@ -3,23 +3,23 @@
 
 <%- include('../partials/head') %> 
 
-<body>
+<body class="fondo-home">
     <%- include('../partials/header') %> 
 
     <main class="login">
-        <h2 class="title-login">Formulario de edición de productos</h2>
+        <h2 class="title-login" style="font-family:nexa-light">Formulario de edición de productos</h2>
         <br>
-        <section class="cuadro" style="margin-left: 20px; margin-right: 20px;">
-            <div class="detail-group">
+        <section class="cuadro" style="width: 70%">
+            <div  class="detail-group">
                       <div style="margin: auto;">     
                 <img src="/images/products/<%= productEdit.image %>"    alt = <%= productEdit.name %> class= "imagen-detalle">
             </div> 
-            <div style="width: 50%; margin: auto;">
+            <div style="margin: auto;">
             <div class="formulario">
                 <form action="/productos/editarproducto/<%= productEdit.id %>?_method=PUT" method="POST" enctype= "multipart/form-data" class='createEditForm'>
                 <p class="campo">
                 <label for="productName"class="label">Modifique nombre de producto</label>
-                <input type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.name : productEdit.name %>">
+                <input style= "outline:none" type="text" name="name" id="productName" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.name : productEdit.name %>">
                 </p>
                 <span style="color: red; font-size: 10px; font-style:italic">
                     <% if (locals.errors && errors.name) { %>  
@@ -29,7 +29,7 @@
                 <br>
                 <p class="campo" >
                     <label for="productDescription"class="label">Modifique descripción</label>
-                    <input type="text" name="description" id="productDescription" class="input" style="font-style:italic; font-size: 12px"   value="<%= locals.oldProductEdit ? oldProductEdit.description : productEdit.description %>"   >
+                    <input style= "outline:none" type="text" name="description" id="productDescription" class="input" style="font-style:italic; font-size: 12px"   value="<%= locals.oldProductEdit ? oldProductEdit.description : productEdit.description %>"   >
                     </p>
                     <span style="color: red; font-size: 10px; font-style:italic">
                         <% if (locals.errors && errors.description) { %>  
@@ -39,7 +39,7 @@
                     <br>
                     <p class="campo">
                     <label for="productImage" class="label">Modifique imagen</label>
-                    <input type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.image : productEdit.image %>"> 
+                    <input style= "outline:none" type="file" name="image" id="productImage" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.image : productEdit.image %>"> 
                     </p>
                     <span style="color: red; font-size: 10px; font-style:italic">
                         <% if (locals.errors && errors.image) { %>  
@@ -74,7 +74,7 @@
                     <br>
                     <p class="campo">
                         <label for="productPrice" class="label">Modifique precio ARS $</label>
-                        <input type="number" name="price" id="productPrice" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.price : productEdit.price %>">
+                        <input style= "outline:none" type="number" name="price" id="productPrice" class="input" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.price : productEdit.price %>">
                         </p>
                         <span style="color: red; font-size: 10px; font-style:italic">
                             <% if (locals.errors && errors.price) { %>  
@@ -84,7 +84,7 @@
                     <br>
                     <p class="campo">
                         <label for="productStock" class="label">Modifique Stock</label>
-                        <input type="number" name="stock" id="productStock" class="input" step="0.01" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.stock : productEdit.stock %>">
+                        <input style= "outline:none" type="number" name="stock" id="productStock" class="input" step="0.01" style="font-style:italic; font-size: 12px" value="<%= locals.oldProductEdit ? oldProductEdit.stock : productEdit.stock %>">
                         </p>
                         <span style="color: red; font-size: 10px; font-style:italic">
                             <% if (locals.errors && errors.stock) { %>  

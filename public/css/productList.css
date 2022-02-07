@@ -4,13 +4,13 @@ main {
 }
 
 .listado_productos_title{
-    background-color: white;
+    background-image: url('/images/fondo-cactus.png');
     font-size: 18px;
     color: rgb(114, 141, 117);
     font-family: nexa-light;
     padding: 5px;
     font-weight: bold;
-    border-bottom: 3px ridge;
+    border-bottom: 2px ridge white;
 }
 .listado_productos {
     background-color: white;
@@ -19,6 +19,11 @@ main {
     font-family: nexa-light;
     padding: 5px;
     font-weight: bold;
+}
+
+.hay-tabla{
+    margin: auto;
+    padding: 60px;
 }
 
 .table-products {

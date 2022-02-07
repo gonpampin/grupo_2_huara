@@ -3,7 +3,7 @@
     
     <%- include('../partials/head') %> 
 
-<body>
+<body style="background-image: url('/images/fondo-cactus.png')">
     <%- include('../partials/header') %> 
 
     <!-- <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
@@ -15,22 +15,23 @@
     </div> -->
 
 
-    <main>
-        <section>
-            <div class="head-carrito">
+    <main style="background-image: url('/images/fondo-cactus.png')">
+        <section >
+            <div style="background-image: url('/images/fondo-cactus.png')"class="head-carrito">
                 <img src="/images/genericas/taza-chocolate-partido-corto.jpg" class="head-carrito-image">
                 <div class="titulo-carrito"> Carrito.</div>
             </div>
         </section>
 
         <% if (locals.cart.length != 0)  { %>
-                            
+            <div>                   
             <div class="boton-compra-compra">
                 <h4 class="descripcion-carrito">
                     <a href="/productos">Seguir comprando</a>
                 </h4>
 
             </div>
+            </div> 
            
         <% } %>
 

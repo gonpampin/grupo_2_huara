@@ -216,16 +216,17 @@ button.carousel__anterior{
    
 }
 
-.list-banner{
+.list-banner-3 li{
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: rgb(77, 77, 77);
+    font-size: 30px;
+    font-family: nexa-light;
+    color: rgb(114,141,117);
+    letter-spacing: .2REM;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 5px;
-    border-radius: 5%;
+    padding: 5PX;
 }
 
 .list-banner-2{

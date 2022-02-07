@@ -3,23 +3,23 @@
 
 <%- include('../partials/head') %> 
 
-<body class="fondo-pro-home">
+<body class="fondo-products">
     <%- include('../partials/header') %> 
 
-    <main>
+    <main style="background-image: url('/images/fondo-cactus.png');">
         <h1> <% products.product_category_id %></h1>
-        <section>
+        <section class="productos-fondito">
             <div class="head-products">
                 <img src="images\prueba1-corto.jpeg" class="head-product-image">
                 <div class="titulo"> Productos.</div>
             </div>
         </section>
-        <section id="2">
+        <section id="2" class="fondo-products">
             
             <p class="intro">Tabletitas y chocolates tipo Bariloche a elección. Podés elegir las dulzuras que más te gusten, creadas y elaboradas a mano en San Juan, con la mejor materia prima.</p>
             <div class="buscar-titulo">
                 <form action="/productos" method="POST">
-                    <input type="text" name="titulo" id="titulo">
+                    <input type="text" name="titulo" id="titulo" class="buscar-product">
                     <button class="boton-buscar" type="submit">Buscar</button>
                 </form>  
             </div>    

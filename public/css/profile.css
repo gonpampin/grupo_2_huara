@@ -20,8 +20,7 @@ color: rgb(114,141,117);
 
 .cuadro-profile{
     margin-top: 10px;
-    border:dotted rgb(114,141,117) 2px;
-    width:fit-content;
+    width: 40%;
     padding: 0px 15px;
     box-sizing: border-box;
     margin-bottom: 5px;

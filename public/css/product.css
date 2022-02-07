@@ -1,4 +1,4 @@
-body.fondo-pro-home{
+body.fondo-products{
     background-image: url('/images/fondo-cactus.png');
 }
 
@@ -22,11 +22,26 @@ div.buscar-titulo{
 }
 
 button.boton-buscar{
-    padding: 5px;
+    padding: 8px;
     font-family: nexa-light;
-    background-color: #ebebeb;
+    background-color: rgb(250,212,184);
     border: none;
+    color: #666;
+    width: 70px;
 }
+
+button.boton-buscar:hover{
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+}
+
+input.buscar-product{
+    border: solid rgb(250,212,184) 0.5px;
+    background-color: white;
+    width: 100px;
+    outline: none;
+}
+
+
 
 .descripcion, .precio {
     font-size:16px;
@@ -60,6 +75,11 @@ button.boton-buscar{
 section{
     width:90%;
     margin:auto;
+
+}
+
+section.productos-fondito{
+    background-image: url('/images/fondo-cactus.png');
 }
 
 .head-product-image{
@@ -76,12 +96,12 @@ position: relative;
     font-size: 20px;
     color: #666;
     font-family: nexa-light;
-    background-color: white;
+    background-image: url('/images/fondo-cactus.png');
 }
 
 .head-products{
     position:relative;
-    
+
     z-index: 0;
 }
 
@@ -97,8 +117,16 @@ div.titulo{
     
 
 }
+
+article.product{
+    background-image: url('/images/fondo-cactus.png');
+}
 .box-description{
     margin-top: 20px;
+}
+
+div.product-box{
+    background-image: url('/images/fondo-cactus.png');
 }
 
 @media(min-width: 768px){
@@ -135,7 +163,7 @@ div.titulo{
         font-size: 20px;
         color: #666;
         font-family: nexa-light;
-        background-color: white;
+      
     }
 
    
