@@ -68,6 +68,20 @@ Intentar usar más el soporte del Trello, para hacer el seguimiento de los temas
 ## *Continuar haciendo* ##
 Continuar codeando en equipo, con reuniones semanales/diarias. Esta metodología nos funciona como equipo. Estamos todos en tema, equivocándonos y aprendiendo sobre los errores.
 
+# Retro Final #
+
+## *Conclusiones * ##
+Para este proyecto inicial nos resultó muy efectiva la metodología de tener reuniones semanales/diarias en las cuales trabajábamos en el código cada uno aportando lo suyo.
+De esta forma podíamos probar, equivocarnos y aprender de los errores y de los aportes de cada miembro del equipo.
+Cuando quedaban temas pendientes, nos dividíamos y cada uno realizaba por su cuenta lo que faltaba.  
+Quizás deberíamos haber utilizado aún más el soporte del Trello, consultarlo y mantenerlo actualizado para estar al tanto de los asuntos pendientes, fijando plazos de resolución. 
+Por ejemplo, la estética de las vistas del sitio. Este item lo fuimos postergando con el correr de los Sprint y nos quedamos con poco margen de tiempo para trabajarlo. Deberíamos haberlo contemplado y apuntarlo en el Trello para avanzar un poco en este aspecto en cada uno de los Sprint.
+Utilizamos muy poco Slack como canal de comunicación, ya que lo más accesible que teníamos era el grupo de Whatsapp. 
+Como conclusión, fueron 6 meses de puro aprendizaje, donde logramos trabajar en equipo, debatiendo y escuchando las distintas opiniones. Pudimos poner en práctica todos los temas vistos en clase.
+
+
+
+
 
 
 

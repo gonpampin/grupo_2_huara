@@ -226,3 +226,32 @@
 * Se trabajó en el Trello para planear el sprint. Se comenzó a trabajar en las validaciones de productos.
 
 ***
+
+## *Lunes-Jueves diciembre de 2021* ##
+## *17:30 a 19:00hs* ##
+
+* Antes de la clase reunión para ver temas pendientes.
+
+***
+
+## *Diciembre/Enero de 2021* ##
+
+* Reuniones diarias de codeo en equipo.
+
+***
+
+# Weekly-Daily - Sprint 8 #
+
+
+## *Lunes-Jueves enero de 2021* ##
+## *17:30 a 19:00hs* ##
+
+* Antes de la clase reunión para ver temas pendientes.
+
+***
+
+## *Enero/Febrero de 2021* ##
+
+* Reuniones diarias de codeo en equipo.
+
+***
