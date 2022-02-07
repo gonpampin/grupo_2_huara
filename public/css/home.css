@@ -43,7 +43,7 @@ body.fondo-home{
 }
 
 .product-img.carrusel-img{
-    border-radius: 200%;
+
     box-shadow: none;
     border: solid white 5px;
 }
@@ -198,6 +198,24 @@ button.carousel__anterior{
     text-align: center;
 }
 
+.carru-titulo p{
+   
+    
+    text-align: center;
+    font-family: nexa-light;
+    font-size: 40px;
+    color:rgb(114,141,117);
+    font-style: bold;
+    letter-spacing: .2REM
+    
+
+}
+
+.carru-titulo{
+    opacity: 0.8;
+   
+}
+
 .list-banner{
     position: absolute;
     top: 20%;
@@ -213,13 +231,12 @@ button.carousel__anterior{
 .list-banner-2{
     position: absolute;
     transform: translate(-50%, -90%);
-    font-size: 20px;
-    color: rgb(77, 77, 77);
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 5px;
-    border-radius: 5%;
+  
+  
    
 }
+
+
 
 .carru-titulo{
     color: rgb(77, 77, 77);
@@ -227,16 +244,16 @@ button.carousel__anterior{
 }
 
 .list-banner-2 li{
-    font-size: 40px;
+    font-size: 30px;
     font-family: nexa-light;
+    color: rgb(114,141,117);
+    letter-spacing: .2REM;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5PX;
 
 }
 
 .list-banner:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.list-banner-2:hover{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
